@@ -286,10 +286,31 @@ main .trending-gifos p {
   margin-top: 7px;
 }
 
-main .trending-gifos iframe {
+main .trending-gifos .carousel {
+  margin-top: 32px;
+}
+
+main .trending-gifos .carousel .left-arrow {
+  display: none;
+}
+
+main .trending-gifos .carousel .grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  gap: 5.86vw;
+}
+
+main .trending-gifos .carousel .grid .img-carousel img {
   width: 243px;
   height: 187px;
-  margin-top: 32px;
+}
+
+main .trending-gifos .carousel .right-arrow {
+  display: none;
 }
 
 footer {
@@ -434,7 +455,7 @@ footer p {
     font-size: 18px;
     margin-top: 12px;
   }
-  main .trending-gifos .grid-gifs-arrows {
+  main .trending-gifos .carousel {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -446,23 +467,40 @@ footer p {
     width: 100%;
     margin-top: 53px;
   }
-  main .trending-gifos .grid-gifs-arrows .left-arrow {
+  main .trending-gifos .carousel .left-arrow {
+    display: block;
     margin-left: 7vw;
   }
-  main .trending-gifos .grid-gifs-arrows .grid {
-    display: -ms-grid;
-    display: grid;
+  main .trending-gifos .carousel .grid {
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
-    -ms-grid-rows: 1fr;
-        grid-template-rows: 1fr;
     gap: 2vw;
     margin: 0 1.60vw 0 1.60vw;
   }
-  main .trending-gifos .grid-gifs-arrows .grid img {
-    width: 100%;
+  main .trending-gifos .carousel .grid .img-carousel {
+    position: relative;
   }
-  main .trending-gifos .grid-gifs-arrows .right-arrow {
+  main .trending-gifos .carousel .grid .img-carousel:hover .transition {
+    height: 100%;
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+  }
+  main .trending-gifos .carousel .grid .img-carousel img {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+  }
+  main .trending-gifos .carousel .grid .img-carousel .transition {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 0;
+    background: #572EE5;
+    opacity: 0.7;
+    z-index: 2;
+  }
+  main .trending-gifos .carousel .right-arrow {
+    display: block;
     margin-right: 7vw;
   }
   footer {
