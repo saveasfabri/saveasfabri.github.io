@@ -1,0 +1,178 @@
+@import "reset";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+@mixin montserrat-font{font-family: 'Montserrat', sans-serif};
+@mixin roboto-font {font-family: 'Roboto', sans-serif;
+    
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 95px;
+    border-top: 5px solid #572EE5 ;
+    .gifos-logo{
+        margin-left: 22px;
+        }    
+    nav{       
+        .burguer-img{
+            margin-right: 22px;
+        }
+    }
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7px;
+    .main-title-img{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .main-title{
+            font-size: 25px;
+            color: #572EE5;
+            margin: 0 45px 0 45px;
+            @include montserrat-font;
+            font-weight: 700;
+            text-align: center;
+            line-height: 33px;
+            span{
+                color: #50E3C2;
+            }
+        }
+        .main-img{
+            margin-top: 31px;
+            width: 273px;
+        }
+        .search{
+            input{
+                width: 334px;
+                height: 50px;
+                border: 1px solid #572EE5;
+                border-radius: 50px;
+                padding: 15px 64px 13px 55px;
+                @include roboto-font;
+                background-image: url(../asset/icon-search.svg);
+                background-position: 294px 15px;
+                background-repeat: no-repeat;
+            }
+        }        
+    }// main-title-img end
+    .section-trending{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 31px;        
+        .p-trending{
+            text-align: center;
+            color: #572EE5;
+            font-weight: 700;
+            @include montserrat-font;
+            font-size: 16px;
+        }
+        p{
+            text-align: center;
+            width: 225px;
+            font-size: 14px;
+            font-weight:inherit;
+            color: #572EE5;
+            @include montserrat-font;
+            line-height: 25px;
+        }        
+    }
+    .line{
+        width: 171px;
+        border-top: 1px solid #9cafc37c;
+        margin-top: 35px;
+    }
+    .search-page{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 43px;
+        h2{
+            @include montserrat-font;
+            font-size: 25px;
+            font-weight: bold;
+            color: #572EE5;
+            line-height: 40px;
+        }
+        .grid{
+            display: grid;
+            grid-template-columns: 156px 156px;
+            grid-template-rows: 120px 120px 120px 120px 120px 120px;
+            column-gap: 21px;
+            row-gap: 25px;
+            margin-top: 38px;
+        }
+        a{
+            border: 1px solid #572EE5;
+            border-radius: 25px;
+            margin-top: 78px;
+            padding: 18px 32.5px;
+            text-align: center;
+            text-decoration: none;
+            @include montserrat-font;
+            font-weight: bold;
+            color: #572EE5 ;
+        }
+    }
+    .gif{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 430px;
+        margin-top:79px;
+        background: #F3F5F8;
+        h2{            
+            @include montserrat-font;
+            font-size: 20px;
+            font-weight: bold;
+            color: #572EE5;
+            margin-top: 46px;
+        }
+        p{
+            width: 200px;
+            @include roboto-font;
+            line-height: 23px;
+            text-align: center;
+            margin-top: 7px;
+        }
+        iframe{
+            width: 243px;
+            height: 187px;
+            margin-top: 32px;
+        }
+    }// .gif end       
+}//main end
+footer{
+    width: 100%;
+    height: 196px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 5px solid #572EE5;
+    .compartir{
+        display: flex;
+        margin-top: 47px;
+        @include roboto-font;
+    }
+    .social{
+        display: flex;
+        justify-content: space-between;
+        width: 90px;
+        margin-top: 23px;
+    }
+    p{
+        margin-top: 47.8px;
+        @include roboto-font;
+    }
+}// footer end
+

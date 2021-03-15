@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    <link rel="stylesheet" href="./css/index.css">
+
+    <title>Gifos</title>
+</head>
+<body>
+    <header>        
+        <div class="container-logo">
+            <img class="gifos-logo" src="./asset/logo-mobile.svg" alt="Logo Gifos">  
+        </div>
+        <div class="menu-toggle" onclick="menuBurger()">
+            <img id="burger" class="burger" src="./asset/burger.svg" alt="Icono abrir menu/cerrar menu">            
+        </div>
+        <nav id="site-nav" class="site-nav">            
+                <ul>
+                    <li><a class="item-menu" href="index-dark.html">Modo Nocturno</a></li>
+                    <div class="separator-line"></div>
+                    <li><a class="item-menu" href="favorites.html">Favoritos</a></li>
+                    <div class="separator-line"></div>
+                    <li><a class="item-menu" href="mis-gifos.html">Mis Gifos</a></li>
+                    <div class="separator-line"></div>                
+                </ul>
+                <a class="btn-more" href="./mis-gifos.html"><img src="./asset/button-crear-gifo.svg" alt="Icono boton mas"></a>                 
+        </nav>                           
+    </header>
+    <main>
+        <section class="main-title-img">
+            <h1 class="main-title">
+                Inspírate, busca, guarda, y crea los mejores <span>GIFOS</span>
+            </h1>            
+            <img class="main-img" src="./asset/ilustra_header.svg" alt="Ilustracion de personas alegres">
+            <div class="search">
+                <input type="search"placeholder="Busca GIFOS y más">
+            </div> 
+        </section>
+        <section class="section-trending">
+            <p class="p-trending">Trending:</p>
+            <p>Reactions, Entertainment, Sports, Stickers, Artists</p>
+        </section>
+        <section class="trending-gifos">
+            <h2>Trending GIFOS</h2>
+            <p>Mira los últimos GIFOS de nuestra comunidad.</p>
+            <div class="grid-gifs-arrows">
+                <img class="left-arrow" src="./asset/button-slider-left.svg" alt="">
+                <div class="grid">
+                    <img src="./images/pet medium (1).jpg" alt="Imagen ejemplo mascota">
+                    <img src="./images/pet medium (2).jpg" alt="Imagen ejemplo mascota">
+                    <img src="./images/pet medium (3).jpg" alt="Imagen ejemplo mascota">
+                </div>
+                <img class="right-arrow" src="./asset/Button-Slider-right.svg" alt="">
+            </div>                           
+        </section>       
+    </main>
+    <footer>
+        <div class="compartir-social">
+            <p class="compartir">Compartir en:</p>
+            <div class="social">
+                <a href="#" ><img id="face-icon" src="./asset/icon_facebook.svg" alt="icono de facebook" target="_blank"></a>
+                <a href=""><img id="twit-icon" src="./asset/icon-twitter.svg" alt="icono de twitter" target="_blank"></a>
+                <a href=""><img id="insta-icon" src="./asset/icon_instagram.svg" alt="icono de instagram" target="_blank"></a>            
+            </div>        
+        </div>
+        <p>© GIFOS 2021 All Rights Reserved.</p>                
+    </footer>
+    <script src="./js/index.js"></script>
+</body>
+</html>
