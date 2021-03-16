@@ -1,8 +1,10 @@
 @import "reset";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
-@mixin montserrat-font{font-family: 'Montserrat', sans-serif};
-@mixin roboto-font {font-family: 'Roboto', sans-serif};
+@mixin montserrat{font-family: 'Montserrat', sans-serif};
+@mixin montserrat-dark{font-family: 'Montserrat', sans-serif; color: #ffffff};
+@mixin roboto {font-family: 'Roboto', sans-serif};
+@mixin roboto-dark {font-family: 'Roboto', sans-serif; color: #ffffff};
 
 header{
     display: flex;
@@ -48,7 +50,7 @@ header{
             .item-menu{
                 text-align: center;                    
                 color: #ffffff;
-                @include montserrat-font;
+                @include montserrat;
                 font-size: 15px;
                 font-weight: bold;
                 line-height: 30px;
@@ -84,7 +86,7 @@ main{
             font-size: 25px;
             color: #572EE5;
             margin: 0 45px 0 45px;
-            @include montserrat-font;
+            @include montserrat;
             font-weight: 700;
             text-align: center;
             line-height: 33px;
@@ -104,7 +106,7 @@ main{
                 border-radius: 50px;
                 font-size: 16px;
                 padding: 15px 64px 13px 55px;
-                @include roboto-font;
+                @include roboto;
                 background-image: url(../asset/icon-search.svg);
                 background-position: 294px 15px;
                 background-repeat: no-repeat;
@@ -121,7 +123,7 @@ main{
             text-align: center;
             color: #572EE5;
             font-weight: 700;
-            @include montserrat-font;
+            @include montserrat;
             font-size: 16px;
         }
         p{
@@ -131,7 +133,7 @@ main{
             font-size: 14px;
             font-weight:500;
             color: #572EE5;
-            @include montserrat-font;
+            @include montserrat;
             line-height: 25px;
         }        
     }
@@ -144,7 +146,7 @@ main{
         margin-top: 45px;
         background: #F3F5F8;
         h2{            
-            @include montserrat-font;
+            @include montserrat;
             font-size: 20px;
             font-weight: bold;
             color: #572EE5;
@@ -153,7 +155,7 @@ main{
         p{
             width: 200px;
             font-weight: 500;
-            @include roboto-font;
+            @include roboto;
             line-height: 23px;
             text-align: center;
             margin-top: 7px;
@@ -165,13 +167,16 @@ main{
             }
             .grid{                
                 display: grid;
-                grid-template-columns: repeat(3,1fr);
+                grid-template-columns: 1fr 1fr 1fr;
                 grid-template-rows: 1fr;
                 gap: 5.86vw;
                 .img-carousel{
-                    img{
+                    .gif-pet{
                         width: 243px;
                         height: 187px;
+                    }
+                    .transition{
+                        display: none;
                     }
                 }
             }
@@ -193,7 +198,7 @@ footer{
         .compartir{
             font-weight: 500;
             margin-top: 47px;
-            @include roboto-font;
+            @include roboto;
         }
         .social{
             display: flex;
@@ -205,7 +210,7 @@ footer{
     p{
         font-weight: 500;
         margin-top: 47.8px;
-        @include roboto-font;
+        @include roboto;
     }
 }//footer end
 
@@ -315,7 +320,7 @@ footer{
                     margin-left: 7vw;
                 }
                 .grid{
-                    grid-template-columns: repeat(3,1fr);
+                    grid-template-columns: 1fr 1fr 1fr;
                     gap: 2vw;
                     margin: 0 1.60vw 0 1.60vw;
                     .img-carousel{
@@ -323,22 +328,70 @@ footer{
                         &:hover{
                             .transition{
                                 height: 100%;
-                                transition: 0.5s ease-in-out;
+                                transition: 0.4s ease-in-out;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-between;
+                                .icon-content{
+                                    margin-top: 10px;
+                                    transition: .3s ease;
+                                    display: flex;
+                                    justify-content: flex-end;
+                                    .icon{
+                                        height: 32px;
+                                        margin-right: 10px;
+                                        transition: .3s ease;
+                                    }
+                                }                
+                                .text-content{
+                                    .user{
+                                        color: #FFFFFF;
+                                        @include roboto();
+                                        font-size: 15px;
+                                        font-weight: 400;
+                                        text-transform:none ;
+                                        margin-left: 18px;
+                                        text-align: left;
+                                        transition: .3s ease .1s;
+                                    }
+                                    .titulo{
+                                        color: #FFFFFF;
+                                        @include roboto();
+                                        font-size: 16px;
+                                        margin: 6px 0 51px 1.25vw;
+                                        text-align: left;
+                                        font-weight: 600;
+                                        transition: .3s ease .1s;
+                                    }
+                                }                                                               
                             }
                         }
-                        img{
+                        .gif-pet{
                             width: 100%;
-                            max-width: 100%;
                             height: 100%;
+                            max-width: 100%;
                         }
                         .transition{
                             position: absolute;
                             top: 0;
                             width: 100%;
-                            height: 0;                            
+                            height: 0; 
                             background: #572EE5;
                             opacity: 0.7;
                             z-index: 2;
+                            .icon-content{
+                                .icon{
+                                    height: 0;
+                                }
+                            }
+                            .text-content{
+                                .user{
+                                    font-size: 0px;
+                                }
+                                .titulo{
+                                    font-size: 0px;;
+                                }
+                            }                                                        
                         }
                     }
                 }
@@ -347,7 +400,7 @@ footer{
                     margin-right: 7vw;
                 }                
             }            
-        }   
+        }// .trending-gifos end   
     }// main end
     footer{
         display: flex;

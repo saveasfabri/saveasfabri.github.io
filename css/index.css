@@ -297,16 +297,20 @@ main .trending-gifos .carousel .left-arrow {
 main .trending-gifos .carousel .grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
   gap: 5.86vw;
 }
 
-main .trending-gifos .carousel .grid .img-carousel img {
+main .trending-gifos .carousel .grid .img-carousel .gif-pet {
   width: 243px;
   height: 187px;
+}
+
+main .trending-gifos .carousel .grid .img-carousel .transition {
+  display: none;
 }
 
 main .trending-gifos .carousel .right-arrow {
@@ -472,8 +476,8 @@ footer p {
     margin-left: 7vw;
   }
   main .trending-gifos .carousel .grid {
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     gap: 2vw;
     margin: 0 1.60vw 0 1.60vw;
   }
@@ -482,13 +486,61 @@ footer p {
   }
   main .trending-gifos .carousel .grid .img-carousel:hover .transition {
     height: 100%;
-    -webkit-transition: 0.5s ease-in-out;
-    transition: 0.5s ease-in-out;
+    -webkit-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
-  main .trending-gifos .carousel .grid .img-carousel img {
+  main .trending-gifos .carousel .grid .img-carousel:hover .transition .icon-content {
+    margin-top: 10px;
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  main .trending-gifos .carousel .grid .img-carousel:hover .transition .icon-content .icon {
+    height: 32px;
+    margin-right: 10px;
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+  }
+  main .trending-gifos .carousel .grid .img-carousel:hover .transition .text-content .user {
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: none;
+    margin-left: 18px;
+    text-align: left;
+    -webkit-transition: .3s ease .1s;
+    transition: .3s ease .1s;
+  }
+  main .trending-gifos .carousel .grid .img-carousel:hover .transition .text-content .titulo {
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    margin: 6px 0 51px 1.25vw;
+    text-align: left;
+    font-weight: 600;
+    -webkit-transition: .3s ease .1s;
+    transition: .3s ease .1s;
+  }
+  main .trending-gifos .carousel .grid .img-carousel .gif-pet {
     width: 100%;
-    max-width: 100%;
     height: 100%;
+    max-width: 100%;
   }
   main .trending-gifos .carousel .grid .img-carousel .transition {
     position: absolute;
@@ -498,6 +550,15 @@ footer p {
     background: #572EE5;
     opacity: 0.7;
     z-index: 2;
+  }
+  main .trending-gifos .carousel .grid .img-carousel .transition .icon-content .icon {
+    height: 0;
+  }
+  main .trending-gifos .carousel .grid .img-carousel .transition .text-content .user {
+    font-size: 0px;
+  }
+  main .trending-gifos .carousel .grid .img-carousel .transition .text-content .titulo {
+    font-size: 0px;
   }
   main .trending-gifos .carousel .right-arrow {
     display: block;
