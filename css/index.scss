@@ -185,7 +185,7 @@ main{
             }
         }
         
-    }// .gif end       
+    }// trending-gif end      
 }//main end
 footer{
     width: 100%;
@@ -220,7 +220,8 @@ footer{
     header{
         justify-content: space-between;
         height: 90px;
-        .gifos-logo{           
+        .gifos-logo{ 
+            width: 59px;          
             margin-left: 10.83vw;
         }        
         .menu-toggle{

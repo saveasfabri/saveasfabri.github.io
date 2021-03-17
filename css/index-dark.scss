@@ -6,13 +6,16 @@
 @mixin roboto {font-family: 'Roboto', sans-serif};
 @mixin roboto-dark {font-family: 'Roboto', sans-serif; color: #ffffff};
 
+body{
+    background-color: #37383C;
+}
 header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 95px;
-    border-top: 5px solid #572EE5 ;
+    border-top: 5px solid #000000 ;
     position: relative; // para que tome desde donde comienza .site-nav (top 100%)
     :after{
         content: '';
@@ -63,7 +66,7 @@ header{
             border: 1px solid #FFFFFF;
             margin-top: 10px;
             }            
-        }
+        }// ul end
         .btn-more{
             display:none;
         }
@@ -84,9 +87,8 @@ main{
         align-items: center;
         .main-title{
             font-size: 25px;
-            color: #572EE5;
             margin: 0 45px 0 45px;
-            @include montserrat;
+            @include montserrat-dark();
             font-weight: 700;
             text-align: center;
             line-height: 33px;
@@ -102,16 +104,17 @@ main{
             input{
                 width: 334px;
                 height: 50px;
-                border: 1px solid #572EE5;
+                border: 1px solid #ffffff;
                 border-radius: 50px;
                 font-size: 16px;
                 padding: 15px 64px 13px 55px;
                 @include roboto;
-                background-image: url(../asset/icon-search.svg);
+                background-image: url(../asset/icon-search-modo-noct.svg);
                 background-position: 294px 15px;
                 background-repeat: no-repeat;
+                background-color: #37383C;
             }
-        }        
+        }// .search end       
     }// main-title-img end
     .section-trending{
         width: 100%;
@@ -121,9 +124,8 @@ main{
         margin-top: 31px;
         .p-trending{
             text-align: center;
-            color: #572EE5;
             font-weight: 700;
-            @include montserrat;
+            @include montserrat-dark();
             font-size: 16px;
         }
         p{
@@ -132,8 +134,7 @@ main{
             margin-top: 2px;
             font-size: 14px;
             font-weight:500;
-            color: #572EE5;
-            @include montserrat;
+            @include montserrat-dark();
             line-height: 25px;
         }        
     }
@@ -144,18 +145,18 @@ main{
         width: 100%;
         height: 430px;
         margin-top: 45px;
-        background: #F3F5F8;
+        background: #222326;
         h2{            
-            @include montserrat;
+            @include montserrat-dark();
             font-size: 20px;
             font-weight: bold;
-            color: #572EE5;
             margin-top: 46px;
+            line-height: 60px;
         }
         p{
             width: 200px;
-            font-weight: 500;
-            @include roboto;
+            font-weight: 400;
+            @include roboto-dark();
             line-height: 23px;
             text-align: center;
             margin-top: 7px;
@@ -183,9 +184,8 @@ main{
             .right-arrow{
                 display: none;
             }
-        }
-        
-    }// .gif end       
+        }// .carousel end        
+    }// .trending-gifos end       
 }//main end
 footer{
     width: 100%;
@@ -193,34 +193,36 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-bottom: 5px solid #572EE5;
+    border-bottom: 5px solid #000000;
     .compartir-social{
         .compartir{
-            font-weight: 500;
+            font-size: 15px;
+            font-weight: 400;
             margin-top: 47px;
-            @include roboto;
+            @include roboto-dark();
         }
         .social{
             display: flex;
             justify-content: space-between;
             width: 90px;
             margin-top: 23px;
-        }
-    }    
-    p{
-        font-weight: 500;
-        margin-top: 47.8px;
-        @include roboto;
+        }           
     }
+    p{
+        font-size: 14px;
+        font-weight: 400;
+        margin-top: 47.8px;
+        @include roboto-dark();
+    }    
 }//footer end
-
 /************** MEDIA QUERY 700px *************************************************/
 
 @media screen and (min-width: 700px){
     header{
         justify-content: space-between;
         height: 90px;
-        .gifos-logo{           
+        .gifos-logo{ 
+            width: 59px;          
             margin-left: 10.83vw;
         }        
         .menu-toggle{
@@ -246,7 +248,7 @@ footer{
                     margin-left: 2.77vw;
                     margin-top: 0;
                     .item-menu{
-                        color: #572EE5;
+                        color: #ffffff;
                         font-size: 13px;
                         font-weight: bold;
                         line-height: 16px;
@@ -301,7 +303,7 @@ footer{
             height: 640px;
             margin-top: 95px;
             h2{
-                font-size: 25px;
+                font-size: 30px;
                 margin-top: 67px;
             }
             p{
@@ -364,8 +366,8 @@ footer{
                                         transition: .3s ease .1s;
                                     }
                                 }                                                               
-                            }
-                        }
+                            }// .transition end
+                        }// &:hover end
                         .gif-pet{
                             width: 100%;
                             height: 100%;
@@ -393,13 +395,13 @@ footer{
                                 }
                             }                                                        
                         }
-                    }
-                }
+                    }// .img-carousel end
+                }// .grid end
                 .right-arrow{
                     display: block;
                     margin-right: 7vw;
                 }                
-            }            
+            }// .carousel end           
         }// .trending-gifos end   
     }// main end
     footer{
@@ -417,8 +419,8 @@ footer{
             }
             .social{
                 margin-top: 0px;
-            }
-        }        
+            }            
+        }
         p{
             font-size: 13px;
             margin-top: 0;
