@@ -404,7 +404,7 @@ footer{
                     display: block;
                     margin-right: 7vw;
                 }                
-            }            
+            } // .carousel end           
         }// .trending-gifos end   
     }// main end
     footer{
@@ -412,7 +412,7 @@ footer{
         flex-direction: row;
         align-content: center;
         justify-content: space-between;
-        height: 116px;
+        height: 116px;        
         .compartir-social{
             display: flex;
             .compartir{

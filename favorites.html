@@ -9,18 +9,24 @@
     <title>Gifos favorite</title>
 </head>
 <body>
-    <header>
-        <img class="gifos-logo" src="./asset/logo-mobile.svg" alt="Logo Gifos">
-        <nav>  
-            <div id="Links">              
-                <a href="index-dark.html">Modo Nocturno</a>
-                <a href="favorites.html">Favoritos</a>
-                <a href="mis-gifos.htm">Mis Gifos</a>
-            </div>        
-            <img class="burguer-img" src="./asset/burger.svg" alt="Menu hamburguesa">
-        </nav>
-        <img class="burguer-img" src="./asset/burger.svg" alt="Menu hamburguesa">
-        
+    <header>        
+        <div class="container-logo">
+            <a href="./index.html"><img class="gifos-logo" src="./asset/logo-mobile.svg" alt="Logo Gifos"></a> 
+        </div>
+        <div class="menu-toggle" onclick="menuBurger()">
+            <img id="burger" class="burger" src="./asset/burger.svg" alt="Icono abrir menu/cerrar menu">            
+        </div>
+        <nav id="site-nav" class="site-nav">            
+                <ul>
+                    <li><a class="item-menu" href="./dark-index.html">Modo Nocturno</a></li>
+                    <div class="separator-line"></div>
+                    <li><a class="item-menu" href="./favorites.html">Favoritos</a></li>
+                    <div class="separator-line"></div>
+                    <li><a class="item-menu" href="mis-gifos.html">Mis Gifos</a></li>
+                    <div class="separator-line"></div>                
+                </ul>
+                <a class="btn-more" href="./create-gifos.html"><img src="./asset/button-crear-gifo.svg" alt="Icono boton Crear gifos"></a>                 
+        </nav>                           
     </header>
     <main>
         <section class="favorite">

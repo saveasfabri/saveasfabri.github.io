@@ -67,29 +67,6 @@ table {
   border-spacing: 0;
 }
 
-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  height: 95px;
-  border-top: 5px solid #572EE5;
-}
-
-header .gifos-logo {
-  margin-left: 22px;
-}
-
-header nav .burguer-img {
-  margin-right: 22px;
-}
-
 main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -236,5 +213,104 @@ footer .social {
 footer p {
   margin-top: 47.8px;
   font-family: 'Roboto', sans-serif;
+}
+
+/************** MEDIA QUERY 700px *************************************************/
+@media screen and (min-width: 700px) {
+  header {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 90px;
+  }
+  header .gifos-logo {
+    width: 59px;
+    margin-left: 10.83vw;
+  }
+  header .menu-toggle {
+    display: none;
+  }
+  header .site-nav {
+    width: auto;
+    top: 0;
+    height: auto;
+    position: relative;
+    background-color: transparent;
+    opacity: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header .site-nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  header .site-nav ul:first-child {
+    margin-top: 0;
+  }
+  header .site-nav ul li {
+    margin-left: 2.77vw;
+    margin-top: 0;
+  }
+  header .site-nav ul li .item-menu {
+    color: #572EE5;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 16px;
+    text-transform: uppercase;
+  }
+  header .site-nav ul .separator-line {
+    display: none;
+  }
+  header .site-nav .btn-more {
+    display: block;
+    margin-left: 53px;
+    margin-right: 10.83vw;
+  }
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 116px;
+  }
+  footer .compartir-social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  footer .compartir-social .compartir {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    font-size: 13px;
+    margin-top: 0;
+    margin: 0 1.18vw 0 10.83vw;
+  }
+  footer .compartir-social .social {
+    margin-top: 0px;
+  }
+  footer p {
+    font-size: 13px;
+    margin-top: 0;
+    margin-right: 10.97vw;
+  }
 }
 /*# sourceMappingURL=favorite.css.map */
