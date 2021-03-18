@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+    <link rel="stylesheet" href="./css/create-gifos.css">
+    <title>Gifos</title>
+</head>
+<body>
+    <header>        
+        <div class="container-logo">
+            <a href="./index.html"><img class="gifos-logo" src="./asset/logo-mobile.svg" alt="Logo Gifos"></a> 
+        </div>
+        <div class="menu-toggle" onclick="menuBurger()">
+            <img id="burger" class="burger" src="./asset/burger.svg" alt="Icono abrir menu/cerrar menu">            
+        </div>
+        <nav id="site-nav" class="site-nav">            
+                <ul>
+                    <li><a class="item-menu" href="./dark-index.html">Modo Nocturno</a></li>
+                    <div class="separator-line"></div>
+                    <li><a class="item-menu" href="./favorites.html">Favoritos</a></li>
+                    <div class="separator-line"></div>
+                    <li><a class="item-menu" href="mis-gifos.html">Mis Gifos</a></li>
+                    <div class="separator-line"></div>                
+                </ul>
+                <a class="btn-more" href="./create-gifos.html"><img src="./asset/CTA-crear-gifo-active.svg" alt="Icono boton mas"></a>                 
+        </nav>                           
+    </header>
+    <main>
+        <div class="box-create">
+            <div class="corners"></div>
+            <h1>Aquí podrás <br> crear tus propios GIFOS</h1>
+            <p>¡Crea tu GIFO en sólo 3 pasos! <br> (sólo necesitas una cámara para grabar un video)</p>
+        </div>
+    </main>
+    <footer>
+        <div class="compartir-social">
+            <p class="compartir">Compartir en:</p>
+            <div class="social">
+                <a href="#" target="_blank" ><img id="face-icon" src="./asset/icon_facebook.svg" alt="icono de facebook"></a>
+                <a href="#" target="_blank"><img id="twit-icon" src="./asset/icon-twitter.svg" alt="icono de twitter" ></a>
+                <a href="#" target="_blank"><img id="insta-icon" src="./asset/icon_instagram.svg" alt="icono de instagram"></a>            
+            </div>        
+        </div>
+        <p>© GIFOS 2021 All Rights Reserved.</p>                
+    </footer>
+    <script src="./js/create-gifos.js"></script>
+</body>
+</html>

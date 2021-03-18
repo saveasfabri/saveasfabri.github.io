@@ -294,6 +294,9 @@ main .trending-gifos p {
 }
 
 main .trending-gifos .carousel {
+  width: 100%;
+  overflow: hidden;
+  margin-left: 22px;
   margin-top: 32px;
 }
 
@@ -367,7 +370,7 @@ footer p {
   color: #ffffff;
 }
 
-/************** MEDIA QUERY 700px *************************************************/
+/************** MEDIA QUERY 700px ************************************************/
 @media screen and (min-width: 700px) {
   header {
     -webkit-box-pack: justify;
@@ -598,6 +601,9 @@ footer p {
     display: flex;
   }
   footer .compartir-social .compartir {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
     font-size: 13px;
     margin-top: 0;
     margin: 0 1.18vw 0 10.83vw;
@@ -611,4 +617,4 @@ footer p {
     margin-right: 10.97vw;
   }
 }
-/*# sourceMappingURL=index-dark.css.map */
+/*# sourceMappingURL=dark-index.css.map */

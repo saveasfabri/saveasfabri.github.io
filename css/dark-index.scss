@@ -162,6 +162,9 @@ main{
             margin-top: 7px;
         }
         .carousel{
+            width: 100%;
+            overflow: hidden;
+            margin-left: 22px;
             margin-top: 32px;
             .left-arrow{
                 display: none;
@@ -215,7 +218,7 @@ footer{
         @include roboto-dark();
     }    
 }//footer end
-/************** MEDIA QUERY 700px *************************************************/
+/************** MEDIA QUERY 700px ************************************************/
 
 @media screen and (min-width: 700px){
     header{
@@ -413,6 +416,7 @@ footer{
         .compartir-social{
             display: flex;
             .compartir{
+                align-self: center;
                 font-size: 13px;
                 margin-top: 0;
                 margin: 0 1.18vw 0 10.83vw;
