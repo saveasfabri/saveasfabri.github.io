@@ -63,29 +63,27 @@ header{
             border: 1px solid #FFFFFF;
             margin-top: 10px;
             }            
-        }// ul end
+        }// ul DESKTOP end
         .btn-more{
             display:none;
         }
-    }// .site-nav end  
+    }// .site-nav DESKTOP end
     .site-nav-open{        //no esta en html, está creada por JS
         height: 100vh;
     } 
-}// header end
-
+}// header DESKTOP end
 main{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 7px;
+    margin-top: 5px;
     .favorite{
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100%;
-        img{
-            margin-top: 5px;
+        .heart-icon{
+            width: 28px;
         }
         h2{
             @include montserrat;
@@ -93,17 +91,22 @@ main{
             font-weight: bold;
             color: #572EE5;
             line-height: 40px;
-            margin-top: 7px;
+            margin-top: 5px;
         }
         .grid-favorites{
             display: grid;
-            grid-template-columns: 156px 156px;
-            grid-template-rows: 120px 120px 120px 120px 120px 120px;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
             column-gap: 21px;
             row-gap: 25px;
-            margin-top: 46px;
+            margin: 46px 21px 0 21px;
+            .img-grid-favorites{
+                width: 100%;
+                height: 100%;
+                max-width: 100%;
+            }
         }
-        a{
+        .btn-mas{
             border: 1px solid #572EE5;
             border-radius: 25px;
             margin-top: 78px;
@@ -114,14 +117,14 @@ main{
             font-weight: bold;
             color: #572EE5 ;
         }
-    }// .favorite end
+    }// .favorite DESKTOP end
     .trending-gifos{
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 100%;
         height: 430px;
-        margin-top: 78px;
+        margin-top: 94px;
         background: #F3F5F8;
         h2{            
             @include montserrat;
@@ -164,9 +167,9 @@ main{
             .right-arrow{
                 display: none;
             }
-        }// .carousel end
-    }// trending-gif end       
-}//main end
+        }// .carousel DESKTOP end 
+    }// trending-gif DESKTOP end       
+}//main DESKTOP end
 footer{
     width: 100%;
     height: 196px;
@@ -192,7 +195,7 @@ footer{
         margin-top: 47.8px;
         @include roboto;
     }
-}//footer end
+}//footer DESKTOP end
 
 /************** MEDIA QUERY 700px *************************************************/
 
@@ -243,9 +246,48 @@ footer{
                 margin-left: 53px;
                 margin-right: 10.83vw;
             }            
-        }//.site-nav end               
-    }// header end
+        }//.site-nav MOBILE end             
+    }// header MOBILE end
     main{
+        margin-top: 11px;
+        .favorite{
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            h2{
+                @include montserrat;
+                font-size: 25px;
+                font-weight: bold;
+                color: #572EE5;
+                line-height: 40px;
+                margin-top: 8px;
+            }
+            .grid-favorites{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+                column-gap: 29px;
+                row-gap: 25px;
+                margin: 36px 10.76vw 0 10.76vw;
+                .img-grid-favorites{
+                    width: 100%;
+                    height: 100%;
+                    max-width: 100%;
+                }
+            }
+            .btn-mas{
+                border: 1px solid #572EE5;
+                border-radius: 25px;
+                margin-top: 78px;
+                padding: 18px 32.5px;
+                text-align: center;
+                text-decoration: none;
+                @include montserrat;
+                font-size: 13px;
+                font-weight: bold;
+                color: #572EE5 ;
+            }
+        }// .favorite DESKTOP end
         .trending-gifos{
             height: 640px;
             margin-top: 79px;
@@ -341,15 +383,15 @@ footer{
                                     font-size: 0px;;
                                 }
                             }                                                        
-                        }// .transition end
-                    }// .img-carousel end
-                }// .grid end
+                        }// .transition MOBILE end
+                    }// .img-carousel MOBILE end
+                }// .grid MOBILE end
                 .right-arrow{
                     display: block;
                     margin-right: 7vw;
                 }                
-            } // .carousel end           
-        }// .trending-gifos end
+            } // .carousel MOBILE end        
+        }// .trending-gifos MOBILE end
     }     
     footer{
         display: flex;
@@ -374,6 +416,6 @@ footer{
             margin-top: 0;
             margin-right: 10.97vw;
         }
-    }// footer end
+    }// footer MOBILE end
 }// @media end
 

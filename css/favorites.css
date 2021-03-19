@@ -170,7 +170,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 7px;
+  margin-top: 5px;
 }
 
 main .favorite {
@@ -184,11 +184,10 @@ main .favorite {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
 }
 
-main .favorite img {
-  margin-top: 5px;
+main .favorite .heart-icon {
+  width: 28px;
 }
 
 main .favorite h2 {
@@ -197,23 +196,29 @@ main .favorite h2 {
   font-weight: bold;
   color: #572EE5;
   line-height: 40px;
-  margin-top: 7px;
+  margin-top: 5px;
 }
 
 main .favorite .grid-favorites {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 156px 156px;
-      grid-template-columns: 156px 156px;
-  -ms-grid-rows: 120px 120px 120px 120px 120px 120px;
-      grid-template-rows: 120px 120px 120px 120px 120px 120px;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
   -webkit-column-gap: 21px;
           column-gap: 21px;
   row-gap: 25px;
-  margin-top: 46px;
+  margin: 46px 21px 0 21px;
 }
 
-main .favorite a {
+main .favorite .grid-favorites .img-grid-favorites {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+}
+
+main .favorite .btn-mas {
   border: 1px solid #572EE5;
   border-radius: 25px;
   margin-top: 78px;
@@ -238,7 +243,7 @@ main .trending-gifos {
           align-items: center;
   width: 100%;
   height: 430px;
-  margin-top: 78px;
+  margin-top: 94px;
   background: #F3F5F8;
 }
 
@@ -392,6 +397,55 @@ footer p {
     display: block;
     margin-left: 53px;
     margin-right: 10.83vw;
+  }
+  main {
+    margin-top: 11px;
+  }
+  main .favorite {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+  main .favorite h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: #572EE5;
+    line-height: 40px;
+    margin-top: 8px;
+  }
+  main .favorite .grid-favorites {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    -webkit-column-gap: 29px;
+            column-gap: 29px;
+    row-gap: 25px;
+    margin: 36px 10.76vw 0 10.76vw;
+  }
+  main .favorite .grid-favorites .img-grid-favorites {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+  }
+  main .favorite .btn-mas {
+    border: 1px solid #572EE5;
+    border-radius: 25px;
+    margin-top: 78px;
+    padding: 18px 32.5px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    color: #572EE5;
   }
   main .trending-gifos {
     height: 640px;
@@ -548,4 +602,4 @@ footer p {
     margin-right: 10.97vw;
   }
 }
-/*# sourceMappingURL=favorite.css.map */
+/*# sourceMappingURL=favorites.css.map */
