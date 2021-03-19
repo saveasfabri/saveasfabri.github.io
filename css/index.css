@@ -268,6 +268,7 @@ main .trending-gifos {
   height: 430px;
   margin-top: 45px;
   background: #F3F5F8;
+  overflow: hidden;
 }
 
 main .trending-gifos h2 {
@@ -289,7 +290,6 @@ main .trending-gifos p {
 
 main .trending-gifos .carousel {
   width: 100%;
-  overflow: hidden;
   margin-left: 22px;
   margin-top: 32px;
 }
@@ -301,6 +301,7 @@ main .trending-gifos .carousel .left-arrow {
 main .trending-gifos .carousel .grid {
   display: -ms-grid;
   display: grid;
+  width: 100%;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
   -ms-grid-rows: 1fr;

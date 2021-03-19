@@ -245,6 +245,7 @@ main .trending-gifos {
   height: 430px;
   margin-top: 94px;
   background: #F3F5F8;
+  overflow: hidden;
 }
 
 main .trending-gifos h2 {

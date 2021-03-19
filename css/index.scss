@@ -78,7 +78,7 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 7px;
+    margin-top: 7px;    
     .main-title-img{
         display: flex;
         flex-direction: column;
@@ -146,6 +146,7 @@ main{
         height: 430px;
         margin-top: 45px;
         background: #F3F5F8;
+        overflow: hidden;
         h2{            
             @include montserrat;
             font-size: 20px;
@@ -162,8 +163,7 @@ main{
             margin-top: 7px;
         }
         .carousel{
-            width: 100%;
-            overflow: hidden;
+            width: 100%;            
             margin-left: 22px;
             margin-top: 32px;
             .left-arrow{
@@ -171,9 +171,10 @@ main{
             }
             .grid{                
                 display: grid;
+                width: 100%;
                 grid-template-columns: 1fr 1fr 1fr;
                 grid-template-rows: 1fr;
-                gap: 5.86vw;
+                gap: 5.86vw;                
                 .img-carousel{
                     .gif-pet{
                         width: 243px;
