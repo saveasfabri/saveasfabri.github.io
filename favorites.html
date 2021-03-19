@@ -32,37 +32,86 @@
         <section class="favorite">
             <img src="./asset/icon-favoritos.svg" alt="">
             <h2>Favoritos</h2>
-            <div class="grid">
-                <img src="./images/pet (1).jpg" alt="gif de ejemplo">
-                <img src="./images/pet (2).jpg" alt="gif de ejemplo">
-                <img src="./images/pet (3).jpg" alt="gif de ejemplo">
-                <img src="./images/pet (4).jpg" alt="gif de ejemplo">
-                <img src="./images/pet (5).jpg" alt="gif de ejemplo">
-                <img src="./images/pet (6).jpg" alt="gif de ejemplo">
-                <img src="./images/pet (7).jpg" alt="gif de ejemplo">
-                <img src="./images/pet (8).jpg" alt="gif de ejemplo">
-                <img src="./images/pet (9).jpg" alt="gif de ejemplo">
-                <img src="./images/pet (10).jpg" alt="gif de ejemplo">
-                <img src="./images/pet (11).jpg" alt="gif de ejemplo">
-                <img src="./images/pet (12).jpg" alt="gif de ejemplo">                
+            <div class="grid-favorites">
+                <img src="./images/pet_small(1).jpg" >
+                <img src="./images/pet_small(2).jpg" >
+                <img src="./images/pet_small(3).jpg" >
+                <img src="./images/pet_small(4).jpg" >
+                <img src="./images/pet_small(5).jpg" >
+                <img src="./images/pet_small(6).jpg" >
+                <img src="./images/pet_small(7).jpg" >
+                <img src="./images/pet_small(8).jpg" >
+                <img src="./images/pet_small(9).jpg" >
+                <img src="./images/pet_small(10).jpg" >
+                <img src="./images/pet_small(11).jpg" >
+                <img src="./images/pet_small(12).jpg" >                
             </div>
             <a href="">VER MAS</a>
         </section>
-        <section class="gif">
+        <section class="trending-gifos">
             <h2>Trending GIFOS</h2>
             <p>Mira los últimos GIFOS de nuestra comunidad.</p>
-            <iframe src="https://giphy.com/embed/cuPm4p4pClZVC" allowFullScreen></iframe>
+            <div class="carousel">
+                <img class="left-arrow" src="./asset/button-slider-left.svg" alt="">
+                <div class="grid">                    
+                    <div class="img-carousel">
+                        <img class="gif-pet" src="./images/per_medium(1).jpg" alt="Imagen ejemplo mascota">
+                        <div class="transition">
+                            <div class="icon-content">
+                                <img class="icon" src="./asset/icon-fav.svg" alt="Icono Favoritos">
+                                <img class="icon" src="./asset/icon-download.svg" alt="Icono Descargar">
+                                <img class="icon" src="./asset/icon-max-normal.svg" alt="Icono ampliar imagen">
+                            </div>                            
+                            <div class="text-content">
+                                <p class="user">User</p>
+                                <p class="titulo">Titulo GIFO</p>
+                            </div>                            
+                        </div>                            
+                    </div>
+                    <div class="img-carousel">
+                        <img class="gif-pet" src="./images/per_medium(2).jpg" alt="Imagen ejemplo mascota">
+                        <div class="transition">
+                            <div class="icon-content">
+                                <img class="icon" src="./asset/icon-fav.svg" alt="Icono Favoritos">
+                                <img class="icon" src="./asset/icon-download.svg" alt="Icono Descargar">
+                                <img class="icon" src="./asset/icon-max-normal.svg" alt="Icono ampliar imagen">
+                            </div>                            
+                            <div class="text-content">
+                                <p class="user">User</p>
+                                <p class="titulo">Titulo GIFO</p>
+                            </div>                            
+                        </div>                            
+                    </div>
+                    <div class="img-carousel">
+                        <img class="gif-pet" src="./images/per_medium(3).jpg" alt="Imagen ejemplo mascota">
+                        <div class="transition">
+                            <div class="icon-content">
+                                <img class="icon" src="./asset/icon-fav.svg" alt="Icono Favoritos">
+                                <img class="icon" src="./asset/icon-download.svg" alt="Icono Descargar">
+                                <img class="icon" src="./asset/icon-max-normal.svg" alt="Icono ampliar imagen">
+                            </div>                            
+                            <div class="text-content">
+                                <p class="user">User</p>
+                                <p class="titulo">Titulo GIFO</p>
+                            </div>                           
+                        </div>                            
+                    </div>                    
+                </div>
+                <img class="right-arrow" src="./asset/Button-Slider-right.svg" alt="">
+            </div>                           
         </section>       
     </main>
     <footer>
-        <p class="compartir">Compartir en:</p>
-        <div class="social">
-            <a href=""><img src="./asset/icon_facebook.svg" alt="icono de facebook"></a>
-            <a href=""><img src="./asset/icon-twitter.svg" alt="icono de twitter"></a>
-            <a href=""><img src="./asset/icon_instagram.svg" alt="icono de instagram"></a>            
+        <div class="compartir-social">
+            <p class="compartir">Compartir en:</p>
+            <div class="social">
+                <a href="#" target="_blank" ><img id="face-icon" src="./asset/icon_facebook.svg" alt="icono de facebook"></a>
+                <a href="#" target="_blank"><img id="twit-icon" src="./asset/icon-twitter.svg" alt="icono de twitter" ></a>
+                <a href="#" target="_blank"><img id="insta-icon" src="./asset/icon_instagram.svg" alt="icono de instagram"></a>            
+            </div>        
         </div>
-        <p>© GIFOS 2021 All Rights Reserved.</p>        
+        <p>© GIFOS 2021 All Rights Reserved.</p>                
     </footer>
-
+    <script src="./js/favorite.js"></script>
 </body>
 </html>

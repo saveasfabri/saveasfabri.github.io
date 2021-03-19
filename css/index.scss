@@ -187,8 +187,7 @@ main{
             .right-arrow{
                 display: none;
             }
-        }
-        
+        }// .carousel end
     }// trending-gif end      
 }//main end
 footer{
@@ -397,9 +396,9 @@ footer{
                                     font-size: 0px;;
                                 }
                             }                                                        
-                        }
-                    }
-                }
+                        }// .transition end
+                    }// .img-carousel end
+                }// .grid end
                 .right-arrow{
                     display: block;
                     margin-right: 7vw;
@@ -430,5 +429,5 @@ footer{
             margin-top: 0;
             margin-right: 10.97vw;
         }
-    }
+    }// footer end
 }// @media end
