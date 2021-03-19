@@ -63,15 +63,15 @@ header{
             border: 1px solid #FFFFFF;
             margin-top: 10px;
             }            
-        }// ul DESKTOP end
+        }// ul MOBILE END
         .btn-more{
             display:none;
         }
-    }// .site-nav DESKTOP end
+    }// .site-nav MOBILE END
     .site-nav-open{        //no esta en html, está creada por JS
         height: 100vh;
     } 
-}// header DESKTOP end
+}// header MOBILE END
 main{
     display: flex;
     flex-direction: column;
@@ -117,7 +117,7 @@ main{
             font-weight: bold;
             color: #572EE5 ;
         }
-    }// .favorite DESKTOP end
+    }// .favorite MOBILE END
     .trending-gifos{
         display: flex;
         flex-direction: column;
@@ -126,7 +126,6 @@ main{
         height: 430px;
         margin-top: 94px;
         background: #F3F5F8;
-        
         overflow: hidden;
         h2{            
             @include montserrat;
@@ -145,7 +144,6 @@ main{
         }
         .carousel{
             width: 100%;
-            overflow: hidden;
             margin-left: 22px;
             margin-top: 32px;
             .left-arrow{
@@ -162,16 +160,21 @@ main{
                         height: 187px;
                     }
                     .transition{
-                        display: none;
+                        .icon-content{
+                            display: none;
+                        }
+                        .text-content{
+                            display: none;
+                        }
                     }
                 }
             }
             .right-arrow{
                 display: none;
             }
-        }// .carousel DESKTOP end 
-    }// trending-gif DESKTOP end       
-}//main DESKTOP end
+        }// .carousel MOBILE END 
+    }// trending-gif MOBILE END       
+}//main MOBILE END
 footer{
     width: 100%;
     height: 196px;
@@ -197,7 +200,7 @@ footer{
         margin-top: 47.8px;
         @include roboto;
     }
-}//footer DESKTOP end
+}//footer MOBILE END
 
 /************** MEDIA QUERY 700px *************************************************/
 
@@ -236,7 +239,7 @@ footer{
                         font-size: 13px;
                         font-weight: bold;
                         line-height: 16px;
-                        text-transform: uppercase;                        
+                        text-transform: uppercase; 
                     }
                 }
                 .separator-line{
@@ -248,8 +251,8 @@ footer{
                 margin-left: 53px;
                 margin-right: 10.83vw;
             }            
-        }//.site-nav MOBILE end             
-    }// header MOBILE end
+        }//.site-nav DESKTOP END             
+    }// header DESKTOP END
     main{
         margin-top: 11px;
         .favorite{
@@ -356,7 +359,7 @@ footer{
                                         font-weight: 600;
                                         transition: .3s ease .1s;
                                     }
-                                }                                                               
+                                }
                             }
                         }
                         .gif-pet{
@@ -373,27 +376,29 @@ footer{
                             opacity: 0.7;
                             z-index: 2;
                             .icon-content{
+                                display: block;
                                 .icon{
                                     height: 0;
                                 }
                             }
                             .text-content{
+                                display: block;
                                 .user{
                                     font-size: 0px;
                                 }
                                 .titulo{
                                     font-size: 0px;;
                                 }
-                            }                                                        
-                        }// .transition MOBILE end
-                    }// .img-carousel MOBILE end
-                }// .grid MOBILE end
+                            }
+                        }// .transition DESKTOP END
+                    }// .img-carousel DESKTOP END
+                }// .grid DESKTOP END
                 .right-arrow{
                     display: block;
                     margin-right: 7vw;
                 }                
-            } // .carousel MOBILE end        
-        }// .trending-gifos MOBILE end
+            } // .carousel DESKTOP END        
+        }// .trending-gifos DESKTOP END
     }     
     footer{
         display: flex;
@@ -418,6 +423,6 @@ footer{
             margin-top: 0;
             margin-right: 10.97vw;
         }
-    }// footer MOBILE end
+    }// footer DESKTOP END
 }// @media end
 

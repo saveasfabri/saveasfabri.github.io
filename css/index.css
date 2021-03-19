@@ -314,7 +314,11 @@ main .trending-gifos .carousel .grid .img-carousel .gif-pet {
   height: 187px;
 }
 
-main .trending-gifos .carousel .grid .img-carousel .transition {
+main .trending-gifos .carousel .grid .img-carousel .transition .icon-content {
+  display: none;
+}
+
+main .trending-gifos .carousel .grid .img-carousel .transition .text-content {
   display: none;
 }
 
@@ -557,8 +561,14 @@ footer p {
     opacity: 0.7;
     z-index: 2;
   }
+  main .trending-gifos .carousel .grid .img-carousel .transition .icon-content {
+    display: block;
+  }
   main .trending-gifos .carousel .grid .img-carousel .transition .icon-content .icon {
     height: 0;
+  }
+  main .trending-gifos .carousel .grid .img-carousel .transition .text-content {
+    display: block;
   }
   main .trending-gifos .carousel .grid .img-carousel .transition .text-content .user {
     font-size: 0px;

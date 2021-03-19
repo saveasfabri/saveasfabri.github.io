@@ -68,11 +68,11 @@ header{
         .btn-more{
             display:none;
         }
-    }// .site-nav end  
+    }// .site-nav MOBILE END  
     .site-nav-open{        //no esta en html, está creada por JS
         height: 100vh;
     } 
-}// header end
+}// header MOBILE END
 main{
     display: flex;
     flex-direction: column;
@@ -113,7 +113,7 @@ main{
                 background-repeat: no-repeat;
             }
         }        
-    }// main-title-img end
+    }// main-title-img MOBILE END
     .section-trending{
         width: 100%;
         display: flex;
@@ -181,16 +181,21 @@ main{
                         height: 187px;
                     }
                     .transition{
-                        display: none;
+                        .icon-content{
+                            display: none;
+                        }
+                        .text-content{
+                            display: none;
+                        }
                     }
                 }
             }
             .right-arrow{
                 display: none;
             }
-        }// .carousel end
-    }// trending-gif end      
-}//main end
+        }// .carousel MOBILE END
+    }// trending-gif MOBILE END      
+}//main MOBILE END
 footer{
     width: 100%;
     height: 196px;
@@ -216,7 +221,7 @@ footer{
         margin-top: 47.8px;
         @include roboto;
     }
-}//footer end
+}//footer MOBILE END
 
 /************** MEDIA QUERY 700px *************************************************/
 
@@ -267,8 +272,8 @@ footer{
                 margin-left: 53px;
                 margin-right: 10.83vw;
             }            
-        }//.site-nav end               
-    }// header end
+        }//.site-nav DESKTOP END               
+    }// header DESKTOP END
     main{
         margin-top: 76px;
         .main-title-img{
@@ -289,7 +294,7 @@ footer{
                     background-position: 511px 15px;
                 }
             }    
-        }// .main-title-img end
+        }// .main-title-img DESKTOP END
         .section-trending{
             margin-top: 73px;
             .p-trending{                
@@ -385,28 +390,30 @@ footer{
                             opacity: 0.7;
                             z-index: 2;
                             .icon-content{
+                                display: block;
                                 .icon{
                                     height: 0;
                                 }
                             }
                             .text-content{
+                                display: block;
                                 .user{
                                     font-size: 0px;
                                 }
                                 .titulo{
                                     font-size: 0px;;
                                 }
-                            }                                                        
-                        }// .transition end
-                    }// .img-carousel end
-                }// .grid end
+                            }                        
+                        }// .transition DESKTOP END
+                    }// .img-carousel DESKTOP END
+                }// .grid DESKTOP END
                 .right-arrow{
                     display: block;
                     margin-right: 7vw;
                 }                
-            } // .carousel end           
-        }// .trending-gifos end   
-    }// main end
+            } // .carousel DESKTOP END           
+        }// .trending-gifos DESKTOP END   
+    }// main DESKTOP END
     footer{
         display: flex;
         flex-direction: row;
@@ -430,5 +437,5 @@ footer{
             margin-top: 0;
             margin-right: 10.97vw;
         }
-    }// footer end
-}// @media end
+    }// footer DESKTOP END
+}// @media DESKTOP END
