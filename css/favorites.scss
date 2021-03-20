@@ -100,7 +100,7 @@ main{
             column-gap: 21px;
             row-gap: 25px;
             margin: 46px 21px 0 21px;
-            .img-grid-favorites{
+            .gif-grid-favorites{
                 width: 100%;
                 height: 100%;
                 max-width: 100%;
@@ -154,8 +154,8 @@ main{
                 grid-template-columns: 1fr 1fr 1fr;
                 grid-template-rows: 1fr;
                 gap: 5.86vw;
-                .img-carousel{
-                    .gif-pet{
+                .gif-grid{
+                    .gif{
                         width: 243px;
                         height: 187px;
                     }
@@ -274,7 +274,7 @@ footer{
                 column-gap: 29px;
                 row-gap: 25px;
                 margin: 36px 10.76vw 0 10.76vw;
-                .img-grid-favorites{
+                .gif-grid-favorites{
                     width: 100%;
                     height: 100%;
                     max-width: 100%;
@@ -319,7 +319,7 @@ footer{
                     grid-template-columns: 1fr 1fr 1fr;
                     gap: 2vw;
                     margin: 0 1.60vw 0 1.60vw;
-                    .img-carousel{
+                    .gif-grid{
                         position: relative;
                         &:hover{
                             .transition{
@@ -362,7 +362,7 @@ footer{
                                 }
                             }
                         }
-                        .gif-pet{
+                        .gif{
                             width: 100%;
                             height: 100%;
                             max-width: 100%;
