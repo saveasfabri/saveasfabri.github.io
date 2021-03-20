@@ -174,6 +174,7 @@ main {
 }
 
 main .favorite {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -200,22 +201,27 @@ main .favorite h2 {
 }
 
 main .favorite .grid-favorites {
+  margin: 46px 21px 0 21px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-  -webkit-column-gap: 21px;
-          column-gap: 21px;
-  row-gap: 25px;
-  margin: 46px 21px 0 21px;
+  gap: 5.86vw;
 }
 
-main .favorite .grid-favorites .gif-grid-favorites {
+main .favorite .grid-favorites .gif-transition .gif {
   width: 100%;
   height: 100%;
-  max-width: 100%;
+}
+
+main .favorite .grid-favorites .gif-transition .transition .icon-content {
+  display: none;
+}
+
+main .favorite .grid-favorites .gif-transition .transition .text-content {
+  display: none;
 }
 
 main .favorite .btn-mas {
@@ -434,10 +440,90 @@ footer p {
     row-gap: 25px;
     margin: 36px 10.76vw 0 10.76vw;
   }
-  main .favorite .grid-favorites .gif-grid-favorites {
+  main .favorite .grid-favorites .gif-transition {
+    position: relative;
+  }
+  main .favorite .grid-favorites .gif-transition:hover .transition {
+    height: 100%;
+    -webkit-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  main .favorite .grid-favorites .gif-transition:hover .transition .icon-content {
+    margin-top: 10px;
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  main .favorite .grid-favorites .gif-transition:hover .transition .icon-content .icon {
+    height: 32px;
+    margin-right: 10px;
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+  }
+  main .favorite .grid-favorites .gif-transition:hover .transition .text-content .user {
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: none;
+    margin-left: 18px;
+    text-align: left;
+    -webkit-transition: .3s ease .1s;
+    transition: .3s ease .1s;
+  }
+  main .favorite .grid-favorites .gif-transition:hover .transition .text-content .titulo {
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    margin: 6px 0 51px 1.25vw;
+    text-align: left;
+    font-weight: 600;
+    -webkit-transition: .3s ease .1s;
+    transition: .3s ease .1s;
+  }
+  main .favorite .grid-favorites .gif-transition .gif {
     width: 100%;
     height: 100%;
     max-width: 100%;
+  }
+  main .favorite .grid-favorites .gif-transition .transition {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 0;
+    background: #572EE5;
+    opacity: 0.7;
+    z-index: 2;
+  }
+  main .favorite .grid-favorites .gif-transition .transition .icon-content {
+    display: block;
+  }
+  main .favorite .grid-favorites .gif-transition .transition .icon-content .icon {
+    height: 0;
+  }
+  main .favorite .grid-favorites .gif-transition .transition .text-content {
+    display: block;
+  }
+  main .favorite .grid-favorites .gif-transition .transition .text-content .user {
+    font-size: 0px;
+  }
+  main .favorite .grid-favorites .gif-transition .transition .text-content .titulo {
+    font-size: 0px;
   }
   main .favorite .btn-mas {
     border: 1px solid #572EE5;
