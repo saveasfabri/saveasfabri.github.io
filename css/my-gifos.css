@@ -79,7 +79,7 @@ header {
           align-items: center;
   width: 100%;
   height: 95px;
-  border-top: 5px solid #572EE5;
+  border-top: 5px solid #000000;
   position: relative;
 }
 
@@ -90,7 +90,6 @@ header :after {
 }
 
 header .gifos-logo {
-  text-decoration: none;
   margin-left: 22px;
 }
 
@@ -171,52 +170,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 7px;
-}
-
-main .main-title-img {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-main .main-title-img .main-title {
-  font-size: 25px;
-  color: #572EE5;
-  margin: 0 45px 0 45px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  text-align: center;
-  line-height: 33px;
-}
-
-main .main-title-img .main-title span {
-  color: #50E3C2;
-}
-
-main .main-title-img .main-img {
-  margin-top: 31px;
-  width: 273px;
-}
-
-main .main-title-img .search input {
-  width: 334px;
-  height: 50px;
-  border: 1px solid #572EE5;
-  border-radius: 50px;
-  font-size: 16px;
-  padding: 15px 64px 13px 55px;
-  font-family: 'Roboto', sans-serif;
-  background-image: url(../asset/icon-search.svg);
-  background-position: 294px 15px;
-  background-repeat: no-repeat;
+  margin-top: 5px;
 }
 
 main .favorite {
@@ -250,8 +204,8 @@ main .favorite .grid-favorites {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
   -webkit-column-gap: 21px;
           column-gap: 21px;
   row-gap: 25px;
@@ -276,40 +230,6 @@ main .favorite .btn-mas {
   color: #572EE5;
 }
 
-main .section-trending {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 31px;
-}
-
-main .section-trending .p-trending {
-  text-align: center;
-  color: #572EE5;
-  font-weight: 700;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
-}
-
-main .section-trending p {
-  text-align: center;
-  width: 225px;
-  margin-top: 2px;
-  font-size: 14px;
-  font-weight: 500;
-  color: #572EE5;
-  font-family: 'Montserrat', sans-serif;
-  line-height: 25px;
-}
-
 main .trending-gifos {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -323,7 +243,7 @@ main .trending-gifos {
           align-items: center;
   width: 100%;
   height: 430px;
-  margin-top: 45px;
+  margin-top: 94px;
   background: #F3F5F8;
   overflow: hidden;
 }
@@ -358,7 +278,6 @@ main .trending-gifos .carousel .left-arrow {
 main .trending-gifos .carousel .grid {
   display: -ms-grid;
   display: grid;
-  width: 100%;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
   -ms-grid-rows: 1fr;
@@ -484,22 +403,7 @@ footer p {
     margin-right: 10.83vw;
   }
   main {
-    margin-top: 76px;
-  }
-  main .main-title-img .main-title {
-    width: 630px;
-    margin: 0;
-    font-size: 35px;
-    line-height: 50px;
-  }
-  main .main-title-img .main-img {
-    width: 399px;
-    height: 190px;
-  }
-  main .main-title-img .search input {
-    width: 551px;
-    height: 50px;
-    background-position: 511px 15px;
+    margin-top: 11px;
   }
   main .favorite {
     -webkit-box-align: center;
@@ -523,8 +427,8 @@ footer p {
     display: grid;
     -ms-grid-columns: 1fr 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-    -ms-grid-rows: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
     -webkit-column-gap: 29px;
             column-gap: 29px;
     row-gap: 25px;
@@ -547,21 +451,9 @@ footer p {
     font-weight: bold;
     color: #572EE5;
   }
-  main .section-trending {
-    margin-top: 73px;
-  }
-  main .section-trending .p-trending {
-    font-size: 18px;
-  }
-  main .section-trending p {
-    width: auto;
-    font-size: 16px;
-    font-weight: 500;
-    margin-top: 7px;
-  }
   main .trending-gifos {
     height: 640px;
-    margin-top: 95px;
+    margin-top: 79px;
   }
   main .trending-gifos h2 {
     font-size: 25px;
@@ -720,4 +612,4 @@ footer p {
     margin-right: 10.97vw;
   }
 }
-/*# sourceMappingURL=search.css.map */
+/*# sourceMappingURL=my-gifos.css.map */
