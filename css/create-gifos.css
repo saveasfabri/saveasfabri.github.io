@@ -343,6 +343,14 @@ footer p {
     line-height: 16px;
     text-transform: uppercase;
   }
+  header .site-nav ul li .item-menu:hover {
+    -webkit-text-decoration: underline 2px #5ED7C6;
+            text-decoration: underline 2px #5ED7C6;
+  }
+  header .site-nav ul li .item-menu:active {
+    color: #9CAFC3;
+    text-decoration: none;
+  }
   header .site-nav ul .separator-line {
     display: none;
   }

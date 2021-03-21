@@ -300,7 +300,14 @@ footer{
                         font-size: 13px;
                         font-weight: bold;
                         line-height: 16px;
-                        text-transform: uppercase;                        
+                        text-transform: uppercase;
+                        &:hover{
+                            text-decoration: underline 2px #5ED7C6;; 
+                        }
+                        &:active{
+                            color: #9CAFC3;
+                            text-decoration: none;
+                        }                        
                     }
                 }
                 .separator-line{

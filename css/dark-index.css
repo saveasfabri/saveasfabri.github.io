@@ -105,7 +105,7 @@ header .site-nav {
   top: 100%;
   right: 0;
   position: absolute;
-  background-color: #572EE5;
+  background-color: #000000;
   opacity: 0.9;
   width: 100%;
   height: 0;
@@ -319,7 +319,11 @@ main .trending-gifos .carousel .grid .gif-grid .gif {
   height: 187px;
 }
 
-main .trending-gifos .carousel .grid .gif-grid .transition {
+main .trending-gifos .carousel .grid .gif-grid .transition .icon-content {
+  display: none;
+}
+
+main .trending-gifos .carousel .grid .gif-grid .transition .text-content {
   display: none;
 }
 
@@ -422,6 +426,14 @@ footer p {
     font-weight: bold;
     line-height: 16px;
     text-transform: uppercase;
+  }
+  header .site-nav ul li .item-menu:hover {
+    -webkit-text-decoration: underline 2px #5ED7C6;
+            text-decoration: underline 2px #5ED7C6;
+  }
+  header .site-nav ul li .item-menu:active {
+    color: #9CAFC3;
+    text-decoration: none;
   }
   header .site-nav ul .separator-line {
     display: none;
@@ -566,8 +578,14 @@ footer p {
     opacity: 0.7;
     z-index: 2;
   }
+  main .trending-gifos .carousel .grid .gif-grid .transition .icon-content {
+    display: block;
+  }
   main .trending-gifos .carousel .grid .gif-grid .transition .icon-content .icon {
     height: 0;
+  }
+  main .trending-gifos .carousel .grid .gif-grid .transition .text-content {
+    display: block;
   }
   main .trending-gifos .carousel .grid .gif-grid .transition .text-content .user {
     font-size: 0px;

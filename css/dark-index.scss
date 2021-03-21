@@ -34,7 +34,7 @@ header{
         top: 100%; //toma que empieza despues del 100% del hieght del padre(Header)
         right: 0;
         position: absolute;
-        background-color: #572EE5;
+        background-color: #000000;
         opacity: 0.9;
         width: 100%;
         height: 0;
@@ -66,15 +66,15 @@ header{
             border: 1px solid #FFFFFF;
             margin-top: 10px;
             }            
-        }// ul end
+        }// ul  MOBILE END
         .btn-more{
             display:none;
         }
-    }// .site-nav end  
+    }// .site-nav  MOBILE END
     .site-nav-open{        //no esta en html, está creada por JS
         height: 100vh;
     } 
-}// header end
+}// header  MOBILE END
 main{
     display: flex;
     flex-direction: column;
@@ -114,8 +114,8 @@ main{
                 background-repeat: no-repeat;
                 background-color: #37383C;
             }
-        }// .search end       
-    }// main-title-img end
+        }// .search  MOBILE END    
+    }// main-title-img  MOBILE END
     .section-trending{
         width: 100%;
         display: flex;
@@ -180,16 +180,21 @@ main{
                         height: 187px;
                     }
                     .transition{
-                        display: none;
+                        .icon-content{
+                            display: none;
+                        }
+                        .text-content{
+                            display: none;
+                        }
                     }
                 }
             }
             .right-arrow{
                 display: none;
             }
-        }// .carousel end        
-    }// .trending-gifos end       
-}//main end
+        }// .carousel  MOBILE END
+    }// .trending-gifos  MOBILE END   
+}//main  MOBILE END
 footer{
     width: 100%;
     height: 196px;
@@ -224,8 +229,8 @@ footer{
     header{
         justify-content: space-between;
         height: 90px;
-        .gifos-logo{ 
-            width: 59px;          
+        .gifos-logo{
+            width: 59px;       
             margin-left: 10.83vw;          
         }        
         .menu-toggle{
@@ -255,7 +260,14 @@ footer{
                         font-size: 13px;
                         font-weight: bold;
                         line-height: 16px;
-                        text-transform: uppercase;                        
+                        text-transform: uppercase;
+                        &:hover{
+                            text-decoration: underline 2px #5ED7C6;; 
+                        }
+                        &:active{
+                            color: #9CAFC3;
+                            text-decoration: none;
+                        }                        
                     }
                 }
                 .separator-line{
@@ -385,18 +397,20 @@ footer{
                             opacity: 0.7;
                             z-index: 2;
                             .icon-content{
+                                display: block;
                                 .icon{
                                     height: 0;
                                 }
                             }
                             .text-content{
+                                display: block;
                                 .user{
                                     font-size: 0px;
                                 }
                                 .titulo{
                                     font-size: 0px;;
                                 }
-                            }                                                        
+                            }                                                       
                         }
                     }// .img-carousel end
                 }// .grid end
