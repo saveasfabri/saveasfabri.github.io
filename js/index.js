@@ -1,6 +1,18 @@
+//********************* STICKY MENU **************************/
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
 
 //********************* BURGUER MENU **************************/
-
 function menuBurger(){
     const desplegarMenu = document.getElementById ('site-nav');
     desplegarMenu.classList.toggle('site-nav-open');
@@ -11,10 +23,7 @@ function menuBurger(){
             cambiarBurgerClose.src = "./asset/close.svg";
     } 
 };
-
-
 //************** HOVER ICONOS REDES SOCIALES *******************/
-
 window.onload = function(){
     let cambiarIconoHoverFace = document.getElementById("face-icon");
     cambiarIconoHoverFace.addEventListener('mouseover',cambiarIconoFinal);
@@ -25,16 +34,5 @@ window.onload = function(){
     }   
     function cambiarIconoInicial(){
         this.setAttribute('src',"./asset/icon_facebook.svg");
-    }
-
-    let cambiarIconoHoverTwit = document.getElementById("twit-icon");
-    cambiarIconoHoverTwit.addEventListener('mouseover',cambiarIconoFinal);
-    cambiarIconoHoverTwit.addEventListener('mouseout',cambiarIconoInicial);
-   
-    function cambiarIconoFinal(){
-        this.setAttribute('src','./asset/icon-twitter-hover.svg');   
-    }   
-    function cambiarIconoInicial(){
-        this.setAttribute('src',"./asset/icon_twitter.svg");
-    }
+    }    
 } 

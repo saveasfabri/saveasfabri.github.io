@@ -226,6 +226,10 @@ footer{
 
 @media screen and (min-width: 700px){
     header{
+        position: sticky;
+        z-index: 100;
+        top: 0;
+        background-color: #ffffff;        
         justify-content: space-between;
         height: 90px;
         .gifos-logo{ 

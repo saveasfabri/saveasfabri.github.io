@@ -80,13 +80,11 @@ header {
   width: 100%;
   height: 90px;
   border-top: 5px solid #572EE5;
-  position: relative;
-}
-
-header :after {
-  content: '';
-  clear: both;
-  display: block;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  background-color: #ffffff;
 }
 
 header .gifos-logo {

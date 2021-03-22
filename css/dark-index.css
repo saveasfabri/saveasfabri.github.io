@@ -377,6 +377,11 @@ footer p {
 /************** MEDIA QUERY 700px ************************************************/
 @media screen and (min-width: 700px) {
   header {
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 100;
+    top: 0;
+    background-color: #37383C;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;

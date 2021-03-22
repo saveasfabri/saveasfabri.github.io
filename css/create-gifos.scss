@@ -13,12 +13,10 @@ header{
     width: 100%;
     height: 90px;
     border-top: 5px solid #572EE5 ;
-    position: relative; // para que tome desde donde comienza .site-nav (top 100%)
-    :after{
-        content: '';
-        clear: both;
-        display: block;
-    }
+    position: sticky;
+    z-index: 100;
+    top: 0;
+    background-color: #ffffff;    
     .gifos-logo{
         width: 59px;          
             margin-left: 10.83vw;
