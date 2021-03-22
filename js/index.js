@@ -16,14 +16,25 @@ function menuBurger(){
 //************** HOVER ICONOS REDES SOCIALES *******************/
 
 window.onload = function(){
-    let cambiarIconoHover = document.getElementById("face-icon");
-    cambiarIconoHover.addEventListener('mouseover',cambiarIconoFinal);
-    cambiarIconoHover.addEventListener('mouseout',cambiarIconoInicial);
+    let cambiarIconoHoverFace = document.getElementById("face-icon");
+    cambiarIconoHoverFace.addEventListener('mouseover',cambiarIconoFinal);
+    cambiarIconoHoverFace.addEventListener('mouseout',cambiarIconoInicial);
    
     function cambiarIconoFinal(){
         this.setAttribute('src','./asset/icon_facebook_hover.svg');   
     }   
     function cambiarIconoInicial(){
         this.setAttribute('src',"./asset/icon_facebook.svg");
+    }
+
+    let cambiarIconoHoverTwit = document.getElementById("twit-icon");
+    cambiarIconoHoverTwit.addEventListener('mouseover',cambiarIconoFinal);
+    cambiarIconoHoverTwit.addEventListener('mouseout',cambiarIconoInicial);
+   
+    function cambiarIconoFinal(){
+        this.setAttribute('src','./asset/icon-twitter-hover.svg');   
+    }   
+    function cambiarIconoInicial(){
+        this.setAttribute('src',"./asset/icon_twitter.svg");
     }
 } 

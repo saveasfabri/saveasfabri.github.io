@@ -78,7 +78,7 @@ header {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  height: 95px;
+  height: 90px;
   border-top: 5px solid #572EE5;
   position: relative;
 }
@@ -90,67 +90,62 @@ header :after {
 }
 
 header .gifos-logo {
-  text-decoration: none;
-  margin-left: 22px;
+  width: 59px;
+  margin-left: 10.83vw;
 }
 
-header .menu-toggle .burger {
-  margin-right: 26px;
+header .menu-toggle {
+  display: none;
 }
 
 header .site-nav {
-  top: 100%;
-  right: 0;
-  position: absolute;
-  background-color: #572EE5;
-  opacity: 0.9;
-  width: 100%;
-  height: 0;
-  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 header .site-nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   list-style: none;
 }
 
-header .site-nav ul:first-child {
-  margin-top: 32px;
-}
-
 header .site-nav ul li {
-  margin-top: 14px;
+  margin-left: 3.47vw;
 }
 
 header .site-nav ul .item-menu {
   text-align: center;
-  color: #ffffff;
+  color: #572EE5;
   font-family: 'Montserrat', sans-serif;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: bold;
-  line-height: 30px;
+  line-height: 16px;
   display: block;
   text-decoration: none;
 }
 
-header .site-nav ul .separator-line {
-  width: 41px;
-  opacity: 0.5;
-  border: 1px solid #FFFFFF;
-  margin-top: 10px;
+header .site-nav ul .item-menu:hover {
+  -webkit-text-decoration: underline 2px #5ED7C6;
+          text-decoration: underline 2px #5ED7C6;
+}
+
+header .site-nav ul .item-menu:active {
+  color: #9CAFC3;
+  text-decoration: none;
 }
 
 header .site-nav .btn-more {
-  display: none;
+  margin-left: 53px;
+  margin-right: 10.83vw;
 }
 
 header .site-nav-open {
@@ -373,76 +368,5 @@ footer p {
   font-weight: 500;
   font-family: 'Roboto', sans-serif;
   margin-right: 10.83vw;
-}
-
-/************** MEDIA QUERY 700px *************************************************/
-@media screen and (min-width: 700px) {
-  header {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    height: 90px;
-  }
-  header .gifos-logo {
-    width: 59px;
-    margin-left: 10.83vw;
-  }
-  header .menu-toggle {
-    display: none;
-  }
-  header .site-nav {
-    width: auto;
-    top: 0;
-    height: auto;
-    position: relative;
-    background-color: transparent;
-    opacity: 1;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  header .site-nav ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 100%;
-  }
-  header .site-nav ul:first-child {
-    margin-top: 0;
-  }
-  header .site-nav ul li {
-    margin-left: 2.77vw;
-    margin-top: 0;
-  }
-  header .site-nav ul li .item-menu {
-    color: #572EE5;
-    font-size: 13px;
-    font-weight: bold;
-    line-height: 16px;
-    text-transform: uppercase;
-  }
-  header .site-nav ul li .item-menu:hover {
-    -webkit-text-decoration: underline 2px #5ED7C6;
-            text-decoration: underline 2px #5ED7C6;
-  }
-  header .site-nav ul li .item-menu:active {
-    color: #9CAFC3;
-    text-decoration: none;
-  }
-  header .site-nav ul .separator-line {
-    display: none;
-  }
-  header .site-nav .btn-more {
-    display: block;
-    margin-left: 53px;
-    margin-right: 10.83vw;
-  }
 }
 /*# sourceMappingURL=create-gifos.css.map */
