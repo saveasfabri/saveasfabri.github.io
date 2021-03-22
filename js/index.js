@@ -1,16 +1,14 @@
 //********************* STICKY MENU **************************/
-window.onscroll = function() {myFunction()};
-
-var navbar = document.getElementById("navbar");
-var sticky = navbar.offsetTop;
-
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
-}
+$(function(){
+    $(document).scroll(function(){
+        if($(this).scrollTop() > 1) {
+            $('#header-search').attr('src','http://wowslider.com/images/data/images/slide1.png')
+        }
+        if($(this).scrollTop() < 1) {        
+            $('#header-search').attr('src','https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png');   
+        }
+    });
+});
 
 //********************* BURGUER MENU **************************/
 function menuBurger(){

@@ -89,8 +89,18 @@ header :after {
   display: block;
 }
 
-header .gifos-logo {
+header .container-logo-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .container-logo-search .gifos-logo {
   margin-left: 22px;
+}
+
+header .container-logo-search .header-search {
+  display: none;
 }
 
 header .menu-toggle .burger {
@@ -173,7 +183,7 @@ main {
   margin-top: 7px;
 }
 
-main .main-title-img {
+main .main-title-img-search {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -186,7 +196,7 @@ main .main-title-img {
           align-items: center;
 }
 
-main .main-title-img .main-title {
+main .main-title-img-search .main-title {
   font-size: 25px;
   color: #572EE5;
   margin: 0 45px 0 45px;
@@ -196,16 +206,16 @@ main .main-title-img .main-title {
   line-height: 33px;
 }
 
-main .main-title-img .main-title span {
+main .main-title-img-search .main-title span {
   color: #50E3C2;
 }
 
-main .main-title-img .main-img {
+main .main-title-img-search .main-img {
   margin-top: 31px;
   width: 273px;
 }
 
-main .main-title-img .search input {
+main .main-title-img-search .main-search {
   width: 334px;
   height: 50px;
   border: 1px solid #572EE5;
@@ -216,6 +226,7 @@ main .main-title-img .search input {
   background-image: url(../asset/icon-search.svg);
   background-position: 294px 15px;
   background-repeat: no-repeat;
+  outline: none;
 }
 
 main .section-trending {
@@ -377,9 +388,24 @@ footer p {
             justify-content: space-between;
     height: 90px;
   }
-  header .gifos-logo {
+  header .container-logo-search .gifos-logo {
     width: 59px;
     margin-left: 10.83vw;
+    margin-right: 8.26vw;
+  }
+  header .container-logo-search .header-search {
+    display: block;
+    width: 23.19vw;
+    height: 50px;
+    border: 1px solid #572EE5;
+    border-radius: 50px;
+    font-size: calc(.2em + 1vw);
+    padding: 15px 4.44vw 13px 3.82vw;
+    font-family: 'Roboto', sans-serif;
+    background-image: url(../asset/icon-search.svg);
+    background-position: right 5% top 50%;
+    background-repeat: no-repeat;
+    outline: none;
   }
   header .menu-toggle {
     display: none;
@@ -441,20 +467,21 @@ footer p {
   main {
     margin-top: 76px;
   }
-  main .main-title-img .main-title {
+  main .main-title-img-search .main-title {
     width: 630px;
     margin: 0;
     font-size: 35px;
     line-height: 50px;
   }
-  main .main-title-img .main-img {
+  main .main-title-img-search .main-img {
     width: 399px;
     height: 190px;
   }
-  main .main-title-img .search input {
+  main .main-title-img-search .main-search {
     width: 551px;
     height: 50px;
     background-position: 511px 15px;
+    outline: none;
   }
   main .section-trending {
     margin-top: 73px;

@@ -19,9 +19,15 @@ header{
         clear: both;
         display: block;
     }
-    .gifos-logo{
-        margin-left: 22px;
-    }
+    .container-logo-search{
+        display: flex;
+        .gifos-logo{
+            margin-left: 22px;
+        }
+        .header-search{
+            display: none;
+        }
+    }    
     .menu-toggle{
         .burger{   
             margin-right: 26px;
@@ -78,7 +84,7 @@ main{
     justify-content: center;
     align-items: center;
     margin-top: 7px;    
-    .main-title-img{
+    .main-title-img-search{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -98,20 +104,19 @@ main{
             margin-top: 31px;
             width: 273px;
         }
-        .search{
-            input{
-                width: 334px;
-                height: 50px;
-                border: 1px solid #572EE5;
-                border-radius: 50px;
-                font-size: 16px;
-                padding: 15px 64px 13px 55px;
-                @include roboto;
-                background-image: url(../asset/icon-search.svg);
-                background-position: 294px 15px;
-                background-repeat: no-repeat;
-            }
-        }        
+        .main-search{
+            width: 334px;
+            height: 50px;
+            border: 1px solid #572EE5;
+            border-radius: 50px;
+            font-size: 16px;
+            padding: 15px 64px 13px 55px;
+            @include roboto;
+            background-image: url(../asset/icon-search.svg);
+            background-position: 294px 15px;
+            background-repeat: no-repeat;
+            outline: none;
+        }      
     }// main-title-img MOBILE END
     .section-trending{
         width: 100%;
@@ -232,10 +237,27 @@ footer{
         background-color: #ffffff;        
         justify-content: space-between;
         height: 90px;
-        .gifos-logo{ 
-            width: 59px;          
-            margin-left: 10.83vw;
-        }        
+        .container-logo-search{
+            .gifos-logo{ 
+                width: 59px;          
+                margin-left: 10.83vw;
+                margin-right: 8.26vw;
+            }
+            .header-search{
+                display: block;
+                width: 23.19vw;
+                height: 50px;
+                border: 1px solid #572EE5;
+                border-radius: 50px;
+                font-size: calc(.2em + 1vw);
+                padding: 15px 4.44vw 13px 3.82vw;
+                @include roboto;
+                background-image: url(../asset/icon-search.svg);
+                background-position: right 5% top 50%; //Para que la lupa se responsive al input
+                background-repeat: no-repeat;
+                outline: none;
+            }
+        }                
         .menu-toggle{
             display: none;
         }        
@@ -286,7 +308,7 @@ footer{
     }// header DESKTOP END
     main{
         margin-top: 76px;
-        .main-title-img{
+        .main-title-img-search{
             .main-title{
                 width: 630px;
                 margin: 0;
@@ -297,12 +319,11 @@ footer{
                 width: 399px;
                 height: 190px;
             }
-            .search{
-                input{
-                    width: 551px;
-                    height: 50px;
-                    background-position: 511px 15px;
-                }
+            .main-search{
+                width: 551px;
+                height: 50px;
+                background-position: 511px 15px;
+                outline: none;
             }    
         }// .main-title-img DESKTOP END
         .section-trending{

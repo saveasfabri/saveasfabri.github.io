@@ -89,8 +89,18 @@ header :after {
   display: block;
 }
 
-header .gifos-logo {
+header .container-logo-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .container-logo-search .gifos-logo {
   margin-left: 22px;
+}
+
+header .container-logo-search .header-search {
+  display: none;
 }
 
 header .menu-toggle .burger {
@@ -354,9 +364,24 @@ footer p {
             justify-content: space-between;
     height: 90px;
   }
-  header .gifos-logo {
+  header .container-logo-search .gifos-logo {
     width: 59px;
     margin-left: 10.83vw;
+    margin-right: 8.26vw;
+  }
+  header .container-logo-search .header-search {
+    display: block;
+    width: 23.19vw;
+    height: 50px;
+    border: 1px solid #572EE5;
+    border-radius: 50px;
+    font-size: calc(.2em + 1vw);
+    padding: 15px 4.44vw 13px 3.82vw;
+    font-family: 'Roboto', sans-serif;
+    background-image: url(../asset/icon-search.svg);
+    background-position: right 5% top 50%;
+    background-repeat: no-repeat;
+    outline: none;
   }
   header .menu-toggle {
     display: none;
