@@ -141,6 +141,10 @@ header .site-nav ul li {
   margin-left: 3.47vw;
 }
 
+header .site-nav ul .separator-line {
+  display: none;
+}
+
 header .site-nav ul .item-menu {
   text-align: center;
   color: #572EE5;
@@ -216,7 +220,7 @@ main .main-container .box-btns {
 
 main .main-container .box-btns .box-create {
   width: 47.78vw;
-  height: 60.42vh;
+  height: 28.42vw;
   border: 1px solid #572EE5;
   display: -webkit-box;
   display: -ms-flexbox;

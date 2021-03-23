@@ -50,7 +50,10 @@ header{
             list-style: none;
             li{
                 margin-left: 3.47vw;                
-            }               
+            }
+            .separator-line{
+                display: none;
+            }
             .item-menu{
                 text-align: center;                    
                 color: #572EE5;
@@ -96,7 +99,7 @@ main{
             align-items: center;
             .box-create{
                 width: 47.78vw;
-                height: 60.42vh;  // !!!!! no es responsive
+                height: 28.42vw;  // !!!!! no es responsive
                 border: 1px solid #572EE5;
                 display: flex;
                 flex-direction: column;
