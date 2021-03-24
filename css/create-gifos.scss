@@ -42,7 +42,9 @@ header{
         display: none;   
     }   
     .site-nav{
-        display: flex; 
+        background-color: yellow;
+        display: flex;
+        margin-right: 10.83vw; 
         ul{
             display: flex;
             flex-direction: row;
@@ -73,8 +75,7 @@ header{
             }           
         }
         .btn-more{
-            margin-left: 3.68vw;
-            margin-right: 10.83vw;
+            margin-left: 3.68vw;            
         }
     }// .site-nav end  
     .site-nav-open{        //no esta en html, está creada por JS
@@ -87,8 +88,10 @@ main{
     flex-direction: column;
     align-items: center;    
     .main-container{
+        background-color: yellowgreen;
+        width: 78%;
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
         margin: 4px 10.83vw 0 10.83vw;
         .camera-img{
             width: calc(1px + 8vw); // Imagen responsive

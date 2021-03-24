@@ -118,9 +118,11 @@ header .menu-toggle {
 }
 
 header .site-nav {
+  background-color: yellow;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-right: 10.83vw;
 }
 
 header .site-nav ul {
@@ -168,7 +170,6 @@ header .site-nav ul .item-menu:active {
 
 header .site-nav .btn-more {
   margin-left: 3.68vw;
-  margin-right: 10.83vw;
 }
 
 header .site-nav-open {
@@ -190,12 +191,14 @@ main {
 }
 
 main .main-container {
+  background-color: yellowgreen;
+  width: 78%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   margin: 4px 10.83vw 0 10.83vw;
 }
 
