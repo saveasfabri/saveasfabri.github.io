@@ -176,6 +176,7 @@ header .site-nav-open {
 }
 
 main {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -198,7 +199,16 @@ main .main-container {
   margin: 4px 10.83vw 0 10.83vw;
 }
 
-main .main-container .camera {
+main .main-container .camera-img {
+  width: calc(1px + 8vw);
+  max-width: 100%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+main .main-container .camera-projection-img {
+  width: calc(1px + 5vw);
   max-width: 100%;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -237,7 +247,7 @@ main .main-container .box-btns .box-create {
           align-items: center;
 }
 
-main .main-container .box-btns .box-create .corners1 {
+main .main-container .box-btns .box-create .container-corners1 {
   width: 94%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -245,19 +255,19 @@ main .main-container .box-btns .box-create .corners1 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 20px 20px 0 20px;
+  margin: 1.39vw 1.39vw 0 1.39vw;
 }
 
-main .main-container .box-btns .box-create .corners1 .div1 {
-  width: 25px;
-  height: 25px;
+main .main-container .box-btns .box-create .container-corners1 .corner1 {
+  width: 1.74vw;
+  height: 1.74vw;
   border-top: 1px solid #50E3C2;
   border-left: 1px solid #50E3C2;
 }
 
-main .main-container .box-btns .box-create .corners1 .div2 {
-  width: 25px;
-  height: 25px;
+main .main-container .box-btns .box-create .container-corners1 .corner2 {
+  width: 1.74vw;
+  height: 1.74vw;
   border-top: 1px solid #50E3C2;
   border-right: 1px solid #50E3C2;
 }
@@ -265,7 +275,7 @@ main .main-container .box-btns .box-create .corners1 .div2 {
 main .main-container .box-btns .box-create .title-main h1 {
   text-align: center;
   font-family: 'Montserrat', sans-serif;
-  font-size: 25px;
+  font-size: calc(.8em + 1vw);
   font-weight: 700;
   line-height: 35px;
   color: #572EE5;
@@ -274,11 +284,11 @@ main .main-container .box-btns .box-create .title-main h1 {
 main .main-container .box-btns .box-create .title-main p {
   text-align: center;
   font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+  font-size: calc(.3em + 1vw);
   line-height: 29px;
 }
 
-main .main-container .box-btns .box-create .corners2 {
+main .main-container .box-btns .box-create .container-corners2 {
   width: 94%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -286,19 +296,19 @@ main .main-container .box-btns .box-create .corners2 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 0px 20px 20px 20px;
+  margin: 0px 1.39vw 1.39vw 1.39vw;
 }
 
-main .main-container .box-btns .box-create .corners2 .div3 {
-  width: 25px;
-  height: 25px;
+main .main-container .box-btns .box-create .container-corners2 .corner3 {
+  width: 1.74vw;
+  height: 1.74vw;
   border-bottom: 1px solid #50E3C2;
   border-left: 1px solid #50E3C2;
 }
 
-main .main-container .box-btns .box-create .corners2 .div4 {
-  width: 25px;
-  height: 25px;
+main .main-container .box-btns .box-create .container-corners2 .corner4 {
+  width: 1.74vw;
+  height: 1.74vw;
   border-bottom: 1px solid #50E3C2;
   border-right: 1px solid #50E3C2;
 }
@@ -307,14 +317,15 @@ main .main-container .box-btns .btns-numbers {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 24px;
+  margin-top: 1.67vw;
 }
 
 main .main-container .box-btns .btns-numbers .btn {
-  margin-left: 25px;
+  margin-left: 1.74vw;
 }
 
-main .main-container .movie-tape {
+main .main-container .movie-tape-img {
+  width: calc(1px + 8vw);
   max-width: 100%;
   -ms-flex-item-align: end;
       align-self: flex-end;
@@ -392,5 +403,18 @@ footer p {
   font-weight: 500;
   font-family: 'Roboto', sans-serif;
   margin-right: 10.83vw;
+}
+
+/************** MEDIA QUERY 600px *************************************************/
+@media screen and (max-width: 600px) {
+  .header-search {
+    display: none;
+  }
+  .title-main p {
+    display: none;
+  }
+  .btns-numbers .btn {
+    width: 25px;
+  }
 }
 /*# sourceMappingURL=create-gifos.css.map */
