@@ -321,9 +321,10 @@ main .main-container .movie-tape {
   margin-left: 4.65vw;
 }
 
-main hr {
-  width: 800px;
+main .line {
+  width: 55.55vw;
   height: 7px;
+  border-radius: 25px;
   background-color: #572EE5;
   margin-top: 19px;
 }
