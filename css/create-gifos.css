@@ -118,7 +118,6 @@ header .menu-toggle {
 }
 
 header .site-nav {
-  background-color: yellow;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -191,7 +190,6 @@ main {
 }
 
 main .main-container {
-  background-color: yellowgreen;
   width: 78%;
   display: -webkit-box;
   display: -ms-flexbox;
