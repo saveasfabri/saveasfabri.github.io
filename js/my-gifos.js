@@ -1,5 +1,34 @@
+//***************** DARK MODE *******************/
 
-//********************* BURGUER MENU **************************/
+const darkMode = document.querySelector('#dark');
+
+//Para cambiar el colores de fondo, fuentes etc
+darkMode.addEventListener('click', () => {
+	document.body.classList.toggle('dark');
+    
+//Para cambiar texto del id="dark" ubicado dentro de .site-nav
+if (darkMode.innerHTML === 'Modo Nocturno') 
+    darkMode.innerHTML = 'Modo Diurno';
+else darkMode.innerHTML = 'Modo Nocturno'; 
+
+	// Guardo en el localstorage.
+if(document.body.classList.contains('dark')){
+    localStorage.setItem('dark-mode', 'true');
+} else {
+    localStorage.setItem('dark-mode', 'false');
+}
+});
+
+if(localStorage.getItem('dark-mode') === 'true'){
+    document.body.classList.add('dark');
+    darkMode.innerHTML = 'Modo Diurno';
+}
+else{
+    document.body.classList.remove('dark');
+    darkMode.innerHTML = 'Modo Nocturno';
+}
+
+//********************* BURGUER MENU / .menu-toggle / header **************************/
 
 function menuBurger(){
     const desplegarMenu = document.getElementById ('site-nav');
@@ -12,18 +41,37 @@ function menuBurger(){
     } 
 };
 
-
-//************** HOVER ICONOS REDES SOCIALES *******************/
+//************** HOVER ICONS/ SOCIAL MEDIA / .footer *******************/
 
 window.onload = function(){
-    let cambiarIconoHover = document.getElementById("face-icon");
-    cambiarIconoHover.addEventListener('mouseover',cambiarIconoFinal);
-    cambiarIconoHover.addEventListener('mouseout',cambiarIconoInicial);
+    let cambiarIconoHoverFace = document.getElementById("face-icon");
+    let cambiarIconoHovertwit = document.getElementById("twit-icon");
+    let cambiarIconoHoverInsta = document.getElementById("insta-icon");
+
+    cambiarIconoHoverFace.addEventListener('mouseover',cambiarIconoFinalFace);
+    cambiarIconoHoverFace.addEventListener('mouseout',cambiarIconoInicialFace);
+    cambiarIconoHovertwit.addEventListener('mouseover',cambiarIconoFinalTwit);
+    cambiarIconoHovertwit.addEventListener('mouseout',cambiarIconoInicialTwit);
+    cambiarIconoHoverInsta.addEventListener('mouseover',cambiarIconoFinalInsta);
+    cambiarIconoHoverInsta.addEventListener('mouseout',cambiarIconoInicialInsta);
    
-    function cambiarIconoFinal(){
-        this.setAttribute('src','./asset/icon_facebook_hover.svg');   
+    function cambiarIconoFinalFace(){
+        this.setAttribute('src','./asset/icon_facebook_hover.svg');
     }   
-    function cambiarIconoInicial(){
+    function cambiarIconoInicialFace(){
         this.setAttribute('src',"./asset/icon_facebook.svg");
     }
-} 
+    function cambiarIconoFinalTwit(){
+        this.setAttribute('src','./asset/icon-twitter-hover.svg');   
+    }   
+    function cambiarIconoInicialTwit(){
+        this.setAttribute('src',"./asset/icon-twitter.svg");
+    } 
+    function cambiarIconoFinalInsta(){
+        this.setAttribute('src','./asset/icon_instagram-hover.svg');   
+    }   
+    function cambiarIconoInicialInsta(){
+        this.setAttribute('src',"./asset/icon_instagram.svg");
+    } 
+}
+
