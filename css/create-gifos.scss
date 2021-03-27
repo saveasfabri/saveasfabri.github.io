@@ -6,6 +6,13 @@
 @mixin roboto {font-family: 'Roboto', sans-serif};
 @mixin roboto-dark {font-family: 'Roboto', sans-serif; color: #ffffff};
 
+body{
+    background-color: #FFFFFF;
+    transition: .4s ease all; //Suaviza pase a Dark-mode
+    &.dark{
+        background-color: #37383C;
+    }
+}
 header{
     display: flex;
     justify-content: space-between;
@@ -16,7 +23,12 @@ header{
     position: sticky;
     z-index: 100;
     top: 0;
-    background-color: #ffffff;    
+    background-color: #ffffff;
+    transition: .4s ease all; //Suaviza pase a Dark-mode
+    body.dark &{
+        border-top:5px solid #000000;
+        background-color: #37383C;
+    }
     .container-logo-search{
         display: flex;
         .gifos-logo{ 
@@ -36,6 +48,12 @@ header{
             background-position: right 5% top 50%; //Para que la lupa se responsive al input
             background-repeat: no-repeat;
             outline: none;
+            transition: .4s ease all; //Suaviza pase a Dark-mode
+                body.dark & {
+                    border: 1px solid #FFFFFF;
+                    background-color: #37383C;
+                    background-image: url(../asset/icon-search-modo-noct.svg);
+                }
         }
     } 
     .menu-toggle{
@@ -62,15 +80,29 @@ header{
                 font-size: 13px;
                 font-weight: bold;
                 line-height: 16px;
-                display: block;                   
+                display: block;
+                text-transform: uppercase;                  
                 text-decoration: none;
-                &:hover{
-                    text-decoration: underline #5ED7C6; 
-                }
-                &:active{
-                    color: #9CAFC3;
-                    text-decoration: none;
-                }
+                transition: .4s ease all; //Suaviza pase a Dark-mode 
+                    &:hover{
+                        text-decoration: underline solid #5ED7C6;
+                        text-decoration-thickness: 2px;
+                        transition:none
+                    }
+                    &:active{
+                        color: #9CAFC3;
+                        text-decoration: none;
+                        transition:none;
+                    }
+                    body.dark & {
+                        @include montserrat-dark();
+                        transition:none;                        
+                        &:active{
+                            color: #9CAFC3;
+                            text-decoration: none;
+                            transition:none;
+                        }
+                    }
             }           
         }
         .btn-more{
@@ -113,6 +145,9 @@ main{
                 flex-direction: column;
                 justify-content: space-between;
                 align-items: center;
+                body.dark & {
+                    border: 1px solid #FFFFFF;
+                }
                 .container-corners1{
                     width: 94%;
                     display: flex;
@@ -139,12 +174,18 @@ main{
                         font-weight: 700;
                         line-height: 35px;
                         color: #572EE5;
+                        body.dark & {
+                            @include montserrat-dark();
+                        }
                     }
                     p{
                         text-align: center;
                         @include roboto();
                         font-size: calc(.3em + 1vw);
                         line-height: 29px;
+                        body.dark & {
+                            @include montserrat-dark()
+                        }
                     }
                 }       
                 .container-corners2{
@@ -187,6 +228,9 @@ main{
         border-radius: 25px;
         background-color: #572EE5;
         margin-top: 19px;
+        body.dark & {
+            background-color: #9CAFC350;           
+        }
     }
     .btn-comenzar{
         border: 1px solid #572EE5;
@@ -199,6 +243,10 @@ main{
         font-size: 13px;
         font-weight: bold;
         color: #572EE5 ;
+        body.dark & {
+            @include montserrat-dark();
+            border: 1px solid #FFFFFF;           
+        }
     }    
 }// main end
 footer{
@@ -209,6 +257,10 @@ footer{
     height: 116px;
     border-bottom: 5px solid #572EE5;
     margin-top: 26px;
+    transition: .4s ease all; //Suaviza pase a Dark-mode
+    body.dark & {        
+        border-bottom: 5px solid #000000;
+    }
     .compartir-social{
         display: flex;
         .compartir{            
@@ -217,6 +269,10 @@ footer{
             @include roboto;
             align-self: center;
             margin: 0 1.18vw 0 10.83vw;
+            transition: .4s ease all; //Suaviza pase a Dark-mode
+            body.dark & {
+                @include roboto-dark()
+            }
             
         }
         .social{
@@ -230,6 +286,10 @@ footer{
         font-weight: 500;
         @include roboto;
         margin-right: 10.83vw;
+        transition: .4s ease all; //Suaviza pase a Dark-mode
+        body.dark & {
+            @include roboto-dark()
+        }
     }
 }//footer end
 
