@@ -173,17 +173,6 @@ header .site-nav ul .item-menu {
   text-decoration: none;
 }
 
-header .site-nav ul .dark {
-  text-align: center;
-  color: #FFFFFF;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 15px;
-  font-weight: bold;
-  line-height: 30px;
-  display: block;
-  cursor: pointer;
-}
-
 header .site-nav ul .separator-line {
   width: 41px;
   opacity: 0.5;
@@ -487,8 +476,6 @@ body.dark footer p {
         -ms-flex-pack: justify;
             justify-content: space-between;
     height: 90px;
-    -webkit-transition: .4s ease all;
-    transition: .4s ease all;
   }
   body.dark header {
     background-color: #37383C;
@@ -532,8 +519,6 @@ body.dark footer p {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-transition: .4s ease all;
-    transition: .4s ease all;
   }
   body.dark header .site-nav {
     background-color: #37383C;

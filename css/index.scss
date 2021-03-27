@@ -78,23 +78,13 @@ header{
                 display: block;                   
                 text-decoration: none;
             }
-            .dark{  //<li> "modo nocturno" en .site-nav
-                text-align: center;                    
-                color: #FFFFFF;
-                @include montserrat;
-                font-size: 15px;
-                font-weight: bold;
-                line-height: 30px;
-                display: block;
-                cursor: pointer;
-            }
             .separator-line{
             width: 41px;
             opacity: 0.5;
             border: 1px solid #FFFFFF;
             margin-top: 10px;
             }            
-        }
+        }// ul MOBILE END
         .btn-more{
             display:none;
         }
@@ -305,7 +295,6 @@ footer{
         background-color: #ffffff;        
         justify-content: space-between;
         height: 90px;
-        transition: .4s ease all; //Suaviza pase a Dark-mode
         body.dark & {
             background-color: #37383C;
         }
@@ -347,7 +336,6 @@ footer{
             background-color: #FFFFFF;
             opacity: 1;
             display: flex;
-            transition: .4s ease all; //Suaviza pase a Dark-mode
             body.dark & {
                 background-color: #37383C;
             }      
