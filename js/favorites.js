@@ -1,5 +1,34 @@
+//***************** DARK MODE *******************/
 
-//********************* BURGUER MENU **************************/
+const darkMode = document.querySelector('#dark');
+
+//Para cambiar el colores de fondo, fuentes etc
+darkMode.addEventListener('click', () => {
+	document.body.classList.toggle('dark');
+    
+//Para cambiar texto del id="dark" ubicado dentro de .site-nav
+if (darkMode.innerHTML === 'Modo Nocturno') 
+    darkMode.innerHTML = 'Modo Diurno';
+else darkMode.innerHTML = 'Modo Nocturno'; 
+
+	// Guardo en el localstorage.
+if(document.body.classList.contains('dark')){
+    localStorage.setItem('dark-mode', 'true');
+} else {
+    localStorage.setItem('dark-mode', 'false');
+}
+});
+
+if(localStorage.getItem('dark-mode') === 'true'){
+    document.body.classList.add('dark');
+    darkMode.innerHTML = 'Modo Diurno';
+}
+else{
+    document.body.classList.remove('dark');
+    darkMode.innerHTML = 'Modo Nocturno';
+}
+
+//********************* BURGUER MENU / .menu-toggle / header **************************/
 
 function menuBurger(){
     const desplegarMenu = document.getElementById ('site-nav');
@@ -12,7 +41,7 @@ function menuBurger(){
     } 
 };
 
-//************** HOVER ICONS/ SOCIAL MEDIA *******************/
+//************** HOVER ICONS/ SOCIAL MEDIA / .footer *******************/
 
 window.onload = function(){
     let cambiarIconoHoverFace = document.getElementById("face-icon");
@@ -44,35 +73,4 @@ window.onload = function(){
     function cambiarIconoInicialInsta(){
         this.setAttribute('src',"./asset/icon_instagram.svg");
     } 
-}
-
-//***************** DARK MODE *******************/
-
-const darkMode = document.querySelector('#dark');
-
-//Para cambiar el colores de fondo, fuentes etc
-darkMode.addEventListener('click', () => {
-	document.body.classList.toggle('dark');
-//Para cambiar texto de menu 
-if (darkMode.innerHTML === 'Modo Nocturno') 
-    darkMode.innerHTML = 'Modo Diurno';
-else darkMode.innerHTML = 'Modo Nocturno'; 
-
-
-
-	// Guardo el modo en localstorage.
-if(document.body.classList.contains('dark')){
-    localStorage.setItem('dark-mode', 'true');
-} else {
-    localStorage.setItem('dark-mode', 'false');
-}
-});
-
-if(localStorage.getItem('dark-mode') === 'true'){
-    document.body.classList.add('dark');
-    darkMode.innerHTML = 'Modo Diurno';
-}
-else{
-    document.body.classList.remove('dark');
-    darkMode.innerHTML = 'Modo Nocturno';
 }
