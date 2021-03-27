@@ -6,6 +6,14 @@
 @mixin roboto {font-family: 'Roboto', sans-serif;}
 @mixin roboto-dark {font-family: 'Roboto', sans-serif; color: #ffffff};
 
+
+body{
+    background-color: #FFFFFF;
+    transition: .4s ease all; //Suaviza pase a Dark-mode
+    &.dark{
+        background-color: #37383C;
+    }
+}
 header{
     display: flex;
     justify-content: space-between;
@@ -18,6 +26,9 @@ header{
         content: '';
         clear: both;
         display: block;
+    }
+    body.dark &{
+        border-top:5px solid #000000;
     }
     .container-logo-search{
         display: flex;
@@ -42,6 +53,10 @@ header{
         width: 100%;
         height: 0;
         overflow: hidden;
+        transition: .4s ease all; //Suaviza pase a Dark-mode
+        body.dark &{
+            background-color:#000000;
+        }
         ul{
             display: flex;
             flex-direction: column;
@@ -99,6 +114,9 @@ main{
             color: #572EE5;
             line-height: 40px;
             margin-top: 5px;
+            body.dark &{
+                color: #FFFFFF;
+            }
         }
         .grid-favorites{
             margin: 46px 21px 0 21px;           
@@ -131,6 +149,11 @@ main{
             @include montserrat;
             font-weight: bold;
             color: #572EE5 ;
+            body.dark &{
+                border: 1px solid #FFFFFF;
+                @include montserrat-dark();
+                color: #FFFFFF;
+            }
         }
     }// .favorite MOBILE END
     .trending-gifos{
@@ -142,20 +165,32 @@ main{
         margin-top: 94px;
         background: #F3F5F8;
         overflow: hidden;
+        transition: .4s ease all; //Suaviza pase a Dark-mode
+        body.dark & {
+            background-color: #222326;
+        }
         h2{            
             @include montserrat;
             font-size: 20px;
             font-weight: bold;
             color: #572EE5;
             margin-top: 46px;
+            transition: .4s ease all; //Suaviza pase a Dark-mode
+            body.dark & {
+                @include montserrat-dark()
+            }
         }
         p{
             width: 200px;
-            font-weight: 500;
+            font-weight: 400;
             @include roboto;
             line-height: 23px;
             text-align: center;
             margin-top: 7px;
+            transition: .4s ease all; //Suaviza pase a Dark-mode
+            body.dark & {
+                @include roboto-dark()
+            }
         }
         .carousel{
             width: 100%;
@@ -197,11 +232,19 @@ footer{
     flex-direction: column;
     align-items: center;
     border-bottom: 5px solid #572EE5;
+    transition: .4s ease all; //Suaviza pase a Dark-mode
+    body.dark & {        
+        border-bottom: 5px solid #000000;
+    }
     .compartir-social{
         .compartir{
             font-weight: 500;
             margin-top: 47px;
             @include roboto;
+            transition: .4s ease all; //Suaviza pase a Dark-mode
+            body.dark & {
+                @include roboto-dark()
+            }
         }
         .social{
             display: flex;
@@ -214,6 +257,10 @@ footer{
         font-weight: 500;
         margin-top: 47.8px;
         @include roboto;
+        transition: .4s ease all; //Suaviza pase a Dark-mode
+        body.dark & {
+            @include roboto-dark()
+        }
     }
 }//footer MOBILE END
 
@@ -227,6 +274,10 @@ footer{
         background-color: #ffffff;
         justify-content: space-between;
         height: 90px;
+        transition: .4s ease all; //Suaviza pase a Dark-mode
+        body.dark & {
+            background-color: #37383C;
+        }
         .container-logo-search{
             .gifos-logo{ 
                 width: 59px;          
@@ -246,6 +297,12 @@ footer{
                 background-position: right 5% top 50%; //Para que la lupa se responsive al input
                 background-repeat: no-repeat;
                 outline: none;
+                transition: .4s ease all; //Suaviza pase a Dark-mode
+                body.dark & {
+                    border: 1px solid #FFFFFF;
+                    background-color: #37383C;
+                    background-image: url(../asset/icon-search-modo-noct.svg);
+                }
             }
         }         
         .menu-toggle{
@@ -256,9 +313,12 @@ footer{
             top: 0;
             height: auto;
             position: relative;
-            background-color: transparent;
+            background-color: #FFFFFF;
             opacity: 1;
-            display: flex;      
+            display: flex;
+            body.dark & {
+                background-color: #37383C;
+            } 
             ul{
                 display: flex;
                 flex-direction: row;
@@ -269,21 +329,34 @@ footer{
                 }              
                 li{
                     margin-left: 3.47vw;
-                    margin-top: 0;
-                    .item-menu{
-                        color: #572EE5;
-                        font-size: 13px;
-                        font-weight: bold;
-                        line-height: 16px;
-                        text-transform: uppercase;
-                        &:hover{
-                            text-decoration: underline #5ED7C6; 
-                        }
-                        &:active{
-                            color: #9CAFC3;
-                            text-decoration: none;
-                        } 
+                    margin-top: 0;                    
+                }
+                .item-menu{
+                    color: #572EE5;
+                    font-size: 13px;
+                    font-weight: bold;
+                    line-height: 16px;
+                    text-transform: uppercase;
+                    transition: .4s ease all; //Suaviza pase a Dark-mode 
+                    &:hover{
+                        text-decoration: underline solid #5ED7C6;
+                        text-decoration-thickness: 2px;
+                        transition:none
                     }
+                    &:active{
+                        color: #9CAFC3;
+                        text-decoration: none;
+                        transition:none;
+                    }
+                    body.dark & {
+                        color: #FFFFFF;
+                    transition:none;
+                }       
+                    &:active{
+                        color: #9CAFC3;
+                        text-decoration: none;
+                        transition:none;
+                    }                     
                 }
                 .separator-line{
                     display: none;
