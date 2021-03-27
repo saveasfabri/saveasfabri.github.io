@@ -27,3 +27,12 @@ window.onload = function(){
         this.setAttribute('src',"./asset/icon_facebook.svg");
     }
 } 
+
+
+const darkMode = document.querySelector('#dark');
+
+//Para cambiar el colores de fondo, fuentes etc
+darkMode.addEventListener('click', () => {
+	document.body.classList.toggle('dark');
+});
+

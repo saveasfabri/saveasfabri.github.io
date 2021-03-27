@@ -16,43 +16,63 @@ function menuBurger(){
 
 window.onload = function(){
     let cambiarIconoHoverFace = document.getElementById("face-icon");
-    cambiarIconoHoverFace.addEventListener('mouseover',cambiarIconoFinal);
-    cambiarIconoHoverFace.addEventListener('mouseout',cambiarIconoInicial);
+    let cambiarIconoHovertwit = document.getElementById("twit-icon");
+    let cambiarIconoHoverInsta = document.getElementById("insta-icon");
+
+    cambiarIconoHoverFace.addEventListener('mouseover',cambiarIconoFinalFace);
+    cambiarIconoHoverFace.addEventListener('mouseout',cambiarIconoInicialFace);
+    cambiarIconoHovertwit.addEventListener('mouseover',cambiarIconoFinalTwit);
+    cambiarIconoHovertwit.addEventListener('mouseout',cambiarIconoInicialTwit);
+    cambiarIconoHoverInsta.addEventListener('mouseover',cambiarIconoFinalInsta);
+    cambiarIconoHoverInsta.addEventListener('mouseout',cambiarIconoInicialInsta);
    
-    function cambiarIconoFinal(){
-        this.setAttribute('src','./asset/icon_facebook_hover.svg');   
+    function cambiarIconoFinalFace(){
+        this.setAttribute('src','./asset/icon_facebook_hover.svg');
     }   
-    function cambiarIconoInicial(){
+    function cambiarIconoInicialFace(){
         this.setAttribute('src',"./asset/icon_facebook.svg");
-    }    
-} 
+    }
+    function cambiarIconoFinalTwit(){
+        this.setAttribute('src','./asset/icon-twitter-hover.svg');   
+    }   
+    function cambiarIconoInicialTwit(){
+        this.setAttribute('src',"./asset/icon-twitter.svg");
+    } 
+    function cambiarIconoFinalInsta(){
+        this.setAttribute('src','./asset/icon_instagram-hover.svg');   
+    }   
+    function cambiarIconoInicialInsta(){
+        this.setAttribute('src',"./asset/icon_instagram.svg");
+    } 
+}
 
 //***************** DARK MODE *******************/
 
 const darkMode = document.querySelector('#dark');
 
+//Para cambiar el colores de fondo, fuentes etc
 darkMode.addEventListener('click', () => {
 	document.body.classList.toggle('dark');
-    
-  if (darkMode.innerHTML === 'Modo Nocturno') 
-        darkMode.innerHTML = 'Modo Diurno';
-  else darkMode.innerHTML = 'Modo Nocturno'; 
+//Para cambiar texto de menu 
+if (darkMode.innerHTML === 'Modo Nocturno') 
+    darkMode.innerHTML = 'Modo Diurno';
+else darkMode.innerHTML = 'Modo Nocturno'; 
 
-    
 
-	// Guardamos el modo en localstorage.
-	if(document.body.classList.contains('dark')){
-		localStorage.setItem('dark-mode', 'true');
-	} else {
-		localStorage.setItem('dark-mode', 'false');
-	}
+
+	// Guardo el modo en localstorage.
+if(document.body.classList.contains('dark')){
+    localStorage.setItem('dark-mode', 'true');
+} else {
+    localStorage.setItem('dark-mode', 'false');
+}
 });
 
 if(localStorage.getItem('dark-mode') === 'true'){
     document.body.classList.add('dark');
-    darkMode.innerHTML.add('Modo Nocturno');
+    darkMode.innerHTML = 'Modo Diurno';
 }
 else{
     document.body.classList.remove('dark');
-    darkMode.innerHTML.add('Modo Diurno')
+    darkMode.innerHTML = 'Modo Nocturno';
 }

@@ -6,6 +6,14 @@
 @mixin roboto {font-family: 'Roboto', sans-serif;}
 @mixin roboto-dark {font-family: 'Roboto', sans-serif; color: #ffffff};
 
+
+body{
+    background-color: #FFFFFF;
+    transition: .4s ease all; //Suaviza pase a Dark-mode
+    &.dark{
+        background-color: #37383C;
+    }
+}
 header{
     display: flex;
     justify-content: space-between;

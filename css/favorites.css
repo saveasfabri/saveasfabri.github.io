@@ -67,6 +67,16 @@ table {
   border-spacing: 0;
 }
 
+body {
+  background-color: #FFFFFF;
+  -webkit-transition: .4s ease all;
+  transition: .4s ease all;
+}
+
+body.dark {
+  background-color: #37383C;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;

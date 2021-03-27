@@ -475,7 +475,7 @@ body.dark footer p {
   color: #ffffff;
 }
 
-/************** MEDIA QUERY 700px *************************************************/
+/******************************* MEDIA QUERY 700px *************************************************/
 @media screen and (min-width: 700px) {
   header {
     position: -webkit-sticky;
@@ -568,41 +568,28 @@ body.dark footer p {
     transition: .4s ease all;
   }
   header .site-nav ul .item-menu:hover {
-    -webkit-text-decoration: underline #5ED7C6;
-            text-decoration: underline #5ED7C6;
+    -webkit-text-decoration: underline solid #5ED7C6;
+            text-decoration: underline solid #5ED7C6;
+    text-decoration-thickness: 2px;
+    -webkit-transition: none;
+    transition: none;
   }
   header .site-nav ul .item-menu:active {
     color: #9CAFC3;
     text-decoration: none;
+    -webkit-transition: none;
+    transition: none;
   }
   body.dark header .site-nav ul .item-menu {
     color: #FFFFFF;
+    -webkit-transition: none;
+    transition: none;
   }
   body.dark header .site-nav ul .item-menu:active {
     color: #9CAFC3;
-  }
-  header .site-nav ul .dark {
-    color: #572EE5;
-    font-size: 13px;
-    font-weight: bold;
-    line-height: 16px;
-    text-transform: uppercase;
-    -webkit-transition: .4s ease all;
-    transition: .4s ease all;
-  }
-  header .site-nav ul .dark:hover {
-    -webkit-text-decoration: underline #5ED7C6;
-            text-decoration: underline #5ED7C6;
-  }
-  header .site-nav ul .dark:active {
-    color: #9CAFC3;
     text-decoration: none;
-  }
-  body.dark header .site-nav ul .dark {
-    color: #FFFFFF;
-  }
-  body.dark header .site-nav ul .dark:active {
-    color: #9CAFC3;
+    -webkit-transition: none;
+    transition: none;
   }
   header .site-nav ul .separator-line {
     display: none;

@@ -32,7 +32,7 @@ header{
     }
     .container-logo-search{
         display: flex;
-        .gifos-logo{
+        .gifos-logo{            
             margin-left: 22px;
         }
         .header-search{
@@ -78,7 +78,7 @@ header{
                 display: block;                   
                 text-decoration: none;
             }
-            .dark{  //<li> modo nocturno en .site-nav
+            .dark{  //<li> "modo nocturno" en .site-nav
                 text-align: center;                    
                 color: #FFFFFF;
                 @include montserrat;
@@ -295,7 +295,7 @@ footer{
     }
 }//footer MOBILE END
 
-/************** MEDIA QUERY 700px *************************************************/
+/******************************* MEDIA QUERY 700px *************************************************/
 
 @media screen and (min-width: 700px){
     header{
@@ -371,39 +371,24 @@ footer{
                     text-transform: uppercase;
                     transition: .4s ease all; //Suaviza pase a Dark-mode 
                     &:hover{
-                        text-decoration: underline #5ED7C6; 
+                        text-decoration: underline solid #5ED7C6;
+                            text-decoration-thickness: 2px;
+                            transition:none
                     }
                     &:active{
                         color: #9CAFC3;
                         text-decoration: none;
+                        transition:none;
                     }
                     body.dark & {
                         color: #FFFFFF;
+                        transition:none;                        
                         &:active{
                             color: #9CAFC3;
+                            text-decoration: none;
+                            transition:none;
                         }
                     }                       
-                }
-                .dark{ //<li> modo nocturno de meni .site-nav
-                    color: #572EE5;
-                    font-size: 13px;
-                    font-weight: bold;
-                    line-height: 16px;
-                    text-transform: uppercase;
-                    transition: .4s ease all; //Suaviza pase a Dark-mode
-                    &:hover{
-                        text-decoration: underline #5ED7C6; 
-                    }
-                    &:active{
-                        color: #9CAFC3;
-                        text-decoration: none;
-                    }
-                    body.dark & {
-                        color: #FFFFFF;
-                        &:active{
-                            color: #9CAFC3;
-                        }
-                    }
                 }
                 .separator-line{
                     display: none;
