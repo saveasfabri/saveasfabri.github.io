@@ -67,6 +67,16 @@ table {
   border-spacing: 0;
 }
 
+body {
+  background-color: #FFFFFF;
+  -webkit-transition: .4s ease all;
+  transition: .4s ease all;
+}
+
+body.dark {
+  background-color: #37383C;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -85,6 +95,13 @@ header {
   z-index: 100;
   top: 0;
   background-color: #ffffff;
+  -webkit-transition: .4s ease all;
+  transition: .4s ease all;
+}
+
+body.dark header {
+  border-top: 5px solid #000000;
+  background-color: #37383C;
 }
 
 header .container-logo-search {
@@ -111,6 +128,14 @@ header .container-logo-search .header-search {
   background-position: right 5% top 50%;
   background-repeat: no-repeat;
   outline: none;
+  -webkit-transition: .4s ease all;
+  transition: .4s ease all;
+}
+
+body.dark header .container-logo-search .header-search {
+  border: 1px solid #FFFFFF;
+  background-color: #37383C;
+  background-image: url(../asset/icon-search-modo-noct.svg);
 }
 
 header .menu-toggle {
@@ -154,17 +179,39 @@ header .site-nav ul .item-menu {
   font-weight: bold;
   line-height: 16px;
   display: block;
+  text-transform: uppercase;
   text-decoration: none;
+  -webkit-transition: .4s ease all;
+  transition: .4s ease all;
 }
 
 header .site-nav ul .item-menu:hover {
-  -webkit-text-decoration: underline #5ED7C6;
-          text-decoration: underline #5ED7C6;
+  -webkit-text-decoration: underline solid #5ED7C6;
+          text-decoration: underline solid #5ED7C6;
+  text-decoration-thickness: 2px;
+  -webkit-transition: none;
+  transition: none;
 }
 
 header .site-nav ul .item-menu:active {
   color: #9CAFC3;
   text-decoration: none;
+  -webkit-transition: none;
+  transition: none;
+}
+
+body.dark header .site-nav ul .item-menu {
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+  -webkit-transition: none;
+  transition: none;
+}
+
+body.dark header .site-nav ul .item-menu:active {
+  color: #9CAFC3;
+  text-decoration: none;
+  -webkit-transition: none;
+  transition: none;
 }
 
 header .site-nav .btn-more {
@@ -248,6 +295,10 @@ main .main-container .box-btns .box-create {
           align-items: center;
 }
 
+body.dark main .main-container .box-btns .box-create {
+  border: 1px solid #FFFFFF;
+}
+
 main .main-container .box-btns .box-create .container-corners1 {
   width: 94%;
   display: -webkit-box;
@@ -282,11 +333,21 @@ main .main-container .box-btns .box-create .title-main h1 {
   color: #572EE5;
 }
 
+body.dark main .main-container .box-btns .box-create .title-main h1 {
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+}
+
 main .main-container .box-btns .box-create .title-main p {
   text-align: center;
   font-family: 'Roboto', sans-serif;
   font-size: calc(.3em + 1vw);
   line-height: 29px;
+}
+
+body.dark main .main-container .box-btns .box-create .title-main p {
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
 }
 
 main .main-container .box-btns .box-create .container-corners2 {
@@ -341,6 +402,10 @@ main .line {
   margin-top: 19px;
 }
 
+body.dark main .line {
+  background-color: #9CAFC350;
+}
+
 main .btn-comenzar {
   border: 1px solid #572EE5;
   border-radius: 25px;
@@ -352,6 +417,12 @@ main .btn-comenzar {
   font-size: 13px;
   font-weight: bold;
   color: #572EE5;
+}
+
+body.dark main .btn-comenzar {
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+  border: 1px solid #FFFFFF;
 }
 
 footer {
@@ -371,6 +442,12 @@ footer {
   height: 116px;
   border-bottom: 5px solid #572EE5;
   margin-top: 26px;
+  -webkit-transition: .4s ease all;
+  transition: .4s ease all;
+}
+
+body.dark footer {
+  border-bottom: 5px solid #000000;
 }
 
 footer .compartir-social {
@@ -387,6 +464,13 @@ footer .compartir-social .compartir {
       -ms-grid-row-align: center;
       align-self: center;
   margin: 0 1.18vw 0 10.83vw;
+  -webkit-transition: .4s ease all;
+  transition: .4s ease all;
+}
+
+body.dark footer .compartir-social .compartir {
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
 }
 
 footer .compartir-social .social {
@@ -404,6 +488,13 @@ footer p {
   font-weight: 500;
   font-family: 'Roboto', sans-serif;
   margin-right: 10.83vw;
+  -webkit-transition: .4s ease all;
+  transition: .4s ease all;
+}
+
+body.dark footer p {
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
 }
 
 /************** MEDIA QUERY 600px *************************************************/

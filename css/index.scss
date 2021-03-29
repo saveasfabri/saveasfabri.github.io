@@ -292,7 +292,7 @@ footer{
         position: sticky;
         z-index: 100;
         top: 0;
-        background-color: #ffffff;        
+        background-color: #FFFFFF;        
         justify-content: space-between;
         height: 90px;
         body.dark & {
@@ -360,8 +360,8 @@ footer{
                     transition: .4s ease all; //Suaviza pase a Dark-mode 
                     &:hover{
                         text-decoration: underline solid #5ED7C6;
-                            text-decoration-thickness: 2px;
-                            transition:none
+                        text-decoration-thickness: 2px;
+                        transition:none
                     }
                     &:active{
                         color: #9CAFC3;
