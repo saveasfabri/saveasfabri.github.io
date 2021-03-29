@@ -9,7 +9,10 @@ darkMode.addEventListener('click', () => {
 //Para cambiar texto del id="dark" ubicado dentro de .site-nav
 if (darkMode.innerHTML === 'Modo Nocturno') 
     darkMode.innerHTML = 'Modo Diurno';
-else darkMode.innerHTML = 'Modo Nocturno'; 
+else darkMode.innerHTML = 'Modo Nocturno';
+
+//para cambiar iconos e imagenes de Diurno a nocturno
+
 
 	// Guardo en el localstorage.
 if(document.body.classList.contains('dark')){
@@ -20,12 +23,12 @@ if(document.body.classList.contains('dark')){
 });
 
 if(localStorage.getItem('dark-mode') === 'true'){
-    document.body.classList.add('dark');
-    darkMode.innerHTML = 'Modo Diurno';
+    document.body.classList.add('dark');// local storage de cambio de CSS si .dark activo
+    darkMode.innerHTML = 'Modo Diurno';// local storage de cambio MD si .dark activo
 }
 else{
-    document.body.classList.remove('dark');
-    darkMode.innerHTML = 'Modo Nocturno';
+    document.body.classList.remove('dark'); // local storage de cambio de CSS si .dark inactivo
+    darkMode.innerHTML = 'Modo Nocturno';//local storage de cambio MD si .dark inactivo
 }
 
 //********************* BURGUER MENU / .menu-toggle / header **************************/
