@@ -28,6 +28,19 @@ else{
     darkMode.innerHTML = 'Modo Nocturno';
 }
 
+//********************* BURGUER MENU / .menu-toggle / header **************************/
+
+function menuBurger(){
+    const desplegarMenu = document.getElementById ('site-nav');
+    desplegarMenu.classList.toggle('site-nav-open');
+    const cambiarBurgerClose = document.getElementById('burger');
+        if (cambiarBurgerClose.src.match ("close")) {
+            cambiarBurgerClose.src = "./asset/burger.svg";
+        } else {
+            cambiarBurgerClose.src = "./asset/close.svg";
+    } 
+};
+
 //************** HOVER ICONS/ SOCIAL MEDIA / .footer *******************/
 
 window.onload = function(){
@@ -41,25 +54,37 @@ window.onload = function(){
     cambiarIconoHovertwit.addEventListener('mouseout',cambiarIconoInicialTwit);
     cambiarIconoHoverInsta.addEventListener('mouseover',cambiarIconoFinalInsta);
     cambiarIconoHoverInsta.addEventListener('mouseout',cambiarIconoInicialInsta);
-   
+    /*Icono Facebook */
     function cambiarIconoFinalFace(){
-        this.setAttribute('src','./asset/icon_facebook_hover.svg');
+        if (document.body.classList.contains('dark')) {
+            this.setAttribute('src','./asset/icon_facebook_noc.svg');
+        } else {
+            this.setAttribute('src','./asset/icon_facebook_hover.svg');
+        }
     }   
     function cambiarIconoInicialFace(){
         this.setAttribute('src',"./asset/icon_facebook.svg");
     }
+    /*Icono Twitter */
     function cambiarIconoFinalTwit(){
-        this.setAttribute('src','./asset/icon-twitter-hover.svg');   
+        if (document.body.classList.contains('dark')) {
+            this.setAttribute('src','./asset/icon_twitter_noc.svg');
+        } else {
+            this.setAttribute('src','./asset/icon-twitter-hover.svg');
+        }
     }   
     function cambiarIconoInicialTwit(){
         this.setAttribute('src',"./asset/icon-twitter.svg");
-    } 
+    }
+    /*Icono Instagram */
     function cambiarIconoFinalInsta(){
-        this.setAttribute('src','./asset/icon_instagram-hover.svg');   
+        if (document.body.classList.contains('dark')) {
+            this.setAttribute('src','./asset/icon_instagram_noc.svg');
+        } else {
+            this.setAttribute('src','./asset/icon_instagram-hover.svg');
+        }
     }   
     function cambiarIconoInicialInsta(){
         this.setAttribute('src',"./asset/icon_instagram.svg");
-    } 
+    }
 }
-
-
