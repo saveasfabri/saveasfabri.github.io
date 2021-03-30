@@ -8,7 +8,7 @@
 
 body{
     background-color: #FFFFFF;
-    transition: .4s ease all; //Suaviza pase a Dark-mode
+    transition: .4s ease all; //Suaviza el pase a Dark-mode
     &.dark{
         background-color: #37383C;
     }

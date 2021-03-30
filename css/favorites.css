@@ -169,6 +169,7 @@ header .site-nav ul .item-menu {
   line-height: 30px;
   display: block;
   text-decoration: none;
+  cursor: pointer;
 }
 
 header .site-nav ul .separator-line {

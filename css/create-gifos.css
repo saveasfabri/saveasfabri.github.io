@@ -183,6 +183,7 @@ header .site-nav ul .item-menu {
   display: block;
   text-transform: uppercase;
   text-decoration: none;
+  cursor: pointer;
   -webkit-transition: .4s ease all;
   transition: .4s ease all;
 }
@@ -301,7 +302,7 @@ body.dark main .main-container .box-btns .box-create {
   border: 1px solid #FFFFFF;
 }
 
-main .main-container .box-btns .box-create .container-corners1 {
+main .main-container .box-btns .box-create .container-corners-up {
   width: 94%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -312,14 +313,14 @@ main .main-container .box-btns .box-create .container-corners1 {
   margin: 1.39vw 1.39vw 0 1.39vw;
 }
 
-main .main-container .box-btns .box-create .container-corners1 .corner1 {
+main .main-container .box-btns .box-create .container-corners-up .corners-up-left {
   width: 1.74vw;
   height: 1.74vw;
   border-top: 1px solid #50E3C2;
   border-left: 1px solid #50E3C2;
 }
 
-main .main-container .box-btns .box-create .container-corners1 .corner2 {
+main .main-container .box-btns .box-create .container-corners-up .cornersup-right {
   width: 1.74vw;
   height: 1.74vw;
   border-top: 1px solid #50E3C2;
@@ -352,7 +353,7 @@ body.dark main .main-container .box-btns .box-create .title-main p {
   color: #ffffff;
 }
 
-main .main-container .box-btns .box-create .container-corners2 {
+main .main-container .box-btns .box-create .container-corners-down {
   width: 94%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -363,14 +364,14 @@ main .main-container .box-btns .box-create .container-corners2 {
   margin: 0px 1.39vw 1.39vw 1.39vw;
 }
 
-main .main-container .box-btns .box-create .container-corners2 .corner3 {
+main .main-container .box-btns .box-create .container-corners-down .corners-down-left {
   width: 1.74vw;
   height: 1.74vw;
   border-bottom: 1px solid #50E3C2;
   border-left: 1px solid #50E3C2;
 }
 
-main .main-container .box-btns .box-create .container-corners2 .corner4 {
+main .main-container .box-btns .box-create .container-corners-down .corners-down-right {
   width: 1.74vw;
   height: 1.74vw;
   border-bottom: 1px solid #50E3C2;
