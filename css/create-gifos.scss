@@ -20,6 +20,7 @@ header{
     width: 100%;
     height: 90px;
     border-top: 5px solid #572EE5 ;
+    box-shadow: 0 2px 4px 1px #9CAFC350;
     position: sticky;
     z-index: 100;
     top: 0;
@@ -83,6 +84,7 @@ header{
                 display: block;
                 text-transform: uppercase;                  
                 text-decoration: none;
+                cursor: pointer;
                 transition: .4s ease all; //Suaviza pase a Dark-mode 
                     &:hover{
                         text-decoration: underline solid #5ED7C6;
@@ -139,7 +141,7 @@ main{
             align-items: center;
             .box-create{
                 width: 47.78vw;
-                height: 28.42vw;  // !!!!! no es responsive
+                height: 28.42vw; 
                 border: 1px solid #572EE5;
                 display: flex;
                 flex-direction: column;
@@ -148,18 +150,18 @@ main{
                 body.dark & {
                     border: 1px solid #FFFFFF;
                 }
-                .container-corners1{
+                .container-corners-up{
                     width: 94%;
                     display: flex;
                     justify-content: space-between;
                     margin: 1.39vw 1.39vw 0 1.39vw;
-                    .corner1{                
+                    .corners-up-left{                
                         width: 1.74vw;
                         height: 1.74vw;
                         border-top: 1px solid #50E3C2;
                         border-left: 1px solid #50E3C2;
                     }
-                    .corner2{
+                    .cornersup-right{
                         width: 1.74vw;
                         height: 1.74vw;
                         border-top: 1px solid #50E3C2;
@@ -188,18 +190,18 @@ main{
                         }
                     }
                 }       
-                .container-corners2{
+                .container-corners-down{
                     width: 94%;
                     display: flex;
                     justify-content: space-between;
                     margin: 0px 1.39vw 1.39vw 1.39vw;
-                    .corner3{                
+                    .corners-down-left{                
                         width: 1.74vw;
                         height: 1.74vw;
                         border-bottom: 1px solid #50E3C2;
                         border-left: 1px solid #50E3C2;
                     }
-                    .corner4{
+                    .corners-down-right{
                         width: 1.74vw;
                         height: 1.74vw;
                         border-bottom: 1px solid #50E3C2;

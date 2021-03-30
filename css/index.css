@@ -111,8 +111,9 @@ header .container-logo-search {
   display: flex;
 }
 
-header .container-logo-search .gifos-logo {
+header .container-logo-search .svg {
   margin-left: 22px;
+  fill: #FFFFFF;
 }
 
 header .container-logo-search .header-search {
@@ -171,6 +172,7 @@ header .site-nav ul .item-menu {
   line-height: 30px;
   display: block;
   text-decoration: none;
+  cursor: pointer;
 }
 
 header .site-nav ul .separator-line {
@@ -476,6 +478,8 @@ body.dark footer p {
         -ms-flex-pack: justify;
             justify-content: space-between;
     height: 90px;
+    -webkit-box-shadow: 0 2px 4px 1px #9CAFC350;
+            box-shadow: 0 2px 4px 1px #9CAFC350;
   }
   body.dark header {
     background-color: #37383C;
