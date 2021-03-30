@@ -90,6 +90,8 @@ header {
   width: 100%;
   height: 90px;
   border-top: 5px solid #572EE5;
+  -webkit-box-shadow: 0 2px 4px 1px #9CAFC350;
+          box-shadow: 0 2px 4px 1px #9CAFC350;
   position: -webkit-sticky;
   position: sticky;
   z-index: 100;

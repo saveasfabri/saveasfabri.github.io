@@ -262,6 +262,7 @@ footer{
         background-color: #FFFFFF;
         justify-content: space-between;
         height: 90px;
+        box-shadow: 0 2px 4px 1px #9CAFC350;
         transition: .4s ease all; //Suaviza pase a Dark-mode
         body.dark & {
             background-color: #37383C;
