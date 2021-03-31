@@ -32,10 +32,17 @@ header{
     }
     .container-logo-search{
         display: flex;
-        .svg{            
+        .gifos-logo{
+            width: 49px;
+            height: 49px;                     
             margin-left: 22px;
-            fill: #FFFFFF;
-        }
+            background-image: url(../asset/logo-mobile.svg);
+            background-repeat: no-repeat;
+            body.dark & {
+                background-image: url(../asset/logo-mobile-modo-noct.svg);
+                background-repeat: no-repeat;
+            }
+        }       
         .header-search{
             display: none;
         }
@@ -287,7 +294,7 @@ footer{
     }
 }//footer MOBILE END
 
-/******************************* MEDIA QUERY 700px *************************************************/
+/******************************* MEDIA QUERY 700px *********************************************/
 
 @media screen and (min-width: 700px){
     header{
@@ -303,10 +310,17 @@ footer{
         }
         .container-logo-search{
             .gifos-logo{ 
-                width: 59px;          
+                width: 59px;
+                height: 59px;          
                 margin-left: 10.83vw;
                 margin-right: 8.26vw;
-            }
+                background-image: url(../asset/logo-desktop.svg);
+                background-repeat: no-repeat;
+                body.dark & {
+                    background-image: url(../asset/Logo-modo-noc.svg);
+                    background-repeat: no-repeat;
+                }
+            }            
             .header-search{
                 display: block;
                 width: 23.19vw;

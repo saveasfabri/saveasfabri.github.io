@@ -111,9 +111,17 @@ header .container-logo-search {
   display: flex;
 }
 
-header .container-logo-search .svg {
+header .container-logo-search .gifos-logo {
+  width: 49px;
+  height: 49px;
   margin-left: 22px;
-  fill: #FFFFFF;
+  background-image: url(../asset/logo-mobile.svg);
+  background-repeat: no-repeat;
+}
+
+body.dark header .container-logo-search .gifos-logo {
+  background-image: url(../asset/logo-mobile-modo-noct.svg);
+  background-repeat: no-repeat;
 }
 
 header .container-logo-search .header-search {
@@ -466,7 +474,7 @@ body.dark footer p {
   color: #ffffff;
 }
 
-/******************************* MEDIA QUERY 700px *************************************************/
+/******************************* MEDIA QUERY 700px *********************************************/
 @media screen and (min-width: 700px) {
   header {
     position: -webkit-sticky;
@@ -486,8 +494,15 @@ body.dark footer p {
   }
   header .container-logo-search .gifos-logo {
     width: 59px;
+    height: 59px;
     margin-left: 10.83vw;
     margin-right: 8.26vw;
+    background-image: url(../asset/logo-desktop.svg);
+    background-repeat: no-repeat;
+  }
+  body.dark header .container-logo-search .gifos-logo {
+    background-image: url(../asset/Logo-modo-noc.svg);
+    background-repeat: no-repeat;
   }
   header .container-logo-search .header-search {
     display: block;
