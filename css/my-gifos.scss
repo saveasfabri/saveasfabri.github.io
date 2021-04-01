@@ -547,9 +547,23 @@ footer{
                     }// .img-carousel DESKTOP END
                 }// .grid DESKTOP END
                 .right-arrow{
+                    width: 55px;
+                    height: 40px;
                     display: block;
+                    align-self: center;
                     margin-right: 7vw;
-                }                
+                    background-image: url(../asset/Button-Slider-right.svg);
+                    background-repeat: no-repeat;
+                    &:hover{
+                        background-image: url(../asset/Button-Slider-right-hover.svg);
+                    }
+                    body.dark & {
+                        background-image: url(../asset/button-slider-right-md-noct.svg);
+                        &:hover{
+                            background-image: url(../asset/button-slider-right-md-noct-hover.svg);
+                        }
+                    }
+                }
             } // .carousel DESKTOP END        
         }// .trending-gifos DESKTOP END
     }     
