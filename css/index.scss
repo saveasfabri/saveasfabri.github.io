@@ -399,12 +399,12 @@ footer{
                     display: none;
                 }                               
             } 
-            .btn-create-gifos{
-                margin-left: 3.68vw;
-                margin-right: 10.83vw;
+            .btn-create-gifos{                
                 width: 54px;
                 height: 54px;
                 display:block;
+                margin-left: 3.68vw;
+                margin-right: 10.83vw;
                 background-image: url(../asset/button-crear-gifo.svg);
                 background-repeat: no-repeat;
                 &:hover{
@@ -476,8 +476,22 @@ footer{
                 width: 100%;
                 margin-top: 53px;
                 .left-arrow{
+                    width: 55px;
+                    height: 40px;
                     display: block;
+                    align-self: center;
                     margin-left: 7vw;
+                    background-image: url(../asset/button-slider-left.svg);
+                    background-repeat: no-repeat;
+                    &:hover{
+                        background-image: url(../asset/button-slider-left-hover.svg);
+                    }
+                    body.dark &{
+                        background-image: url(../asset/button-slider-left-md-noct.svg);
+                        &:hover{
+                            background-image: url(../asset/button-slider-left-md-noct-hover.svg);
+                        }
+                    }
                 }
                 .grid{
                     grid-template-columns: 1fr 1fr 1fr;
