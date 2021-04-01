@@ -190,7 +190,7 @@ header .site-nav ul .separator-line {
   margin-top: 10px;
 }
 
-header .site-nav .btn-more {
+header .site-nav .btn-create-gifos {
   display: none;
 }
 
@@ -554,10 +554,29 @@ body.dark footer p {
   header .site-nav ul .separator-line {
     display: none;
   }
-  header .site-nav .btn-more {
-    display: block;
+  header .site-nav .btn-create-gifos {
     margin-left: 3.68vw;
     margin-right: 10.83vw;
+    width: 54px;
+    height: 54px;
+    display: block;
+    background-image: url(../asset/button-crear-gifo.svg);
+    background-repeat: no-repeat;
+  }
+  header .site-nav .btn-create-gifos:hover {
+    background-image: url(../asset/CTA-crear-gifo-hover.svg);
+  }
+  header .site-nav .btn-create-gifos:active {
+    background-image: url(../asset/CTA-crear-gifo-active.svg);
+  }
+  body.dark header .site-nav .btn-create-gifos {
+    background-image: url(../asset/CTA-crear-gifo-modo-noc.svg);
+  }
+  body.dark header .site-nav .btn-create-gifos:hover {
+    background-image: url(../asset/CTA-crear-gifo-hover-modo-noc.svg);
+  }
+  body.dark header .site-nav .btn-create-gifos:active {
+    background-image: url(../asset/CTA-crear-gifo-active-modo-noc.svg);
   }
   main {
     margin-top: 11px;

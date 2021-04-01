@@ -94,7 +94,7 @@ header{
             margin-top: 10px;
             }            
         }// ul MOBILE END
-        .btn-more{
+        .btn-create-gifos{
             display:none;
         }
     }// .site-nav MOBILE END
@@ -366,11 +366,30 @@ footer{
                     display: none;
                 }                               
             } 
-            .btn-more{
-                display:block;
+            .btn-create-gifos{
                 margin-left: 3.68vw;
                 margin-right: 10.83vw;
-            }            
+                width: 54px;
+                height: 54px;
+                display:block;
+                background-image: url(../asset/button-crear-gifo.svg);
+                background-repeat: no-repeat;
+                &:hover{
+                    background-image: url(../asset/CTA-crear-gifo-hover.svg);
+                }
+                &:active{
+                    background-image: url(../asset/CTA-crear-gifo-active.svg);
+                }
+                body.dark &{
+                    background-image: url(../asset/CTA-crear-gifo-modo-noc.svg);
+                    &:hover{
+                        background-image: url(../asset/CTA-crear-gifo-hover-modo-noc.svg);
+                    }
+                    &:active{
+                        background-image: url(../asset/CTA-crear-gifo-active-modo-noc.svg);
+                    }
+                }
+            }// .btn-create-gifos DESKTOP END            
         }//.site-nav DESKTOP END             
     }// header DESKTOP END
     main{
