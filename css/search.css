@@ -759,8 +759,24 @@ footer p {
     font-size: 0px;
   }
   main .trending-gifos .carousel .right-arrow {
+    width: 55px;
+    height: 40px;
     display: block;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
     margin-right: 7vw;
+    background-image: url(../asset/Button-Slider-right.svg);
+    background-repeat: no-repeat;
+  }
+  main .trending-gifos .carousel .right-arrow:hover {
+    background-image: url(../asset/Button-Slider-right-hover.svg);
+  }
+  body.dark main .trending-gifos .carousel .right-arrow {
+    background-image: url(../asset/button-slider-right-md-noct.svg);
+  }
+  body.dark main .trending-gifos .carousel .right-arrow:hover {
+    background-image: url(../asset/button-slider-right-md-noct-hover.svg);
   }
   footer {
     display: -webkit-box;
