@@ -115,12 +115,12 @@ header .container-logo-search .gifos-logo {
   width: 49px;
   height: 49px;
   margin-left: 22px;
-  background-image: url(../asset/logo-mobile.svg);
+  background-image: url(../asset/gifos_logo.svg);
   background-repeat: no-repeat;
 }
 
 body.dark header .container-logo-search .gifos-logo {
-  background-image: url(../asset/logo-mobile-modo-noct.svg);
+  background-image: url(../asset/gifos_logo_noc.svg);
   background-repeat: no-repeat;
 }
 
@@ -494,14 +494,14 @@ body.dark footer p {
   }
   header .container-logo-search .gifos-logo {
     width: 59px;
-    height: 59px;
+    height: 66px;
     margin-left: 10.83vw;
     margin-right: 8.26vw;
-    background-image: url(../asset/logo-desktop.svg);
+    background-image: url(../asset/gifos_logo.svg);
     background-repeat: no-repeat;
   }
   body.dark header .container-logo-search .gifos-logo {
-    background-image: url(../asset/Logo-modo-noc.svg);
+    background-image: url(../asset/gifos_logo_noc.svg);
     background-repeat: no-repeat;
   }
   header .container-logo-search .header-search {
