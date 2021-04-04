@@ -309,9 +309,11 @@ footer{
             background-color: #37383C;
         }
         .container-logo-search{
+            display:flex;
+            align-items: center;
             .gifos-logo{ 
                 width: 59px;
-                height: 66px;          
+                height: 59px;          
                 margin-left: 10.83vw;
                 margin-right: 8.26vw;
                 background-image: url(../asset/gifos_logo.svg);

@@ -492,9 +492,17 @@ body.dark footer p {
   body.dark header {
     background-color: #37383C;
   }
+  header .container-logo-search {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   header .container-logo-search .gifos-logo {
     width: 59px;
-    height: 66px;
+    height: 59px;
     margin-left: 10.83vw;
     margin-right: 8.26vw;
     background-image: url(../asset/gifos_logo.svg);

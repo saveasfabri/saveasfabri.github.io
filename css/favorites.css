@@ -89,7 +89,7 @@ header {
           align-items: center;
   width: 100%;
   height: 95px;
-  border-top: 5px solid #000000;
+  border-top: 5px solid #572EE5;
   position: relative;
 }
 
@@ -103,22 +103,16 @@ body.dark header {
   border-top: 5px solid #000000;
 }
 
-header .container-logo-search {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 header .container-logo-search .gifos-logo {
   width: 49px;
   height: 49px;
   margin-left: 22px;
-  background-image: url(../asset/logo-mobile.svg);
+  background-image: url(../asset/gifos_logo.svg);
   background-repeat: no-repeat;
 }
 
 body.dark header .container-logo-search .gifos-logo {
-  background-image: url(../asset/logo-mobile-modo-noct.svg);
+  background-image: url(../asset/gifos_logo_noc.svg);
   background-repeat: no-repeat;
 }
 
@@ -458,16 +452,24 @@ body.dark footer p {
   body.dark header {
     background-color: #37383C;
   }
+  header .container-logo-search {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   header .container-logo-search .gifos-logo {
     width: 59px;
     height: 59px;
     margin-left: 10.83vw;
     margin-right: 8.26vw;
-    background-image: url(../asset/logo-desktop.svg);
+    background-image: url(../asset/gifos_logo.svg);
     background-repeat: no-repeat;
   }
   body.dark header .container-logo-search .gifos-logo {
-    background-image: url(../asset/Logo-modo-noc.svg);
+    background-image: url(../asset/gifos_logo_noc.svg);
     background-repeat: no-repeat;
   }
   header .container-logo-search .header-search {
@@ -716,6 +718,32 @@ body.dark footer p {
     font-size: 13px;
     font-weight: bold;
     color: #572EE5;
+  }
+  main .favorite .btn-mas:hover {
+    border: 1px solid #562ee583;
+    color: #FFFFFF;
+    background-color: #572EE5;
+    -webkit-box-shadow: 0 4px 10px 0 #a1a1a1, 3px 4px 10px 0 #a1a1a1;
+            box-shadow: 0 4px 10px 0 #a1a1a1, 3px 4px 10px 0 #a1a1a1;
+  }
+  main .favorite .btn-mas:active {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  body.dark main .favorite .btn-mas {
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    border: 1px solid #FFFFFF;
+  }
+  body.dark main .favorite .btn-mas:hover {
+    color: #000000;
+    background-color: #FFFFFF;
+    -webkit-box-shadow: 0 4px 10px 0 #575656, 3px 4px 10px 0 #575656;
+            box-shadow: 0 4px 10px 0 #575656, 3px 4px 10px 0 #575656;
+  }
+  body.dark main .favorite .btn-mas:active {
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
   main .trending-gifos {
     height: 640px;
