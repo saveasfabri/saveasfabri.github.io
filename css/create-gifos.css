@@ -234,6 +234,24 @@ header .site-nav-open {
   height: 100vh;
 }
 
+.header-enabled {
+  -webkit-transition: opacity .5s ease-in;
+  transition: opacity .5s ease-in;
+  opacity: 1;
+}
+
+.header-off {
+  -webkit-transition: opacity 1s ease-in;
+  transition: opacity 1s ease-in;
+  opacity: 0;
+}
+
+.header-off:hover {
+  -webkit-transition: opacity .5s ease;
+  transition: opacity .5s ease;
+  opacity: 1;
+}
+
 main {
   width: 100%;
   display: -webkit-box;

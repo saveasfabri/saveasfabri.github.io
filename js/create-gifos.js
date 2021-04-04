@@ -31,6 +31,22 @@ else{
     darkMode.innerHTML = 'Modo Nocturno';//local storage de cambio MD si .dark inactivo
 }
 
+//********************* HEADER OFF ONSCROLL / header **************************/
+let time; 
+
+function desplaza() {
+    clearTimeout(time); 
+    time = setTimeout(oculta, 1500); 
+    document.querySelector("header").className = "header-enabled";       
+}
+
+function oculta() {
+    if((document.documentElement.scrollTop || self.pageYOffset) != 0) {
+        document.querySelector("header").className = "header-off";         
+    }    
+}
+onscroll = desplaza;
+
 //********************* BURGUER MENU / .menu-toggle / header **************************/
 
 function menuBurger(){

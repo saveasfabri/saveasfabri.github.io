@@ -560,6 +560,21 @@ footer p {
   body.dark header .site-nav .btn-create-gifos:active {
     background-image: url(../asset/CTA-crear-gifo-active-modo-noc.svg);
   }
+  .header-enabled {
+    -webkit-transition: opacity .5s ease-in;
+    transition: opacity .5s ease-in;
+    opacity: 1;
+  }
+  .header-off {
+    -webkit-transition: opacity 1s ease-in;
+    transition: opacity 1s ease-in;
+    opacity: 0;
+  }
+  .header-off:hover {
+    -webkit-transition: opacity .5s ease;
+    transition: opacity .5s ease;
+    opacity: 1;
+  }
   main {
     margin-top: 76px;
   }

@@ -324,7 +324,7 @@ footer{
                 }
             }            
             .header-search{
-                display: block;
+                display: none;
                 width: 23.19vw;
                 height: 50px;
                 border: 1px solid #572EE5;
@@ -425,8 +425,20 @@ footer{
                     }
                 }
             }// .btn-create-gifos DESKTOP END
-        }//.site-nav DESKTOP END               
+        }//.site-nav DESKTOP END                      
     }// header DESKTOP END
+    .header-enabled{ //Funcion de JS para efecto onscroll de header
+        transition: opacity .5s ease-in; 
+        opacity: 1; 
+        }        
+    .header-off { //Funcion de JS para efecto onscroll de header
+        transition: opacity 1s ease-in; 
+        opacity: 0;
+        &:hover{
+            transition: opacity .5s ease; 
+            opacity: 1; 
+        }
+    }    
     main{
         margin-top: 76px;
         .main-title-img-search{
