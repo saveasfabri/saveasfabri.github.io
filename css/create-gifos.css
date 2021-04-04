@@ -110,6 +110,9 @@ header .container-logo-search {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header .container-logo-search .gifos-logo {
@@ -117,14 +120,14 @@ header .container-logo-search .gifos-logo {
   height: 59px;
   margin-left: 10.83vw;
   margin-right: 8.26vw;
-  background-image: url(../asset/logo-desktop.svg);
+  background-image: url(../asset/gifos_logo.svg);
   background-repeat: no-repeat;
   -webkit-transition: .4s ease all;
   transition: .4s ease all;
 }
 
 body.dark header .container-logo-search .gifos-logo {
-  background-image: url(../asset/Logo-modo-noc.svg);
+  background-image: url(../asset/gifos_logo_noc.svg);
   background-repeat: no-repeat;
 }
 
@@ -229,6 +232,24 @@ body.dark header .site-nav ul .item-menu:active {
 
 header .site-nav-open {
   height: 100vh;
+}
+
+.header-enabled {
+  -webkit-transition: opacity .5s ease-in;
+  transition: opacity .5s ease-in;
+  opacity: 1;
+}
+
+.header-off {
+  -webkit-transition: opacity 1s ease-in;
+  transition: opacity 1s ease-in;
+  opacity: 0;
+}
+
+.header-off:hover {
+  -webkit-transition: opacity .5s ease;
+  transition: opacity .5s ease;
+  opacity: 1;
 }
 
 main {
@@ -516,7 +537,7 @@ main .btn-comenzar {
 }
 
 main .btn-comenzar:hover {
-  border: 2px solid #562ee583;
+  border: 1px solid #562ee583;
   color: #FFFFFF;
   background-color: #572EE5;
   -webkit-box-shadow: 0 4px 10px 0 #a1a1a1, 3px 4px 10px 0 #a1a1a1;

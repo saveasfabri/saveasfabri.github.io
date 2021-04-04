@@ -19,7 +19,7 @@ header{
     align-items: center;
     width: 100%;
     height: 95px;
-    border-top: 5px solid #000000 ;
+    border-top: 5px solid #572EE5 ;
     position: relative; // para que tome desde donde comienza .site-nav (top 100%)
     transition: .4s ease all; //Suaviza pase a Dark-mode
     :after{
@@ -31,15 +31,16 @@ header{
         border-top:5px solid #000000;
     }
     .container-logo-search{
-        display: flex;
+        display:flex;
+        align-items: center;
         .gifos-logo{
             width: 49px;
             height: 49px;                     
             margin-left: 22px;
-            background-image: url(../asset/logo-mobile.svg);
+            background-image: url(../asset/gifos_logo.svg);
             background-repeat: no-repeat;
             body.dark & {
-                background-image: url(../asset/logo-mobile-modo-noct.svg);
+                background-image: url(../asset/gifos_logo_noc.svg);
                 background-repeat: no-repeat;
             }
         }
@@ -146,10 +147,26 @@ main{
             @include montserrat;
             font-weight: bold;
             color: #572EE5 ;
-            body.dark &{
-                border: 1px solid #FFFFFF;
-                @include montserrat-dark();
+            &:hover{
+                border: 1px solid #562ee583;
                 color: #FFFFFF;
+                background-color: #572EE5;
+                box-shadow: 0 4px 10px 0 #a1a1a1, 3px 4px 10px 0 #a1a1a1;
+            }
+            &:active{
+                box-shadow: none;
+            }
+            body.dark & {
+                @include montserrat-dark();
+                border: 1px solid #FFFFFF;
+                &:hover{
+                    color: #000000;
+                    background-color: #FFFFFF;
+                    box-shadow: 0 4px 10px 0 #575656, 3px 4px 10px 0 #575656;
+                }
+                &:active{
+                    box-shadow: none;
+                }
             }
         }
     }// .favorite MOBILE END
@@ -281,10 +298,10 @@ footer{
                 height: 59px;          
                 margin-left: 10.83vw;
                 margin-right: 8.26vw;
-                background-image: url(../asset/logo-desktop.svg);
+                background-image: url(../asset/gifos_logo.svg);
                 background-repeat: no-repeat;
                 body.dark & {
-                    background-image: url(../asset/Logo-modo-noc.svg);
+                    background-image: url(../asset/gifos_logo_noc.svg);
                     background-repeat: no-repeat;
                 }
             }
@@ -392,6 +409,18 @@ footer{
             }// .btn-create-gifos DESKTOP END            
         }//.site-nav DESKTOP END             
     }// header DESKTOP END
+    .header-enabled{ //Funcion de JS para efecto onscroll de header
+        transition: opacity .5s ease-in; 
+        opacity: 1; 
+        }        
+    .header-off { //Funcion de JS para efecto onscroll de header
+        transition: opacity 1s ease-in; 
+        opacity: 0;
+        &:hover{
+            transition: opacity .5s ease; 
+            opacity: 1; 
+        }
+    }
     main{
         margin-top: 11px;
         .favorite{

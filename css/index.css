@@ -492,9 +492,17 @@ body.dark footer p {
   body.dark header {
     background-color: #37383C;
   }
+  header .container-logo-search {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   header .container-logo-search .gifos-logo {
     width: 59px;
-    height: 66px;
+    height: 59px;
     margin-left: 10.83vw;
     margin-right: 8.26vw;
     background-image: url(../asset/gifos_logo.svg);
@@ -505,7 +513,7 @@ body.dark footer p {
     background-repeat: no-repeat;
   }
   header .container-logo-search .header-search {
-    display: block;
+    display: none;
     width: 23.19vw;
     height: 50px;
     border: 1px solid #572EE5;
@@ -621,6 +629,21 @@ body.dark footer p {
   }
   body.dark header .site-nav .btn-create-gifos:active {
     background-image: url(../asset/CTA-crear-gifo-active-modo-noc.svg);
+  }
+  .header-enabled {
+    -webkit-transition: opacity .5s ease-in;
+    transition: opacity .5s ease-in;
+    opacity: 1;
+  }
+  .header-off {
+    -webkit-transition: opacity 1s ease-in;
+    transition: opacity 1s ease-in;
+    opacity: 0;
+  }
+  .header-off:hover {
+    -webkit-transition: opacity .5s ease;
+    transition: opacity .5s ease;
+    opacity: 1;
   }
   main {
     margin-top: 76px;

@@ -12,6 +12,21 @@ function menuBurger(){
     } 
 };
 
+//********************* HEADER OFF ONSCROLL / header **************************/
+let time; 
+
+function desplaza() {
+    clearTimeout(time); 
+    time = setTimeout(oculta, 1500); 
+    document.querySelector("header").className = "header-enabled";       
+}
+
+function oculta() {
+    if((document.documentElement.scrollTop || self.pageYOffset) != 0) {
+        document.querySelector("header").className = "header-off";         
+    }    
+}
+onscroll = desplaza;
 
 //************** HOVER ICONOS REDES SOCIALES *******************/
 

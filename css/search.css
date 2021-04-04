@@ -93,18 +93,21 @@ header .container-logo-search {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header .container-logo-search .gifos-logo {
   width: 49px;
   height: 49px;
   margin-left: 22px;
-  background-image: url(../asset/logo-mobile.svg);
+  background-image: url(../asset/gifos_logo.svg);
   background-repeat: no-repeat;
 }
 
 body.dark header .container-logo-search .gifos-logo {
-  background-image: url(../asset/logo-mobile-modo-noct.svg);
+  background-image: url(../asset/gifos_logo_noc.svg);
   background-repeat: no-repeat;
 }
 
@@ -460,11 +463,11 @@ footer p {
     height: 59px;
     margin-left: 10.83vw;
     margin-right: 8.26vw;
-    background-image: url(../asset/logo-desktop.svg);
+    background-image: url(../asset/gifos_logo.svg);
     background-repeat: no-repeat;
   }
   body.dark header .container-logo-search .gifos-logo {
-    background-image: url(../asset/Logo-modo-noc.svg);
+    background-image: url(../asset/gifos_logo_noc.svg);
     background-repeat: no-repeat;
   }
   header .container-logo-search .header-search {
@@ -556,6 +559,21 @@ footer p {
   }
   body.dark header .site-nav .btn-create-gifos:active {
     background-image: url(../asset/CTA-crear-gifo-active-modo-noc.svg);
+  }
+  .header-enabled {
+    -webkit-transition: opacity .5s ease-in;
+    transition: opacity .5s ease-in;
+    opacity: 1;
+  }
+  .header-off {
+    -webkit-transition: opacity 1s ease-in;
+    transition: opacity 1s ease-in;
+    opacity: 0;
+  }
+  .header-off:hover {
+    -webkit-transition: opacity .5s ease;
+    transition: opacity .5s ease;
+    opacity: 1;
   }
   main {
     margin-top: 76px;
