@@ -513,7 +513,7 @@ body.dark footer p {
     background-repeat: no-repeat;
   }
   header .container-logo-search .header-search {
-    display: none;
+    display: block;
     width: 23.19vw;
     height: 50px;
     border: 1px solid #572EE5;
