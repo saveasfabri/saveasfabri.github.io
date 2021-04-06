@@ -48,6 +48,25 @@ window.onload = function(){
         darkMode.innerHTML = 'Modo Nocturno';
     }
 
+    //********************* HEADER_SEARCH ON ONSCROLL / header **************************/
+    
+    window.addEventListener('scroll', (e) => {
+
+        const scroll = (document.documentElement.scrollTop || document.body.scrollTop);
+        const headerOnOff = document.querySelector(".header-search");
+    
+        if (scroll > 0) {
+            headerOnOff.classList.add('header-on');
+            headerOnOff.classList.remove('header-off');
+            
+            
+        } else {
+            headerOnOff.classList.add('header-off');
+            headerOnOff.classList.remove('header-on');
+            
+        }
+    });
+
     //********************* HEADER OFF ONSCROLL / header **************************/
     let time;
 

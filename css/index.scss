@@ -53,7 +53,7 @@ header{
         }   
     }   
     .site-nav{
-        top: 100%; //toma que empieza despues del 100% del hieght del padre(Header)
+        top: 100%; //toma que empieza despues del 100% del hieght del padre(header)
         right: 0;
         position: absolute;
         background-color: #572EE5;
@@ -324,7 +324,7 @@ footer{
                 }
             }            
             .header-search{
-                display: block;
+                display: none;
                 width: 23.19vw;
                 height: 50px;
                 border: 1px solid #572EE5;
@@ -343,6 +343,12 @@ footer{
                     background-image: url(../asset/icon-search-modo-noct.svg);
                 }
             }
+            .header-on {
+                display:block;                
+            }            
+            .header-off {
+                display:none;              
+            }            
         }                
         .menu-toggle{
             display: none;

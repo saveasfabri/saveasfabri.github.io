@@ -132,6 +132,7 @@ body.dark header .container-logo-search .gifos-logo {
 }
 
 header .container-logo-search .header-search {
+  display: none;
   width: 23.19vw;
   height: 50px;
   border: 1px solid #572EE5;
@@ -151,6 +152,14 @@ body.dark header .container-logo-search .header-search {
   border: 1px solid #FFFFFF;
   background-color: #37383C;
   background-image: url(../asset/icon-search-modo-noct.svg);
+}
+
+header .container-logo-search .header-on {
+  display: block;
+}
+
+header .container-logo-search .header-off {
+  display: none;
 }
 
 header .menu-toggle {
