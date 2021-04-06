@@ -3,49 +3,48 @@ window.onload = function(){
     
     //***************** DARK MODE *******************/
 
-    const darkMode = document.querySelector('#dark');
-    const cambiarColorBurgerClose = document.querySelector('.burger');
+    const darkMode = document.querySelector("#dark");
+    const cambiarColorBurgerClose = document.querySelector(".burger");
 
     //Para cambiar el colores de fondo, fuentes etc
-    darkMode.addEventListener('click', () => {
-        document.body.classList.toggle('dark');
+    darkMode.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
         
     //Para cambiar texto del id="dark" ubicado dentro de .site-nav
-    if (darkMode.innerHTML === 'Modo Nocturno'){ 
-        darkMode.innerHTML = 'Modo Diurno';
+    if (darkMode.innerHTML === "Modo Nocturno"){ 
+        darkMode.innerHTML = "Modo Diurno";
     }else{ 
-        darkMode.innerHTML = 'Modo Nocturno';
+        darkMode.innerHTML = "Modo Nocturno";
     }
 
-
-
     //Al hacer click en modo Noct cambie burger/close img a Noct/Diurno
-    if (document.body.classList.contains('dark')) {
+    if (document.body.classList.contains("dark")) {
         cambiarColorBurgerClose.src ="./asset/burger-modo-noct.svg";
         cambiarColorBurgerClose.src ="./asset/close-modo-noct.svg";
     } else {
         cambiarColorBurgerClose.src ="./asset/burger-modo-diu.svg";
         cambiarColorBurgerClose.src ="./asset/close-modo-diu.svg";
     }
-    
 
-
-
-        // Guardo en el localstorage.
-    if(document.body.classList.contains('dark')){
-        localStorage.setItem('saveLocalStorage', 'true');
+    // Guardo en el localstorage.
+    if(document.body.classList.contains("dark")){
+        localStorage.setItem("LocalStorageDark", "true");
     } else {
-        localStorage.setItem('saveLocalStorage', 'false');
+        localStorage.setItem("LocalStorageDark", "false");
     }
     });
 
-    if(localStorage.getItem('saveLocalStorage') === 'true'){
-        document.body.classList.add('dark');
-        darkMode.innerHTML = 'Modo Diurno';
+    if(localStorage.getItem("LocalStorageDark") === "true"){
+        document.body.classList.add("dark");
+        darkMode.innerHTML = "Modo Diurno";
+        cambiarColorBurgerClose.src ="./asset/burger-modo-noct.svg";
+        cambiarColorBurgerClose.src ="./asset/close-modo-noct.svg";
     }
     else{
-        document.body.classList.remove('dark');
-        darkMode.innerHTML = 'Modo Nocturno';
+        document.body.classList.remove("dark");
+        darkMode.innerHTML = "Modo Nocturno";
+        cambiarColorBurgerClose.src ="./asset/burger-modo-diu.svg";
+        cambiarColorBurgerClose.src ="./asset/close-modo-diu.svg";
     }
 
     //********************* HEADER OFF ONSCROLL / header **************************/
@@ -53,30 +52,50 @@ window.onload = function(){
 
     function headerVisible() {
         clearTimeout(time); 
-            time = setTimeout(headerOculto, 1500); 
-            document.querySelector("header").className = "header-enabled";       
+        time = setTimeout(headerOculto, 1500); 
+        document.querySelector("header").className = "header-enabled";       
     }
 
     function headerOculto() {
         if((document.documentElement.scrollTop || self.pageYOffset) != 0) {
-            document.querySelector("header").className = "header-off";         
+            document.querySelector("header").className = "header-off";        
         }    
     }
     onscroll = headerVisible;
 
+    //********************* HEADER_SEARCH ON ONSCROLL / header **************************/
+    
+    window.addEventListener('scroll', (e) => {
+
+        const scroll = (document.documentElement.scrollTop || document.body.scrollTop);
+        const headerOnOff = document.querySelector(".header-search");
+    
+        if (scroll > 0) {
+            headerOnOff.classList.add('header-on');
+            headerOnOff.classList.remove('header-off');
+            
+            
+        } else {
+            headerOnOff.classList.add('header-off');
+            headerOnOff.classList.remove('header-on');
+            
+        }
+    });
+
     //********************* BURGUER MENU / .menu-toggle / header **************************/
 
-    let cambiarMenuBurger = document.querySelector("#menu-toggle");
-    const cambiarBurgerClose = document.querySelector('.burger');
+    const cambiarMenuBurger = document.querySelector("#menu-toggle");
+    const cambiarBurgerClose = document.querySelector(".burger");
+    const desplegarMenu = document.querySelector (".site-nav");
+    const cerrarMenuAlSeleccionarItem = document.querySelector (".site-nav");
 
-    cambiarMenuBurger.addEventListener('click', menuBurger); 
+    cambiarMenuBurger.addEventListener("click", menuBurger);
 
     function menuBurger(){
+        //desplegar menu en mobile        
+        desplegarMenu.classList.toggle("site-nav-open");
 
-        //desplegar menu en mobile
-        const desplegarMenu = document.querySelector ('.site-nav');
-        desplegarMenu.classList.toggle('site-nav-open');
-
+        //cambiar icono/burger/close y también noct/diurno
         if (cambiarBurgerClose.src.match ("close")) {
             if(document.body.classList.contains("dark")) {
                 cambiarBurgerClose.src ="./asset/burger-modo-noct.svg";
@@ -84,13 +103,37 @@ window.onload = function(){
                 cambiarBurgerClose.src = "./asset/burger-modo-diu.svg";
             }
         } else {
-            if (document.body.classList.contains('dark')) {
+            if (document.body.classList.contains("dark")) {
                 cambiarBurgerClose.src = "./asset/close-modo-noct.svg";
             } else {
                 cambiarBurgerClose.src = "./asset/close-modo-diu.svg";
             }                
         }
+
+        // Guardo en el localstorage.  !!!!PORQUE NO FUNCIONA?????
+        /* if(cambiarBurgerClose.src.match ("close")){
+            localStorage.setItem("LocalStorageCambiarImgBurger", "true");
+        } else {
+            localStorage.setItem("LocalStorageCambiarImgBurger", "false");
+        }*/
     };
+
+    /*if(localStorage.getItem("LocalStorageCambiarImgBurger") === "true"){
+        if(document.body.classList.contains("dark")) {
+            cambiarBurgerClose.src ="./asset/burger-modo-noct.svg";
+        }else{
+            cambiarBurgerClose.src = "./asset/burger-modo-diu.svg";
+        }
+    }
+    else{
+        if (document.body.classList.contains("dark")) {
+            cambiarBurgerClose.src = "./asset/close-modo-noct.svg";
+        } else {
+            cambiarBurgerClose.src = "./asset/close-modo-diu.svg";
+        }
+    }*/
+
+
 
     //************** HOVER ICONS/ SOCIAL MEDIA / .footer *******************/
 
@@ -98,43 +141,43 @@ window.onload = function(){
     let cambiarIconoHovertwit = document.getElementById("twit-icon");
     let cambiarIconoHoverInsta = document.getElementById("insta-icon");
 
-    cambiarIconoHoverFace.addEventListener('mouseover',cambiarIconoFinalFace);
-    cambiarIconoHoverFace.addEventListener('mouseout',cambiarIconoInicialFace);
-    cambiarIconoHovertwit.addEventListener('mouseover',cambiarIconoFinalTwit);
-    cambiarIconoHovertwit.addEventListener('mouseout',cambiarIconoInicialTwit);
-    cambiarIconoHoverInsta.addEventListener('mouseover',cambiarIconoFinalInsta);
-    cambiarIconoHoverInsta.addEventListener('mouseout',cambiarIconoInicialInsta);
+    cambiarIconoHoverFace.addEventListener("mouseover",cambiarIconoFinalFace);
+    cambiarIconoHoverFace.addEventListener("mouseout",cambiarIconoInicialFace);
+    cambiarIconoHovertwit.addEventListener("mouseover",cambiarIconoFinalTwit);
+    cambiarIconoHovertwit.addEventListener("mouseout",cambiarIconoInicialTwit);
+    cambiarIconoHoverInsta.addEventListener("mouseover",cambiarIconoFinalInsta);
+    cambiarIconoHoverInsta.addEventListener("mouseout",cambiarIconoInicialInsta);
     /*Icono Facebook */
     function cambiarIconoFinalFace(){
-        if (document.body.classList.contains('dark')) {
-            this.setAttribute('src','./asset/icon_facebook_noc.svg');
+        if (document.body.classList.contains("dark")) {
+            this.setAttribute("src","./asset/icon_facebook_noc.svg");
         } else {
-            this.setAttribute('src','./asset/icon_facebook_hover.svg');
+            this.setAttribute("src","./asset/icon_facebook_hover.svg");
         }
     }   
     function cambiarIconoInicialFace(){
-        this.setAttribute('src',"./asset/icon_facebook.svg");
+        this.setAttribute("src","./asset/icon_facebook.svg");
     }
     /*Icono Twitter */
     function cambiarIconoFinalTwit(){
-        if (document.body.classList.contains('dark')) {
-            this.setAttribute('src','./asset/icon_twitter_noc.svg');
+        if (document.body.classList.contains("dark")) {
+            this.setAttribute("src","./asset/icon_twitter_noc.svg");
         } else {
-            this.setAttribute('src','./asset/icon-twitter-hover.svg');
+            this.setAttribute("src","./asset/icon-twitter-hover.svg");
         }
     }   
     function cambiarIconoInicialTwit(){
-        this.setAttribute('src',"./asset/icon-twitter.svg");
+        this.setAttribute("src","./asset/icon-twitter.svg");
     }
     /*Icono Instagram */
     function cambiarIconoFinalInsta(){
-        if (document.body.classList.contains('dark')) {
-            this.setAttribute('src','./asset/icon_instagram_noc.svg');
+        if (document.body.classList.contains("dark")) {
+            this.setAttribute("src","./asset/icon_instagram_noc.svg");
         } else {
-            this.setAttribute('src','./asset/icon_instagram-hover.svg');
+            this.setAttribute("src","./asset/icon_instagram-hover.svg");
         }
     }   
     function cambiarIconoInicialInsta(){
-        this.setAttribute('src',"./asset/icon_instagram.svg");
+        this.setAttribute("src","./asset/icon_instagram.svg");
     }
 }

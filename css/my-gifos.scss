@@ -306,7 +306,7 @@ footer{
                 }
             }
             .header-search{
-                display: block;
+                display: none;
                 width: 23.19vw;
                 height: 50px;
                 border: 1px solid #572EE5;
@@ -324,6 +324,12 @@ footer{
                     background-color: #37383C;
                     background-image: url(../asset/icon-search-modo-noct.svg);
                 }
+            }
+            .header-on {
+                display:block;                
+            }            
+            .header-off {
+                display:none;              
             }
         }        
         .menu-toggle{
