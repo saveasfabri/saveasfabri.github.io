@@ -444,8 +444,6 @@ body.dark footer p {
         -ms-flex-pack: justify;
             justify-content: space-between;
     height: 90px;
-    -webkit-box-shadow: 0 2px 4px 1px #9CAFC350;
-            box-shadow: 0 2px 4px 1px #9CAFC350;
     -webkit-transition: .4s ease all;
     transition: .4s ease all;
   }
@@ -611,10 +609,9 @@ body.dark footer p {
   header .margin-on {
     margin-right: 10.83vw;
   }
-  header .margin-off {
-    margin-right: none;
-  }
   .header-enabled {
+    -webkit-box-shadow: 0 2px 4px 1px #9CAFC350;
+            box-shadow: 0 2px 4px 1px #9CAFC350;
     -webkit-transition: opacity .5s ease-in;
     transition: opacity .5s ease-in;
     opacity: 1;
@@ -628,10 +625,6 @@ body.dark footer p {
     -webkit-transition: opacity .5s ease;
     transition: opacity .5s ease;
     opacity: 1;
-  }
-  .header-shadow-on {
-    -webkit-box-shadow: 0 2px 4px 1px #9CAFC350;
-            box-shadow: 0 2px 4px 1px #9CAFC350;
   }
   .header-shadow-off {
     -webkit-box-shadow: none;
