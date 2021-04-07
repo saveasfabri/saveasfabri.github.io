@@ -20,7 +20,6 @@ header{
     width: 100%;
     height: 90px;
     border-top: 5px solid #572EE5 ;
-    box-shadow: 0 2px 4px 1px #9CAFC350;
     position: sticky;
     z-index: 100;
     top: 0;
@@ -124,25 +123,23 @@ header{
             }           
         }
         
-    }// .site-nav end  
+    }// .site-nav END
     .site-nav-open{        //no esta en html, está creada por JS
         height: 100vh;
     } 
-}// header end
+}// header END
 .header-enabled{ //Funcion de JS para efecto onscroll de header
+    box-shadow: 0 2px 4px 1px #9CAFC350;
     transition: opacity .5s ease-in; 
-    opacity: 1; 
+    opacity: 1;
     }        
 .header-off { //Funcion de JS para efecto onscroll de header
-    transition: opacity 1s ease-in; 
+    transition: opacity 1s ease-in;        
     opacity: 0;
     &:hover{
         transition: opacity .5s ease; 
         opacity: 1; 
     }
-}
-.header-shadow-on{  //efecto on/off en scroll del header
-    box-shadow: 0 2px 4px 1px #9CAFC350;
 }
 .header-shadow-off{  //efecto on/off en scroll del header
     box-shadow: none;
@@ -324,7 +321,7 @@ main{
                 background-image: url(../asset/pelicula-modo-noc.svg);
             }
         }        
-    }// .main-container DESKTOP END
+    }// .main-container END
     .line{
         width: 55.55vw;
         height: 7px;
@@ -369,7 +366,7 @@ main{
             }
         }
     }    
-}// main end
+}// main END
 footer{
     display: flex;
     flex-direction: row;
@@ -412,7 +409,7 @@ footer{
             @include roboto-dark()
         }
     }
-}//footer end
+}//footer END
 
 /************** MEDIA QUERY 600px *************************************************/
 
@@ -429,16 +426,5 @@ footer{
         .btn{
             width: 25px;
         }        
-    }
-}
-@keyframes projection {  //Animación de proyeccion en .camera-projection-img
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
     }
 }

@@ -303,7 +303,7 @@ footer{
         top: 0;
         background-color: #FFFFFF;        
         justify-content: space-between;
-        height: 90px;
+        height: 90px;        
         body.dark & {
             background-color: #37383C;
         }        
@@ -344,9 +344,6 @@ footer{
             }
             .header-search-on {   //efecto on/off en scroll del header
                 display:block;                
-            }            
-            .header-search-off {  //efecto on/off en scroll del header
-                display:none;              
             }            
         }                
         .menu-toggle{
@@ -430,34 +427,26 @@ footer{
                     }
                 }
             }// .btn-create-gifos DESKTOP END
-            .btn-create-gifos-on{  //efecto on/off en scroll del header
-                display: block;
-            }
             .btn-create-gifos-off{  //efecto on/off en scroll del header
                 display: none;
             }
         }//.site-nav DESKTOP END
         .margin-on{  //efecto on/off en scroll del header
             margin-right: 10.83vw;
-        }
-        .margin-off{  //efecto on/off en scroll del header
-            margin-right: none;
-        }                      
+        }                     
     }// header DESKTOP END
     .header-enabled{ //Funcion de JS para efecto onscroll de header
+        box-shadow: 0 2px 4px 1px #9CAFC350;
         transition: opacity .5s ease-in; 
-        opacity: 1; 
+        opacity: 1;
         }        
     .header-off { //Funcion de JS para efecto onscroll de header
-        transition: opacity 1s ease-in; 
+        transition: opacity 1s ease-in;        
         opacity: 0;
         &:hover{
             transition: opacity .5s ease; 
             opacity: 1; 
         }
-    }
-    .header-shadow-on{  //efecto on/off en scroll del header
-        box-shadow: 0 2px 4px 1px #9CAFC350;
     }
     .header-shadow-off{  //efecto on/off en scroll del header
         box-shadow: none;
