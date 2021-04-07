@@ -304,10 +304,9 @@ footer{
         background-color: #FFFFFF;        
         justify-content: space-between;
         height: 90px;
-        box-shadow: 0 2px 4px 1px #9CAFC350;
         body.dark & {
             background-color: #37383C;
-        }
+        }        
         .container-logo-search{
             display:flex;
             align-items: center;
@@ -320,9 +319,9 @@ footer{
                 background-repeat: no-repeat;
                 body.dark & {
                     background-image: url(../asset/gifos_logo_noc.svg);
-                    background-repeat: no-repeat;
-                }
-            }            
+                    background-repeat: no-repeat; 
+                }               
+            }           
             .header-search{
                 display: none;
                 width: 23.19vw;
@@ -343,10 +342,10 @@ footer{
                     background-image: url(../asset/icon-search-modo-noct.svg);
                 }
             }
-            .header-on {
+            .header-search-on {   //efecto on/off en scroll del header
                 display:block;                
             }            
-            .header-off {
+            .header-search-off {  //efecto on/off en scroll del header
                 display:none;              
             }            
         }                
@@ -375,7 +374,7 @@ footer{
                 li{
                     margin-left: 3.47vw;
                     margin-top: 0;
-                }
+                }                
                 .item-menu{
                     color: #572EE5;
                     font-size: 13px;
@@ -431,7 +430,19 @@ footer{
                     }
                 }
             }// .btn-create-gifos DESKTOP END
-        }//.site-nav DESKTOP END                      
+            .btn-create-gifos-on{  //efecto on/off en scroll del header
+                display: block;
+            }
+            .btn-create-gifos-off{  //efecto on/off en scroll del header
+                display: none;
+            }
+        }//.site-nav DESKTOP END
+        .margin-on{  //efecto on/off en scroll del header
+            margin-right: 10.83vw;
+        }
+        .margin-off{  //efecto on/off en scroll del header
+            margin-right: none;
+        }                      
     }// header DESKTOP END
     .header-enabled{ //Funcion de JS para efecto onscroll de header
         transition: opacity .5s ease-in; 
@@ -444,7 +455,13 @@ footer{
             transition: opacity .5s ease; 
             opacity: 1; 
         }
-    }    
+    }
+    .header-shadow-on{  //efecto on/off en scroll del header
+        box-shadow: 0 2px 4px 1px #9CAFC350;
+    }
+    .header-shadow-off{  //efecto on/off en scroll del header
+        box-shadow: none;
+    }
     main{
         margin-top: 76px;
         .main-title-img-search{

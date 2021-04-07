@@ -66,10 +66,10 @@ header{
                 background-image: url(../asset/icon-search-modo-noct.svg);
             }
         }
-        .header-on {
+        .header-search-on {   //efecto on/off en scroll del header
             display:block;                
         }            
-        .header-off {
+        .header-search-off {  //efecto on/off en scroll del header
             display:none;              
         }
     } 
@@ -140,6 +140,12 @@ header{
         transition: opacity .5s ease; 
         opacity: 1; 
     }
+}
+.header-shadow-on{  //efecto on/off en scroll del header
+    box-shadow: 0 2px 4px 1px #9CAFC350;
+}
+.header-shadow-off{  //efecto on/off en scroll del header
+    box-shadow: none;
 }
 main{
     width: 100%;

@@ -154,11 +154,11 @@ body.dark header .container-logo-search .header-search {
   background-image: url(../asset/icon-search-modo-noct.svg);
 }
 
-header .container-logo-search .header-on {
+header .container-logo-search .header-search-on {
   display: block;
 }
 
-header .container-logo-search .header-off {
+header .container-logo-search .header-search-off {
   display: none;
 }
 
@@ -259,6 +259,16 @@ header .site-nav-open {
   -webkit-transition: opacity .5s ease;
   transition: opacity .5s ease;
   opacity: 1;
+}
+
+.header-shadow-on {
+  -webkit-box-shadow: 0 2px 4px 1px #9CAFC350;
+          box-shadow: 0 2px 4px 1px #9CAFC350;
+}
+
+.header-shadow-off {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 main {
