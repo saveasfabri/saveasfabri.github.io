@@ -2,17 +2,24 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Icono de pestaña -->
+    <link rel="icon" href="./asset/gifos_logo_noc.svg">
+    <!-- Link a styles -->       
     <link rel="stylesheet" href="./css/index.css">
+    <!-- Titulo -->
     <title>Gifos</title>
 </head>
 <body>
     <header>
         <div class="container-logo-search">
-            <a href="./index.html"><div class="gifos-logo"></div></a>
-            <input type="search" id="header-search" class="header-search"  placeholder="Busca GIFOS y más">
+            <!-- Logo Gifos -->
+            <a href="./index.html"><div class="gifos-logo"></div></a> <!-- Img asignada por CSS -->
+            <!-- Barra de busqueda en header -->
+            <input type="search" id="header-search" class="header-search" placeholder="Busca GIFOS y más">
         </div> 
         <div class="menu-toggle" id="menu-toggle">
+            <!-- Icono burger / close -->
             <img id="burger" class="burger" src="./asset/burger-modo-diu.svg" alt="Icono abrir menu/cerrar menu">            
         </div>
         <nav id="site-nav" class="site-nav">            
@@ -24,7 +31,7 @@
                 <li><a class="item-menu" href="my-gifos.html">Mis Gifos</a></li>
                 <li class="separator-line"></li>                
             </ul>
-            <a href="./create-gifos.html"><div class="btn-create-gifos"></div></a> <!--imagen se asigna por css-->
+            <a href="./create-gifos.html"><div class="btn-create-gifos"></div></a> <!-- Img asignada por CSS -->
         </nav>                           
     </header>
     <main>
@@ -43,7 +50,7 @@
             <h2>Trending GIFOS</h2>
             <p>Mira los últimos GIFOS de nuestra comunidad.</p>
             <div class="carousel">
-                <div class="left-arrow"></div> <!--imagen se asigna pos css-->
+                <div class="left-arrow"></div> <!-- Img asignada por CSS -->
                 <div class="grid">                    
                     <div class="gif-grid">
                         <img class="gif" src="./images/per_medium(1).jpg" alt="Imagen ejemplo mascota">
@@ -88,7 +95,7 @@
                         </div>                            
                     </div>                    
                 </div>
-                <div class="right-arrow"></div> <!--imagen se asigna pos css-->
+                <div class="right-arrow"></div> <!-- Img asignada por CSS -->
             </div>                           
         </section>     
     </main>
@@ -103,6 +110,6 @@
         </div>
         <p>© GIFOS 2021 All Rights Reserved.</p>                
     </footer>
-    <script src="./js/index.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
