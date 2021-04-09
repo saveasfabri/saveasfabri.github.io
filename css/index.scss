@@ -34,7 +34,8 @@ header{
         display: flex;
         .gifos-logo{
             width: 49px;
-            height: 49px;                     
+            height: 49px;
+            border: none;                     
             margin-left: 22px;
             background-image: url(../asset/gifos_logo.svg);
             background-repeat: no-repeat;
@@ -343,9 +344,9 @@ footer{
                 }
             }
             .header-search-on {   //efecto on/off en scroll del header
-                display:block;                
-            }            
-        }                
+                display: block;                
+            }                        
+        }                       
         .menu-toggle{
             display: none;
         }        

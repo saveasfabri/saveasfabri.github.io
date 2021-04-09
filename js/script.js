@@ -68,23 +68,21 @@ window.onload = function(){
     window.addEventListener('scroll', (e) => {
 
         const scroll = (document.documentElement.scrollTop || document.body.scrollTop);
-        const headerOnOff = document.querySelector(".header-search");
+        const headerSearchOnOff = document.querySelector(".header-search");
         const shadowOff = document.querySelector("header");
         const btnCreateGifosOff = document.querySelector(".btn-create-gifos");
         const marginLastItem = document.querySelector(".site-nav");
     
         if (scroll > 0) {
-            headerOnOff.classList.add('header-search-on');
+            headerSearchOnOff.classList.add('header-search-on');
             btnCreateGifosOff.classList.add('btn-create-gifos-off');
             marginLastItem.classList.add('margin-on');
-        
-        }if(scroll === 0){
-            shadowOff.classList.add('header-shadow-off');
-            
+
         } else {
-            headerOnOff.classList.remove('header-search-on');
+            headerSearchOnOff.classList.remove('header-search-on');
             btnCreateGifosOff.classList.remove('btn-create-gifos-off');
-            marginLastItem.classList.remove('margin-on');            
+            marginLastItem.classList.remove('margin-on');
+            shadowOff.classList.add('header-shadow-off');        
         }
     });
 
@@ -115,31 +113,7 @@ window.onload = function(){
                 cambiarBurgerClose.src = "./asset/close-modo-diu.svg";
             }                
         }
-
-        // Guardo en el localstorage.  !!!!PORQUE NO FUNCIONA?????
-        /* if(cambiarBurgerClose.src.match ("close")){
-            localStorage.setItem("LocalStorageCambiarImgBurger", "true");
-        } else {
-            localStorage.setItem("LocalStorageCambiarImgBurger", "false");
-        }*/
     };
-
-    /*if(localStorage.getItem("LocalStorageCambiarImgBurger") === "true"){
-        if(document.body.classList.contains("dark")) {
-            cambiarBurgerClose.src ="./asset/burger-modo-noct.svg";
-        }else{
-            cambiarBurgerClose.src = "./asset/burger-modo-diu.svg";
-        }
-    }
-    else{
-        if (document.body.classList.contains("dark")) {
-            cambiarBurgerClose.src = "./asset/close-modo-noct.svg";
-        } else {
-            cambiarBurgerClose.src = "./asset/close-modo-diu.svg";
-        }
-    }*/
-
-
 
     //************** HOVER ICONS/ SOCIAL MEDIA / .footer *******************/
 

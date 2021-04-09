@@ -3,32 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
+    <!-- Icono de pestaña -->
+    <link rel="icon" href="./asset/gifos_logo_noc.svg">
+    <!-- Link a styles -->       
     <link rel="stylesheet" href="./css/favorites.css">
-
+    <!-- Titulo -->
     <title>Gifos favorite</title>
 </head>
 <body>
     <header>
         <div class="container-logo-search">
-            <a href="./index.html"><div class="gifos-logo"></div></a>
+            <!-- Logo Gifos -->
+            <a href="./index.html"><div class="gifos-logo"></div></a> <!-- Img asignada por CSS -->
+            <!-- Barra de busqueda en header -->
             <input type="search" id="header-search" class="header-search" placeholder="Busca GIFOS y más">
         </div> 
         <div class="menu-toggle" id="menu-toggle">
+            <!-- Icono burger / close -->
             <img id="burger" class="burger" src="./asset/burger-modo-diu.svg" alt="Icono abrir menu/cerrar menu">            
         </div>
         <nav id="site-nav" class="site-nav">            
             <ul>
-                <ul>
-                    <li id="dark" class="item-menu dark">Modo Nocturno</li>
-                    <li class="separator-line"></li>
-                    <li><a class="item-menu" href="./favorites.html">Favoritos</a></li>
-                    <li class="separator-line"></li>
-                    <li><a class="item-menu" href="my-gifos.html">Mis Gifos</a></li>
-                    <li class="separator-line"></li>                
-                </ul>
+                <li id="dark" class="item-menu dark">Modo Nocturno</li>
+                <li class="separator-line"></li>
+                <li><a class="item-menu" href="./favorites.html">Favoritos</a></li>
+                <li class="separator-line"></li>
+                <li><a class="item-menu" href="my-gifos.html">Mis Gifos</a></li>
+                <li class="separator-line"></li>                
             </ul>
-            <a href="./create-gifos.html"><div class="btn-create-gifos"></div></a>  <!--imagen se asigna pos css-->
+            <a href="./create-gifos.html"><div class="btn-create-gifos"></div></a> <!-- Img asignada por CSS -->
         </nav>                           
     </header>
     <main>
@@ -271,6 +274,6 @@
         </div>
         <p>© GIFOS 2021 All Rights Reserved.</p>                
     </footer>
-    <script src="./js/favorites.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
