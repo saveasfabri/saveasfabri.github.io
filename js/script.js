@@ -1,3 +1,4 @@
+///*******************  FUNCIONES GENERALES  ***************************** */
 
 window.onload = function(){
     
