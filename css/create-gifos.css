@@ -296,22 +296,58 @@ main .main-container {
 }
 
 main .main-container .camera-img {
-  width: 12.83vw;
+  width: 8.6vw;
   height: 11.5vw;
   max-width: 200%;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  background-image: url(../asset/camara.svg), url(../asset/Path-2.svg);
+  background-image: url(../asset/camara.svg);
   background-repeat: no-repeat;
-  background-position: 0, 8.8vw 1vw;
+  background-position: right;
   background-size: 8.54vw, 5.8vw;
   -webkit-transition: .4s ease all;
   transition: .4s ease all;
 }
 
 body.dark main .main-container .camera-img {
-  background-image: url(../asset/camara-modo-noc.svg), url(../asset/Path-2.svg);
+  background-image: url(../asset/camara-modo-noc.svg);
+}
+
+main .main-container .projection-img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(22%, rgba(136, 243, 226, 0)), to(#50e3c2));
+  background-image: linear-gradient(270deg, rgba(136, 243, 226, 0) 22%, #50e3c2 100%);
+  -webkit-clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 62%);
+          clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 62%);
+  width: 5.8vw;
+  height: 12vw;
+  -webkit-animation: mymove 0.15s infinite;
+          animation: mymove 0.15s infinite;
+}
+
+@-webkit-keyframes mymove {
+  from {
+    background-image: -webkit-gradient(linear, right top, left top, color-stop(22%, rgba(136, 243, 226, 0)), to(#50e3c2));
+    background-image: linear-gradient(270deg, rgba(136, 243, 226, 0) 22%, #50e3c2 100%);
+  }
+  to {
+    background-image: -webkit-gradient(linear, right top, left top, from(rgba(136, 243, 226, 0)), to(#50e3c2));
+    background-image: linear-gradient(270deg, rgba(136, 243, 226, 0) 0%, #50e3c2 100%);
+  }
+}
+
+@keyframes mymove {
+  from {
+    background-image: -webkit-gradient(linear, right top, left top, color-stop(22%, rgba(136, 243, 226, 0)), to(#50e3c2));
+    background-image: linear-gradient(270deg, rgba(136, 243, 226, 0) 22%, #50e3c2 100%);
+  }
+  to {
+    background-image: -webkit-gradient(linear, right top, left top, from(rgba(136, 243, 226, 0)), to(#50e3c2));
+    background-image: linear-gradient(270deg, rgba(136, 243, 226, 0) 0%, #50e3c2 100%);
+  }
 }
 
 main .main-container .box-btns {
@@ -514,7 +550,7 @@ main .main-container .movie-tape-img {
   max-width: 200%;
   -ms-flex-item-align: end;
       align-self: flex-end;
-  margin-left: 4.65vw;
+  margin-left: 5.8vw;
   background-image: url(../asset/pelicula.svg);
   background-repeat: no-repeat;
   background-size: 8.86vw;
