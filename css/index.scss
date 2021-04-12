@@ -38,9 +38,15 @@ header{
             margin-left: 22px;
             background-image: url(../asset/gifos_logo.svg);
             background-repeat: no-repeat;
+            &:hover{
+                background-image: url(../asset/gifos_logo_hover.svg);
+            }
             body.dark & {
                 background-image: url(../asset/gifos_logo_noc.svg);
                 background-repeat: no-repeat;
+                &:hover{
+                    background-image: url(../asset/gifos_logo_noc_hover.svg);
+                }
             }
         }       
         .header-search{
