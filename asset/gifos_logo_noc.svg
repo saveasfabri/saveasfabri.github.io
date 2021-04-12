@@ -7,8 +7,8 @@
 	.st1{fill:#572EE5;}
 	.st2{fill:#FFFFFF;}
 	.st3{fill:#AAC1CE;}
-	.st4{fill:#FFFFFF;stroke:#572EE5;stroke-width:0.3;stroke-miterlimit:10;}
-	.st5{font-family:'Bauhaus93';}
+	.st4{fill:#FFFFFF;stroke-width:0.3;stroke-miterlimit:10;}
+	.st5{font-family:'Arial';}
 	.st6{font-size:26.8334px;}
 	.st7{opacity:0.32;fill:#878787;}
 	.st8{font-family:'Consolas';}
