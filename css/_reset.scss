@@ -37,6 +37,9 @@
    blockquote, q {
        quotes: none;
    }
+   button{
+       padding: 0;
+   }
    blockquote:before, blockquote:after,
    q:before, q:after {
        content: '';
