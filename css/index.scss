@@ -130,28 +130,129 @@ main{
         }
         .main-img{
             margin-top: 31px;
-            width: 273px;
+            width: 72.8vw;
         }
-        .main-search{
-            width: 334px;
+        .div-main-search-inactive{ // inactive MOBILE
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 89.06vw;
             height: 50px;
             border: 1px solid #572EE5;
             border-radius: 50px;
-            font-size: 16px;
-            padding: 15px 64px 13px 55px;
-            @include roboto;
-            background-image: url(../asset/icon-search.svg);
-            background-position: 294px 15px;
-            background-repeat: no-repeat;
-            outline: none;
-            transition: .4s ease all; //Suaviza pase a Dark-mode
-            body.dark & {
+            body.dark &{
                 border: 1px solid #FFFFFF;
-                background-color: #37383C;
-                background-image: url(../asset/icon-search-modo-noct.svg);
             }
-        }      
-    }// main-title-img MOBILE END
+            .div-lupa-search-lupa{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .div-align-self-lupa-search{
+                    .img-lupa-gris{
+                        display: none;
+                    }
+                    .input-search{
+                        font-size: 16px;            
+                        @include roboto;
+                        margin-left: 14.74vw;
+                        background-color: transparent;
+                        outline: none;
+                        border: none;
+                        transition: .4s ease all; //Suaviza pase a Dark-mode
+                    }
+                }                            
+                .btn-search{
+                    margin-right: 5.33vw;
+                    border: none;
+                    outline: none;
+                    background-color: transparent;
+                    .btn-img-lupa{
+                        display: block;                        
+                        cursor: pointer;
+                    }
+                    .btn-img-x{
+                    display: none;
+                    } 
+                }
+            }
+            .ul-suggestions{
+                display: none;
+            }                       
+        } // .div-main-search-inactive MOBILE END
+        .div-main-search-active{  // active MOBILE
+            display: flex;
+            flex-direction: column;
+            width: 89.06vw;
+            border: 1px solid #572EE5;
+            border-radius: 25px;
+            body.dark &{
+                border: 1px solid #FFFFFF;
+            }
+            .div-lupa-search-lupa{
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                height: 50px;
+                .div-align-self-lupa-search{
+                    display: flex;
+                    .img-lupa-gris{
+                        display: block;
+                        margin-left: 6.13vw;
+                        width: 20px;
+                    }
+                    .input-search{
+                        font-size: 16px;
+                        color: #000000;
+                        @include roboto;                        
+                        margin-left: 3.47vw;
+                        background-color: transparent;
+                        outline: none;
+                        border: none;
+                        transition: .4s ease all; //Suaviza pase a Dark-mode
+                    } 
+                }                           
+                .btn-search{
+                    margin-right: 6.13vw;
+                    border: none;
+                    outline: none;
+                    background-color: transparent;
+                    .btn-img-lupa{
+                        display: none;
+                    }
+                    .btn-img-x{ 
+                        display: block;
+                        cursor: pointer;
+                    } 
+                }                
+            }
+            .separator-line{
+                height: 1px;
+                margin: 0 6.13vw 0 6.13vw;
+                background-color: #9CAFC3;
+            }
+            .ul-suggestions{
+                display: block;
+                margin-top: 15px;
+                margin-bottom: 8px;
+                .li-suggestions{
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 10px;                    
+                    .img-suggestions{
+                        width: 16px;
+                        margin-left: 6.13vw;
+                    }
+                    .text-suggestions{
+                        color: #9CAFC3;
+                        font-size: 16px;
+                        @include roboto;
+                        margin-left: 3.73vw
+                    }
+                }                
+            }           
+        }
+    }// main-title-img-search MOBILE END
     .section-trending{
         width: 100%;
         display: flex;
@@ -461,16 +562,81 @@ footer{
                 line-height: 50px;
             }
             .main-img{
-                width: 399px;
-                height: 190px;
+                width: 27.71vw;
             }
-            .main-search{
-                width: 551px;
+            .div-main-search-inactive{  // inactive DESKTOP
+                width: 38.26vw;
                 height: 50px;
-                background-position: 511px 15px;
-                outline: none;
-            }    
-        }// .main-title-img DESKTOP END
+                .div-lupa-search-lupa{
+                    .div-align-self-lupa-search{
+                        .img-lupa-gris{
+                            display: none;
+                        }
+                        .input-search{
+                            margin-left: 3.75vw;
+                        }
+                    }                            
+                    .btn-search{
+                        margin-right: 1.39vw;
+                        .btn-img-lupa{
+                            display: block;
+                        }
+                        .btn-img-x{
+                        display: none;
+                        } 
+                    }
+                } 
+            }
+            .div-main-search-active{  // active DESKTOP
+                width: 38.26vw;
+                .div-lupa-search-lupa{
+                    .div-align-self-lupa-search{
+                        .img-lupa-gris{
+                            margin-left: 1.39vw;
+                            display: block;
+                        }
+                        .input-search{                       
+                            margin-left: .76vw;
+                        } 
+                    }                           
+                    .btn-search{
+                        margin-right: 1.39vw;
+                        .btn-img-lupa{
+                            display: none;
+                        }
+                        .btn-img-x{ 
+                            display: block;
+                            cursor: pointer;
+                        } 
+                    }                
+                }
+                .separator-line{
+                    height: 1px;
+                    margin: 0 1.39vw 0 1.39vw;
+                    background-color: #9CAFC3;
+                }
+                .ul-suggestions{
+                    display: block;
+                    margin-top: 15px;
+                    margin-bottom: 8px;
+                    .li-suggestions{
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 10px;                    
+                        .img-suggestions{
+                            width: 16px;
+                            margin-left: 1.52vw;
+                        }
+                        .text-suggestions{
+                            color: #9CAFC3;
+                            font-size: 16px;
+                            @include roboto;
+                            margin-left: .97vw;
+                        }
+                    }                
+                }           
+            } // .div-main-search-active DESKTOP END
+        }// .main-title-img-search DESKTOP END
         .section-trending{
             margin-top: 73px;
             .p-trending{                
