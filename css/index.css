@@ -43,6 +43,10 @@ blockquote, q {
   quotes: none;
 }
 
+button {
+  padding: 0;
+}
+
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
@@ -250,29 +254,177 @@ body.dark main .main-title-img-search .main-title {
 
 main .main-title-img-search .main-img {
   margin-top: 31px;
-  width: 273px;
+  width: 72.8vw;
 }
 
-main .main-title-img-search .main-search {
-  width: 334px;
+main .main-title-img-search .div-main-search-inactive {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 89.06vw;
   height: 50px;
   border: 1px solid #572EE5;
   border-radius: 50px;
+}
+
+body.dark main .main-title-img-search .div-main-search-inactive {
+  border: 1px solid #FFFFFF;
+}
+
+main .main-title-img-search .div-main-search-inactive .div-lupa-search-lupa {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .main-title-img-search .div-main-search-inactive .div-lupa-search-lupa .div-align-self-lupa-search .img-lupa-gris {
+  display: none;
+}
+
+main .main-title-img-search .div-main-search-inactive .div-lupa-search-lupa .div-align-self-lupa-search .input-search {
   font-size: 16px;
-  padding: 15px 64px 13px 55px;
   font-family: 'Roboto', sans-serif;
-  background-image: url(../asset/icon-search.svg);
-  background-position: 294px 15px;
-  background-repeat: no-repeat;
+  margin-left: 14.74vw;
+  background-color: transparent;
   outline: none;
+  border: none;
   -webkit-transition: .4s ease all;
   transition: .4s ease all;
 }
 
-body.dark main .main-title-img-search .main-search {
+main .main-title-img-search .div-main-search-inactive .div-lupa-search-lupa .btn-search {
+  margin-right: 5.33vw;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+main .main-title-img-search .div-main-search-inactive .div-lupa-search-lupa .btn-search .btn-img-lupa {
+  display: block;
+  cursor: pointer;
+}
+
+main .main-title-img-search .div-main-search-inactive .div-lupa-search-lupa .btn-search .btn-img-x {
+  display: none;
+}
+
+main .main-title-img-search .div-main-search-inactive .ul-suggestions {
+  display: none;
+}
+
+main .main-title-img-search .div-main-search-active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 89.06vw;
+  border: 1px solid #572EE5;
+  border-radius: 25px;
+}
+
+body.dark main .main-title-img-search .div-main-search-active {
   border: 1px solid #FFFFFF;
-  background-color: #37383C;
-  background-image: url(../asset/icon-search-modo-noct.svg);
+}
+
+main .main-title-img-search .div-main-search-active .div-lupa-search-lupa {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 50px;
+}
+
+main .main-title-img-search .div-main-search-active .div-lupa-search-lupa .div-align-self-lupa-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .main-title-img-search .div-main-search-active .div-lupa-search-lupa .div-align-self-lupa-search .img-lupa-gris {
+  display: block;
+  margin-left: 6.13vw;
+  width: 20px;
+}
+
+main .main-title-img-search .div-main-search-active .div-lupa-search-lupa .div-align-self-lupa-search .input-search {
+  font-size: 16px;
+  color: #000000;
+  font-family: 'Roboto', sans-serif;
+  margin-left: 3.47vw;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  -webkit-transition: .4s ease all;
+  transition: .4s ease all;
+}
+
+main .main-title-img-search .div-main-search-active .div-lupa-search-lupa .btn-search {
+  margin-right: 6.13vw;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+main .main-title-img-search .div-main-search-active .div-lupa-search-lupa .btn-search .btn-img-lupa {
+  display: none;
+}
+
+main .main-title-img-search .div-main-search-active .div-lupa-search-lupa .btn-search .btn-img-x {
+  display: block;
+  cursor: pointer;
+}
+
+main .main-title-img-search .div-main-search-active .separator-line {
+  height: 1px;
+  margin: 0 6.13vw 0 6.13vw;
+  background-color: #9CAFC3;
+}
+
+main .main-title-img-search .div-main-search-active .ul-suggestions {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 8px;
+}
+
+main .main-title-img-search .div-main-search-active .ul-suggestions .li-suggestions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+}
+
+main .main-title-img-search .div-main-search-active .ul-suggestions .li-suggestions .img-suggestions {
+  width: 16px;
+  margin-left: 6.13vw;
+}
+
+main .main-title-img-search .div-main-search-active .ul-suggestions .li-suggestions .text-suggestions {
+  color: #9CAFC3;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  margin-left: 3.73vw;
 }
 
 main .section-trending {
@@ -668,14 +820,75 @@ body.dark footer p {
     line-height: 50px;
   }
   main .main-title-img-search .main-img {
-    width: 399px;
-    height: 190px;
+    width: 27.71vw;
   }
-  main .main-title-img-search .main-search {
-    width: 551px;
+  main .main-title-img-search .div-main-search-inactive {
+    width: 38.26vw;
     height: 50px;
-    background-position: 511px 15px;
-    outline: none;
+  }
+  main .main-title-img-search .div-main-search-inactive .div-lupa-search-lupa .div-align-self-lupa-search .img-lupa-gris {
+    display: none;
+  }
+  main .main-title-img-search .div-main-search-inactive .div-lupa-search-lupa .div-align-self-lupa-search .input-search {
+    margin-left: 3.75vw;
+  }
+  main .main-title-img-search .div-main-search-inactive .div-lupa-search-lupa .btn-search {
+    margin-right: 1.39vw;
+  }
+  main .main-title-img-search .div-main-search-inactive .div-lupa-search-lupa .btn-search .btn-img-lupa {
+    display: block;
+  }
+  main .main-title-img-search .div-main-search-inactive .div-lupa-search-lupa .btn-search .btn-img-x {
+    display: none;
+  }
+  main .main-title-img-search .div-main-search-active {
+    width: 38.26vw;
+  }
+  main .main-title-img-search .div-main-search-active .div-lupa-search-lupa .div-align-self-lupa-search .img-lupa-gris {
+    margin-left: 1.39vw;
+    display: block;
+  }
+  main .main-title-img-search .div-main-search-active .div-lupa-search-lupa .div-align-self-lupa-search .input-search {
+    margin-left: .76vw;
+  }
+  main .main-title-img-search .div-main-search-active .div-lupa-search-lupa .btn-search {
+    margin-right: 1.39vw;
+  }
+  main .main-title-img-search .div-main-search-active .div-lupa-search-lupa .btn-search .btn-img-lupa {
+    display: none;
+  }
+  main .main-title-img-search .div-main-search-active .div-lupa-search-lupa .btn-search .btn-img-x {
+    display: block;
+    cursor: pointer;
+  }
+  main .main-title-img-search .div-main-search-active .separator-line {
+    height: 1px;
+    margin: 0 1.39vw 0 1.39vw;
+    background-color: #9CAFC3;
+  }
+  main .main-title-img-search .div-main-search-active .ul-suggestions {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 8px;
+  }
+  main .main-title-img-search .div-main-search-active .ul-suggestions .li-suggestions {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 10px;
+  }
+  main .main-title-img-search .div-main-search-active .ul-suggestions .li-suggestions .img-suggestions {
+    width: 16px;
+    margin-left: 1.52vw;
+  }
+  main .main-title-img-search .div-main-search-active .ul-suggestions .li-suggestions .text-suggestions {
+    color: #9CAFC3;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    margin-left: .97vw;
   }
   main .section-trending {
     margin-top: 73px;

@@ -38,10 +38,55 @@
         <section class="main-title-img-search">
             <h1 class="main-title">
                 Inspírate, busca, guarda, y crea los mejores <span>GIFOS</span>
-            </h1>            
+            </h1>
+            <!-- Imagen Principal -->
             <img class="main-img" src="./asset/ilustra_header.svg" alt="Ilustracion de personas alegres">
-            <input type="search" id="main-search" class="main-search" placeholder="Busca GIFOS y más">
+
+            <!-- Buscador Principal -->
+            <div class="div-main-search-inactive"> <!-- SE CAMBIA A ACTIVE -->
+                <div class="div-lupa-search-lupa">
+
+                    <div class="div-align-self-lupa-search"><!-- Para alinear search y lupa gris a la izquierda con space between -->
+
+                        <!-- Lupa gris -->
+                    <img id="img-lupa-gris" class="img-lupa-gris" src="./asset/icon-search-grey.svg" alt="imagen ilustrativa de lupa">
+
+                    <!-- input -->
+                    <input type="text" id="input-search" class="input-search" placeholder="Busca GIFOS y más">
+                    </div>
+                    
+                    <!-- Btn Lupa -->
+                    <button id="btn-search" class="btn-search">
+                        <img id="btn-img-lupa" class="btn-img-lupa" src="./asset/icon-search.svg" alt="boton buscador con forma de lupa">
+                        <img id="btn-img-x" class="btn-img-x" src="./asset/close-modo-diu.svg" alt="boton cancelar buscador con forma de X">
+                    </button>                    
+                </div>
+                <div class="separator-line"></div> <!-- Linea se asigna por CSS -->
+                <ul id="ul-suggestions" class="ul-suggestions">
+
+                    <!-- ****li solo de ejemplos, se hacen JS -->
+                    <li class="li-suggestions">
+                        <img class="img-suggestions" src="./asset/icon-search-grey.svg" alt="">
+                        <p class="text-suggestions">Sugerencia 1</p>
+                    </li>
+                    <li class="li-suggestions">
+                        <img class="img-suggestions" src="./asset/icon-search-grey.svg" alt="">
+                        <p class="text-suggestions">Sugerencia 2</p>
+                    </li>
+                    <li class="li-suggestions">
+                        <img class="img-suggestions" src="./asset/icon-search-grey.svg" alt="">
+                        <p class="text-suggestions">Sugerencia 3</p>
+                    </li>
+                    <li class="li-suggestions">
+                        <img class="img-suggestions" src="./asset/icon-search-grey.svg" alt="">
+                        <p class="text-suggestions">Sugerencia 4</p>
+                    </li>
+                    <!-- *********************************** -->
+                </ul>
+            </div>      
         </section>
+
+        <!-- Sección trending texto -->
         <section class="section-trending">
             <h2 class="p-trending">Trending:</h2>
             <p>Reactions, Entertainment, Sports, Stickers, Artists</p>
@@ -49,6 +94,7 @@
         <section class="trending-gifos">
             <h2>Trending GIFOS</h2>
             <p>Mira los últimos GIFOS de nuestra comunidad.</p>
+            <!-- Comienzo de Carrusel -->
             <div class="carousel">
                 <div class="left-arrow"></div> <!-- Img asignada por CSS -->
                 <div class="grid">                    

@@ -155,17 +155,33 @@ main{
         justify-content: space-evenly;
         margin: 4px 10.83vw 0 10.83vw;        
         .camera-img{
-            width:12.83vw;
-            height:11.5vw;
+            width: 8.6vw;
+            height: 11.5vw;
             max-width: 200%;
             align-self: center;
-            background-image: url(../asset/camara.svg), url(../asset/Path-2.svg);
+            background-image: url(../asset/camara.svg);
             background-repeat: no-repeat;
-            background-position: 0, 8.8vw 1vw;
+            background-position: right;
             background-size: 8.54vw, 5.8vw;
             transition: .4s ease all; //Suaviza pase a Dark-mode 
             body.dark &{
-                background-image: url(../asset/camara-modo-noc.svg), url(../asset/Path-2.svg);
+                background-image: url(../asset/camara-modo-noc.svg);
+            }
+        }
+        .projection-img{
+            align-self: center;
+            background-image: linear-gradient(270deg, rgba(136, 243, 226, 0) 22%, #50e3c2 100%);
+            clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 62%);
+            width: 5.8vw;
+            height: 12vw;
+            animation: mymove 0.15s infinite;
+        }
+        @keyframes mymove {
+            from {
+                background-image: linear-gradient(270deg, rgba(136, 243, 226, 0) 22%, #50e3c2 100%);
+            }
+            to {
+                background-image: linear-gradient(270deg, rgba(136, 243, 226, 0) 0%, #50e3c2 100%);
             }
         }
         .box-btns{
@@ -312,7 +328,7 @@ main{
             height: 5.5vw;
             max-width: 200%;
             align-self:flex-end;
-            margin-left: 4.65vw;
+            margin-left: 5.8vw;;
             background-image: url(../asset/pelicula.svg);
             background-repeat: no-repeat;
             background-size: 8.86vw;
