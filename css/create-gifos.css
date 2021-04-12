@@ -124,13 +124,19 @@ header .container-logo-search .gifos-logo {
   margin-right: 8.26vw;
   background-image: url(../asset/gifos_logo.svg);
   background-repeat: no-repeat;
-  -webkit-transition: .4s ease all;
-  transition: .4s ease all;
+}
+
+header .container-logo-search .gifos-logo:hover {
+  background-image: url(../asset/gifos_logo_hover.svg);
 }
 
 body.dark header .container-logo-search .gifos-logo {
   background-image: url(../asset/gifos_logo_noc.svg);
   background-repeat: no-repeat;
+}
+
+body.dark header .container-logo-search .gifos-logo:hover {
+  background-image: url(../asset/gifos_logo_noc_hover.svg);
 }
 
 header .container-logo-search .header-search {

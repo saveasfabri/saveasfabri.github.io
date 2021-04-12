@@ -470,9 +470,15 @@ body.dark footer p {
     background-image: url(../asset/gifos_logo.svg);
     background-repeat: no-repeat;
   }
+  header .container-logo-search .gifos-logo:hover {
+    background-image: url(../asset/gifos_logo_hover.svg);
+  }
   body.dark header .container-logo-search .gifos-logo {
     background-image: url(../asset/gifos_logo_noc.svg);
     background-repeat: no-repeat;
+  }
+  body.dark header .container-logo-search .gifos-logo:hover {
+    background-image: url(../asset/gifos_logo_noc_hover.svg);
   }
   header .container-logo-search .header-search {
     display: none;
