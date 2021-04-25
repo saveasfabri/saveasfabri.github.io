@@ -170,7 +170,7 @@ main{
             }
         }
     }// .favorite MOBILE END
-    .trending-gifos{
+    .section-carousel{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -492,7 +492,7 @@ footer{
                 color: #572EE5 ;
             }
         }// .favorite DESKTOP end
-        .trending-gifos{
+        .section-carousel{
             height: 640px;
             margin-top: 79px;
             h2{
@@ -625,7 +625,7 @@ footer{
                     }
                 }
             } // .carousel DESKTOP END        
-        }// .trending-gifos DESKTOP END
+        }// .section-carousel DESKTOP END
     }     
     footer{
         display: flex;
