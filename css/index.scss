@@ -1,6 +1,7 @@
 @import "reset";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
 @mixin montserrat{font-family: 'Montserrat', sans-serif};
 @mixin montserrat-dark{font-family: 'Montserrat', sans-serif; color: #ffffff};
 @mixin roboto {font-family: 'Roboto', sans-serif};
@@ -238,7 +239,8 @@ main{
                 .li-suggestions{
                     display: flex;
                     align-items: center;
-                    margin-bottom: 10px;                    
+                    margin-bottom: 10px;
+                    cursor: pointer;                
                     .img-suggestions{
                         width: 16px;
                         margin-left: 6.13vw;
@@ -247,7 +249,8 @@ main{
                         color: #9CAFC3;
                         font-size: 16px;
                         @include roboto;
-                        margin-left: 3.73vw
+                        margin-left: 3.73vw;
+                        cursor: pointer;
                     }
                 }                
             }           
@@ -259,7 +262,7 @@ main{
         flex-direction: column;
         align-items: center;
         margin-top: 31px;
-        .p-trending{
+        h3{
             text-align: center;
             color: #572EE5;
             font-weight: 700;
@@ -270,7 +273,7 @@ main{
                 color: #FFFFFF;
             }
         }
-        p{
+        .trending-topics{
             text-align: center;
             width: 225px;
             margin-top: 2px;
@@ -285,7 +288,8 @@ main{
             }
         } 
     }
-    .trending-gifos{
+    
+    .section-carousel{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -394,6 +398,94 @@ footer{
         }
     }
 }//footer MOBILE END
+.trending-topics-link{
+    cursor: pointer;
+}
+//estilos de la seccion RESULTADOS BUSQUEDA agregada con js
+.results-search-container{
+    //la seccion entera con titulo
+    display: none;
+    position: relative;
+    margin-top: 35px;
+    text-align: center;
+}
+.results-search-container::before{
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 1;
+    left: calc(50% - 78.5px);
+    width: 157px;
+    border-bottom: 1px solid #9CAFC3;
+    opacity: 0.5;
+}
+.title-search{
+    position: relative;
+    padding-top: 43px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    text-align: center;
+    color: #572EE5;
+    font-size: 25px;
+    line-height: 40px;
+}
+.results-search{
+    //el contenedor con las 4 columnas
+    margin: 38px 10px 53px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+.results-gif-box {
+    //la caja con cada gif
+    width: 156px;
+    height: 120px;
+    overflow: hidden;
+    margin: 0 10px 25px 10px;
+}
+
+.gif-actions-results {
+    display: none;
+}
+
+.results-gif {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.btn-mas{
+    border: 1px solid #572EE5;
+    border-radius: 25px;
+    margin-top: 78px;
+    padding: 18px 32.5px;
+    text-align: center;
+    text-decoration: none;
+    @include montserrat;
+    font-weight: bold;
+    color: #572EE5 ;
+    body.dark &{
+        border: 1px solid #FFFFFF;
+        @include montserrat-dark();
+        color: #FFFFFF;
+    }
+}
+.search-error-container{
+    margin-top: 40px;
+}
+
+.search-error-img{
+    width: 120px;
+}
+
+.search-error-text{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: #50E3C2;
+    font-size: 18px;
+    line-height: 28px;
+}
 
 /******************************* MEDIA QUERY 700px *********************************************/
 
@@ -597,9 +689,10 @@ footer{
                 width: 38.26vw;
                 .div-lupa-search-lupa{
                     .div-align-self-lupa-search{
+                        cursor: pointer;
                         .img-lupa-gris{
                             margin-left: 1.39vw;
-                            display: block;
+                            display: block;                            
                         }
                         .input-search{                       
                             margin-left: .76vw;
@@ -628,7 +721,7 @@ footer{
                     .li-suggestions{
                         display: flex;
                         align-items: center;
-                        margin-bottom: 10px;                    
+                        margin-bottom: 10px;                                           
                         .img-suggestions{
                             width: 16px;
                             margin-left: 1.52vw;
@@ -643,19 +736,20 @@ footer{
                 }           
             } // .div-main-search-active DESKTOP END
         }// .main-title-img-search DESKTOP END
+
         .section-trending{
             margin-top: 73px;
-            .p-trending{                
-                font-size: 18px;
-            }
-            p{
+            .trending-topics{
                 width: auto;
-                font-size: 16px;
+                font-size: 18px;
                 font-weight: 500;
                 margin-top: 7px;
             }
         }
-        .trending-gifos{
+
+        
+
+        .section-carousel{
             height: 640px;
             margin-top: 95px;
             h2{
@@ -788,7 +882,7 @@ footer{
                     }
                 }                
             } // .carousel DESKTOP END           
-        }// .trending-gifos DESKTOP END   
+        }// .section-carousel DESKTOP END   
     }// main DESKTOP END
     footer{
         display: flex;
@@ -814,4 +908,89 @@ footer{
             margin-right: 10.83vw;
         }
     }// footer DESKTOP END
+    .results-search{
+        //el contenedor con las 4 columnas
+        margin: 38px 10px 53px 10px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .results-gif-box{
+        //la caja con cada gif
+        width: 220px;
+        height: 200px;
+        margin: 0 10px 25px 10px;
+        &:hover{
+            display: block
+        }
+    }
+    .gif-actions-results{
+        position: absolute;
+        z-index: 0;
+        background-color: $violeta-op2;
+        width: 220px;
+        height: 200px;
+        &:hover{
+            display: block
+        }
+    }
+    .icons-actions-gif{
+        display: flex;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+    .icons-actions-box{
+        width: 32px;
+        height: 32px;
+        background-color: #FFFFFF70;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        border-radius: 6px;
+        border: none;
+        &:hover{
+            background-color:#FFFFFF
+        }
+    }
+    .favorite{
+        cursor: pointer;
+    }
+    .download{
+        margin-left: 10px;
+        cursor: pointer;
+    }
+    .max{
+        margin-left: 10px;
+        cursor: pointer;
+    }
+    .text-description-gif-results{
+        position: absolute;
+        bottom: 30px;
+        left: 18px;
+    }
+    
+    .user-gif-results{
+        @include textos-mobile;
+        text-align: left;
+        color: $blanco;
+        font-size: 15px;
+        line-height: 18px;
+        padding: 0;
+        margin-bottom: 6px;
+    }
+    
+    .title-gif-results{
+        @include textos-mobile;
+        text-align: left;
+        color: $blanco;
+        font-size: 16px;
+        line-height: 19px;
+        font-weight: 500;
+        padding: 0;
+        margin: 0;
+    }
 }// @media DESKTOP END
+
+

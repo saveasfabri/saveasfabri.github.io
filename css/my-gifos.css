@@ -310,7 +310,7 @@ body.dark main .favorite .btn-mas:active {
           box-shadow: none;
 }
 
-main .trending-gifos {
+main .section-carousel {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -330,11 +330,11 @@ main .trending-gifos {
   transition: .4s ease all;
 }
 
-body.dark main .trending-gifos {
+body.dark main .section-carousel {
   background-color: #222326;
 }
 
-main .trending-gifos h2 {
+main .section-carousel h2 {
   font-family: 'Montserrat', sans-serif;
   font-size: 20px;
   font-weight: bold;
@@ -344,12 +344,12 @@ main .trending-gifos h2 {
   transition: .4s ease all;
 }
 
-body.dark main .trending-gifos h2 {
+body.dark main .section-carousel h2 {
   font-family: 'Montserrat', sans-serif;
   color: #ffffff;
 }
 
-main .trending-gifos p {
+main .section-carousel p {
   width: 200px;
   font-weight: 400;
   font-family: 'Roboto', sans-serif;
@@ -360,22 +360,22 @@ main .trending-gifos p {
   transition: .4s ease all;
 }
 
-body.dark main .trending-gifos p {
+body.dark main .section-carousel p {
   font-family: 'Roboto', sans-serif;
   color: #ffffff;
 }
 
-main .trending-gifos .carousel {
+main .section-carousel .carousel {
   width: 100%;
   margin-left: 22px;
   margin-top: 32px;
 }
 
-main .trending-gifos .carousel .left-arrow {
+main .section-carousel .carousel .left-arrow {
   display: none;
 }
 
-main .trending-gifos .carousel .grid {
+main .section-carousel .carousel .grid {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
@@ -385,20 +385,20 @@ main .trending-gifos .carousel .grid {
   gap: 5.86vw;
 }
 
-main .trending-gifos .carousel .grid .gif-grid .gif {
+main .section-carousel .carousel .grid .gif-grid .gif {
   width: 243px;
   height: 187px;
 }
 
-main .trending-gifos .carousel .grid .gif-grid .transition .icon-content {
+main .section-carousel .carousel .grid .gif-grid .transition .icon-content {
   display: none;
 }
 
-main .trending-gifos .carousel .grid .gif-grid .transition .text-content {
+main .section-carousel .carousel .grid .gif-grid .transition .text-content {
   display: none;
 }
 
-main .trending-gifos .carousel .right-arrow {
+main .section-carousel .carousel .right-arrow {
   display: none;
 }
 
@@ -706,20 +706,20 @@ body.dark footer p {
     font-weight: bold;
     color: #572EE5;
   }
-  main .trending-gifos {
+  main .section-carousel {
     height: 640px;
     margin-top: 79px;
   }
-  main .trending-gifos h2 {
+  main .section-carousel h2 {
     font-size: 25px;
     margin-top: 67px;
   }
-  main .trending-gifos p {
+  main .section-carousel p {
     width: auto;
     font-size: 18px;
     margin-top: 12px;
   }
-  main .trending-gifos .carousel {
+  main .section-carousel .carousel {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -731,7 +731,7 @@ body.dark footer p {
     width: 100%;
     margin-top: 53px;
   }
-  main .trending-gifos .carousel .left-arrow {
+  main .section-carousel .carousel .left-arrow {
     width: 55px;
     height: 40px;
     display: block;
@@ -742,25 +742,25 @@ body.dark footer p {
     background-image: url(../asset/button-slider-left.svg);
     background-repeat: no-repeat;
   }
-  main .trending-gifos .carousel .left-arrow:hover {
+  main .section-carousel .carousel .left-arrow:hover {
     background-image: url(../asset/button-slider-left-hover.svg);
   }
-  body.dark main .trending-gifos .carousel .left-arrow {
+  body.dark main .section-carousel .carousel .left-arrow {
     background-image: url(../asset/button-slider-left-md-noct.svg);
   }
-  body.dark main .trending-gifos .carousel .left-arrow:hover {
+  body.dark main .section-carousel .carousel .left-arrow:hover {
     background-image: url(../asset/button-slider-left-md-noct-hover.svg);
   }
-  main .trending-gifos .carousel .grid {
+  main .section-carousel .carousel .grid {
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
     gap: 2vw;
     margin: 0 1.60vw 0 1.60vw;
   }
-  main .trending-gifos .carousel .grid .gif-grid {
+  main .section-carousel .carousel .grid .gif-grid {
     position: relative;
   }
-  main .trending-gifos .carousel .grid .gif-grid:hover .transition {
+  main .section-carousel .carousel .grid .gif-grid:hover .transition {
     height: 100%;
     -webkit-transition: 0.4s ease-in-out;
     transition: 0.4s ease-in-out;
@@ -775,7 +775,7 @@ body.dark footer p {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  main .trending-gifos .carousel .grid .gif-grid:hover .transition .icon-content {
+  main .section-carousel .carousel .grid .gif-grid:hover .transition .icon-content {
     margin-top: 10px;
     -webkit-transition: .3s ease;
     transition: .3s ease;
@@ -786,13 +786,13 @@ body.dark footer p {
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
-  main .trending-gifos .carousel .grid .gif-grid:hover .transition .icon-content .icon {
+  main .section-carousel .carousel .grid .gif-grid:hover .transition .icon-content .icon {
     height: 32px;
     margin-right: 10px;
     -webkit-transition: .3s ease;
     transition: .3s ease;
   }
-  main .trending-gifos .carousel .grid .gif-grid:hover .transition .text-content .user {
+  main .section-carousel .carousel .grid .gif-grid:hover .transition .text-content .user {
     color: #FFFFFF;
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
@@ -803,7 +803,7 @@ body.dark footer p {
     -webkit-transition: .3s ease .1s;
     transition: .3s ease .1s;
   }
-  main .trending-gifos .carousel .grid .gif-grid:hover .transition .text-content .titulo {
+  main .section-carousel .carousel .grid .gif-grid:hover .transition .text-content .titulo {
     color: #FFFFFF;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -813,12 +813,12 @@ body.dark footer p {
     -webkit-transition: .3s ease .1s;
     transition: .3s ease .1s;
   }
-  main .trending-gifos .carousel .grid .gif-grid .gif {
+  main .section-carousel .carousel .grid .gif-grid .gif {
     width: 100%;
     height: 100%;
     max-width: 100%;
   }
-  main .trending-gifos .carousel .grid .gif-grid .transition {
+  main .section-carousel .carousel .grid .gif-grid .transition {
     position: absolute;
     top: 0;
     width: 100%;
@@ -827,22 +827,22 @@ body.dark footer p {
     opacity: 0.7;
     z-index: 2;
   }
-  main .trending-gifos .carousel .grid .gif-grid .transition .icon-content {
+  main .section-carousel .carousel .grid .gif-grid .transition .icon-content {
     display: block;
   }
-  main .trending-gifos .carousel .grid .gif-grid .transition .icon-content .icon {
+  main .section-carousel .carousel .grid .gif-grid .transition .icon-content .icon {
     height: 0;
   }
-  main .trending-gifos .carousel .grid .gif-grid .transition .text-content {
+  main .section-carousel .carousel .grid .gif-grid .transition .text-content {
     display: block;
   }
-  main .trending-gifos .carousel .grid .gif-grid .transition .text-content .user {
+  main .section-carousel .carousel .grid .gif-grid .transition .text-content .user {
     font-size: 0px;
   }
-  main .trending-gifos .carousel .grid .gif-grid .transition .text-content .titulo {
+  main .section-carousel .carousel .grid .gif-grid .transition .text-content .titulo {
     font-size: 0px;
   }
-  main .trending-gifos .carousel .right-arrow {
+  main .section-carousel .carousel .right-arrow {
     width: 55px;
     height: 40px;
     display: block;
@@ -853,13 +853,13 @@ body.dark footer p {
     background-image: url(../asset/Button-Slider-right.svg);
     background-repeat: no-repeat;
   }
-  main .trending-gifos .carousel .right-arrow:hover {
+  main .section-carousel .carousel .right-arrow:hover {
     background-image: url(../asset/Button-Slider-right-hover.svg);
   }
-  body.dark main .trending-gifos .carousel .right-arrow {
+  body.dark main .section-carousel .carousel .right-arrow {
     background-image: url(../asset/button-slider-right-md-noct.svg);
   }
-  body.dark main .trending-gifos .carousel .right-arrow:hover {
+  body.dark main .section-carousel .carousel .right-arrow:hover {
     background-image: url(../asset/button-slider-right-md-noct-hover.svg);
   }
   footer {

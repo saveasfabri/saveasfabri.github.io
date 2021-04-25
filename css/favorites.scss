@@ -107,7 +107,7 @@ main{
     justify-content: center;
     align-items: center;
     margin-top: 5px;
-    .favorite{
+    .favorite-title-icon{
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -125,6 +125,24 @@ main{
             body.dark &{
                 color: #FFFFFF;
             }
+        }
+    }
+    .section-favorite-empty{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img{
+            width: 100px;
+            margin-top: 80px;
+        }
+        h3{
+            @include montserrat;
+            color: #50E3C2;
+            font-size:19px;
+            font-weight: bold;
+            line-height: 33px;
+            text-align: center;
+            margin: 24px 26px 0 22px;
         }
         .grid-favorites{
             margin: 46px 21px 0 21px;           
@@ -163,8 +181,8 @@ main{
                 color: #FFFFFF;
             }
         }
-    }// .favorite MOBILE END
-    .trending-gifos{
+    }
+    .section-carousel{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -462,6 +480,17 @@ footer{
                 line-height: 40px;
                 margin-top: 8px;
             }
+        }
+        .section-favorite-empty{
+            img{
+                width: 150px;
+                margin-top: 110px;
+            }
+            h3{
+                width: 430px;
+                height:66px;
+                font-size:22px;
+            }
             .grid-favorites{
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -576,10 +605,10 @@ footer{
                     }
                 }
             }
-        }// .favorite DESKTOP end
-        .trending-gifos{
+        } // section-favorite-empty DESKTOP END
+        .section-carousel{
             height: 640px;
-            margin-top: 79px;
+            margin-top: 137px;
             h2{
                 font-size: 25px;
                 margin-top: 67px;
@@ -710,7 +739,7 @@ footer{
                     }
                 }                
             } // .carousel DESKTOP END        
-        }// .trending-gifos DESKTOP END
+        }// .section-carousel DESKTOP END
     }     
     footer{
         display: flex;
