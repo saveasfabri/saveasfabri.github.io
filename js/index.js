@@ -235,28 +235,27 @@ function searchGifosVerMas() {
 let trendingTopicsTexto = document.querySelector('#trending-topics');
 window.onload = trendingTopics();
 
-function trendingTopics() {
+async function trendingTopics() {
     let url = `https://api.giphy.com/v1/trending/searches?api_key=${apiKey}`;
 
-    return fetch(url)
-        .then(resp => resp.json()) //me trae el json con los trending topics
-        .then(content => {
-            //object with data & meta
-            let topics = content.data;
-            //console.log("Trending Topics", topics);
-            trendingTopicsTexto.innerHTML = `<span class="trending-topics-link">${topics[0]}</span>, <span class="trending-topics-link">${topics[1]}</span>, <span class="trending-topics-link">${topics[2]}</span>, <span class="trending-topics-link">${topics[3]}</span>, <span class="trending-topics-link">${topics[4]}</span>`;
+    try {
+        const resp = await fetch(url);
+        const content = await resp.json();
+        //object with data & meta
+        let topics = content.data;
+        //console.log("Trending Topics", topics);
+        trendingTopicsTexto.innerHTML = `<span class="trending-topics-link">${topics[0]}</span>, <span class="trending-topics-link">${topics[1]}</span>, <span class="trending-topics-link">${topics[2]}</span>, <span class="trending-topics-link">${topics[3]}</span>, <span class="trending-topics-link">${topics[4]}</span>`;
 
-            let topicBtn = document.getElementsByClassName('trending-topics-link');
-            for (let x = 0; x < topicBtn.length; x++) {
-                topicBtn[x].addEventListener('click', function (e) {
-                    inputSearch.value = topics[x];
-                    SearchGifos();
-                })
-            }
-        })
-        .catch(err => {
-            console.log("error trending topics" + err);
-        })
+        let topicBtn = document.getElementsByClassName('trending-topics-link');
+        for (let x = 0; x < topicBtn.length; x++) {
+            topicBtn[x].addEventListener('click', function (e) {
+                inputSearch.value = topics[x];
+                SearchGifos();
+            });
+        }
+    } catch (err) {
+        console.log("error trending topics" + err);
+    }
 }
 
 
