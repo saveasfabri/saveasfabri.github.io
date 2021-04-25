@@ -10,8 +10,8 @@ let btnCloseSearch = document.querySelector('#btn-img-x');
 let listaSuggestions = document.querySelector('#ul-suggestions');
 
 let offsetSearch = 0;
-let searchResultGIFOS = document.querySelector('#results-search');
-let btnVerMasResults = document.querySelector('#btn-mas');
+let searchResultGIFOS = document.querySelector('.results-search');
+let btnVerMasResults = document.querySelector('.btn-mas');
 
 let busqueda;
 
@@ -30,7 +30,7 @@ function searchActive() {
     //agrego las clases del buscador activo
     blockSearch.classList.remove('div-main-search-inactive');
     blockSearch.classList.add('div-main-search-active');
-    /* iconSearch.style.display = "none"; */ 
+    /* iconSearch.style.display = "none"; */
     btnCloseSearch.style.display = "block";
 
     //agrego la funcion de traer sugerencias y reemplazarlas en los elementos
@@ -126,6 +126,7 @@ function SearchGifos() {
             titleSearch.innerHTML = inputSearch.value;
 
             if (content.data === 0) {
+                console.log(searchResultGIFOS);
                 searchResultGIFOS.innerHTML = `
                     <div class="search-error-container">
                     <img class="search-error-img" src="./assets/icon-busqueda-sin-resultado.svg" alt="Imagen ilustrativa sin resultado">
