@@ -10,8 +10,8 @@ let btnCloseSearch = document.querySelector('#btn-img-x');
 let listaSuggestions = document.querySelector('#ul-suggestions');
 
 let offsetSearch = 0;
-let searchResultGIFOS = document.querySelector('#results-search');
-let btnVerMasResults = document.querySelector('#btn-mas');
+let searchResultGIFOS = document.querySelector('.results-search');
+let btnVerMasResults = document.querySelector('.btn-mas');
 
 let busqueda;
 
@@ -30,7 +30,7 @@ function searchActive() {
     //agrego las clases del buscador activo
     blockSearch.classList.remove('div-main-search-inactive');
     blockSearch.classList.add('div-main-search-active');
-    /* iconSearch.style.display = "none"; */ 
+    /* iconSearch.style.display = "none"; */
     btnCloseSearch.style.display = "block";
 
     //agrego la funcion de traer sugerencias y reemplazarlas en los elementos
@@ -126,6 +126,7 @@ function SearchGifos() {
             titleSearch.innerHTML = inputSearch.value;
 
             if (content.data === 0) {
+                console.log(searchResultGIFOS);
                 searchResultGIFOS.innerHTML = `
                     <div class="search-error-container">
                     <img class="search-error-img" src="./assets/icon-busqueda-sin-resultado.svg" alt="Imagen ilustrativa sin resultado">
@@ -234,28 +235,27 @@ function searchGifosVerMas() {
 let trendingTopicsTexto = document.querySelector('#trending-topics');
 window.onload = trendingTopics();
 
-function trendingTopics() {
+async function trendingTopics() {
     let url = `https://api.giphy.com/v1/trending/searches?api_key=${apiKey}`;
 
-    return fetch(url)
-        .then(resp => resp.json()) //me trae el json con los trending topics
-        .then(content => {
-            //object with data & meta
-            let topics = content.data;
-            //console.log("Trending Topics", topics);
-            trendingTopicsTexto.innerHTML = `<span class="trending-topics-link">${topics[0]}</span>, <span class="trending-topics-link">${topics[1]}</span>, <span class="trending-topics-link">${topics[2]}</span>, <span class="trending-topics-link">${topics[3]}</span>, <span class="trending-topics-link">${topics[4]}</span>`;
+    try {
+        const resp = await fetch(url);
+        const content = await resp.json();
+        //object with data & meta
+        let topics = content.data;
+        //console.log("Trending Topics", topics);
+        trendingTopicsTexto.innerHTML = `<span class="trending-topics-link">${topics[0]}</span>, <span class="trending-topics-link">${topics[1]}</span>, <span class="trending-topics-link">${topics[2]}</span>, <span class="trending-topics-link">${topics[3]}</span>, <span class="trending-topics-link">${topics[4]}</span>`;
 
-            let topicBtn = document.getElementsByClassName('trending-topics-link');
-            for (let x = 0; x < topicBtn.length; x++) {
-                topicBtn[x].addEventListener('click', function (e) {
-                    inputSearch.value = topics[x];
-                    SearchGifos();
-                })
-            }
-        })
-        .catch(err => {
-            console.log("error trending topics" + err);
-        })
+        let topicBtn = document.getElementsByClassName('trending-topics-link');
+        for (let x = 0; x < topicBtn.length; x++) {
+            topicBtn[x].addEventListener('click', function (e) {
+                inputSearch.value = topics[x];
+                SearchGifos();
+            });
+        }
+    } catch (err) {
+        console.log("error trending topics" + err);
+    }
 }
 
 
