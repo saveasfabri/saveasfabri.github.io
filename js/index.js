@@ -1,3 +1,4 @@
+
 ///*******************  FUNCIONES EXCLUSIVAS DE INDEX  ***************************** */
 
 let apiKey = "yKyi5ldiEeXcyyhuq23sZ6o4ITW0AE95";
@@ -122,11 +123,10 @@ function SearchGifos() {
             containerResultsSearch.style.display = "block";
 
             //agrego el titulo de la busqueda
-            let titleSearch = document.querySelector('.titleSearch');
+            let titleSearch = document.querySelector('.title-search');
             titleSearch.innerHTML = inputSearch.value;
 
             if (content.data === 0) {
-                console.log(searchResultGIFOS);
                 searchResultGIFOS.innerHTML = `
                     <div class="search-error-container">
                     <img class="search-error-img" src="./assets/icon-busqueda-sin-resultado.svg" alt="Imagen ilustrativa sin resultado">
@@ -148,14 +148,14 @@ function SearchGifos() {
 }
 
 
-function bringSearch(content) { /* Atencion "iconos-acciones-gif esta en descktop de _main */
+function bringSearch(content) { /* Atencion "icons-actions-gif esta en desktop de _main */
     searchResultGIFOS.innerHTML += `
                 <div class="results-gif-box" onclick="maxGifMobile('${content.images.downsized.url}', '${content.id}', '${content.slug}', '${content.username}', '${content.title}')">
                 <div class="gif-actions-results">
                     <div class="icons-actions-gif">
                         <button class="icons-actions-box favorite" onclick="agregarFavoritoBusqueda('${content.id}')">
                             <img src="./assets/icon-fav-hover.svg" alt="Icono agregar a favorito" id="icon-fav-${content.id}">
-                        </button>
+                        </button>                        
                         <button class="icons-actions-box download" onclick="descargarGif('${content.images.downsized.url}', '${content.slug}')">
                             <img src="./assets/icon-download.svg" alt="Icono descargar gif">
                         </button>
@@ -206,7 +206,7 @@ function searchGifosVerMas() {
             containerResultsSearch.style.display = "block";
 
             //agrego el titulo de la busqueda
-            let titleSearch = document.querySelector('.titleSearch');
+            let titleSearch = document.querySelector('.title-search');
             titleSearch.innerHTML = inputSearch.value;
 
             if (content.data == 0) {
