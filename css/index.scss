@@ -214,6 +214,9 @@ main{
                         outline: none;
                         border: none;
                         transition: .4s ease all; //Suaviza pase a Dark-mode
+                        body.dark &{
+                            color: #FFFFFF;
+                        }
                     } 
                 }                           
                 .btn-search{
@@ -227,6 +230,9 @@ main{
                     .btn-img-x{ 
                         display: block;
                         cursor: pointer;
+                        body.dark &{
+                            color: #FFFFFF;
+                        }
                     } 
                 }                
             }
@@ -423,6 +429,7 @@ footer{
     opacity: 0.5;
 }
 .title-search{
+    text-transform: capitalize;
     position: relative;
     padding-top: 43px;
     font-family: 'Montserrat', sans-serif;
@@ -431,6 +438,9 @@ footer{
     color: #572EE5;
     font-size: 25px;
     line-height: 40px;
+    body.dark & {        
+        color: #FFFFFF;
+    }
 }
 .results-search{
     //el contenedor con las 4 columnas
@@ -459,7 +469,7 @@ footer{
 }
 .btn-mas{
     border: 1px solid #572EE5;
-    border-radius: 25px;
+    border-radius: 50px;
     margin-top: 78px;
     padding: 18px 32.5px;
     text-align: center;
@@ -467,10 +477,16 @@ footer{
     @include montserrat;
     font-weight: bold;
     color: #572EE5 ;
+    background-color: unset;
+    cursor: pointer;
     body.dark &{
         border: 1px solid #FFFFFF;
         @include montserrat-dark();
         color: #FFFFFF;
+        &:hover{
+            background-color: #FFFFFF;
+            color: #000000;
+        }
     }
 }
 .search-error-container{
@@ -675,12 +691,18 @@ footer{
                         }
                         .input-search{
                             margin-left: 3.75vw;
+                            body.dark &{
+                                color: #FFFFFF;
+                            }
                         }
                     }                            
                     .btn-search{
                         margin-right: 1.39vw;
                         .btn-img-lupa{
                             display: block;
+                            body.dark &{
+                                color: #FFFFFF;
+                            }
                         }
                         .btn-img-x{
                         display: none;
@@ -709,6 +731,9 @@ footer{
                         .btn-img-x{ 
                             display: block;
                             cursor: pointer;
+                            body.dark &{
+                                color: #FFFFFF;
+                            }
                         } 
                     }                
                 }
@@ -750,7 +775,7 @@ footer{
             }
         }
 
-        .section-carousel{
+        /* .section-carousel{
             height: 640px;
             margin-top: 137px;
             h2{
@@ -883,7 +908,7 @@ footer{
                     }
                 }                
             } // .carousel DESKTOP END        
-        }// .section-carousel DESKTOP END  
+        }// .section-carousel DESKTOP END   */
     }// main DESKTOP END
     footer{
         display: flex;
@@ -992,6 +1017,13 @@ footer{
         font-weight: 500;
         padding: 0;
         margin: 0;
+    }
+    .btn-mas{
+        border: 1px solid #572EE5;
+        &:hover{
+            background-color: #572EE5;
+            color: #FFFFFF;
+        }
     }
 }// @media DESKTOP END
 
