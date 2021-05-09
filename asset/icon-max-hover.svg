@@ -9,7 +9,7 @@
     <g id="GIFOS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="00-UI-Kit" transform="translate(-858.000000, -2861.000000)">
             <g id="icon-max-hover" transform="translate(858.000000, 2861.000000)">
-                <rect id="Rectangle-Copy-5" fill="#FFFFFF" fill-rule="nonzero" x="0" y="0" width="32" height="32" rx="6"></rect>
+                <rect id="Rectangle-Copy-5" fill="#FFFFFF50" fill-rule="nonzero" x="0" y="0" width="32" height="32" rx="6"></rect>
                 <mask id="mask-2" fill="white">
                     <use xlink:href="#path-1"></use>
                 </mask>

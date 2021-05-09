@@ -774,7 +774,105 @@ footer{
                 margin-top: 7px;
             }
         }
-
+        .results-search{
+            //el contenedor con las 4 columnas
+            margin: 38px 10px 53px 10px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .results-gif-box{
+            //la caja con cada gif
+            width: 220px;
+            height: 200px;
+            margin: 0 10px 25px 10px;
+            &:hover{
+                display: block;
+                .gif-actions-results {
+                    display: block;
+                }
+            }
+        }
+        .gif-actions-results{
+            position: absolute;
+            z-index: 0;
+            background-color: #572EE560;
+            width: 220px;
+            height: 200px;
+        }
+        
+        .icons-actions-gif{
+            display: flex;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+        .icons-actions-box{
+            width: 32px;
+            height: 32px;
+            background-color: #FFFFFF60;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            border-radius: 6px;
+            border: none;
+            &:hover{
+                background-color: #FFFFFF;
+                box-shadow: 1px 1px 3px #000000;
+            }
+        }
+        .favorite{
+            cursor: pointer;
+        }
+        .download{
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .max{
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .text-description-gif-results{
+            position: absolute;
+            bottom: 30px;
+            left: 18px;
+        }
+        
+        .user-gif-results{
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            text-align: left;
+            color: #FFFFFF;
+            font-size: 15px;
+            line-height: 18px;
+            padding: 0;
+            margin-bottom: 6px;
+        }
+        
+        .title-gif-results{
+            font-family: 'Roboto', sans-serif;
+            text-align: left;
+            color: #FFFFFF;
+            font-size: 16px;
+            line-height: 19px;
+            font-weight: 500;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .btn-mas{
+            border: 1px solid #572EE5;
+            &:hover{
+                background-color: #572EE5;
+                color: #FFFFFF;
+                box-shadow: 2px 2px 2px grey;
+            }
+            &:active{
+                background-color: rgb(194, 192, 192);
+                color: #FFFFFF;
+            }
+        }
         /* .section-carousel{
             height: 640px;
             margin-top: 137px;
@@ -934,97 +1032,7 @@ footer{
             margin-right: 10.83vw;
         }
     }// footer DESKTOP END
-    .results-search{
-        //el contenedor con las 4 columnas
-        margin: 38px 10px 53px 10px;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: center;
-    }
-    .results-gif-box{
-        //la caja con cada gif
-        width: 220px;
-        height: 200px;
-        margin: 0 10px 25px 10px;
-        &:hover{
-            display: block
-        }
-    }
-    .gif-actions-results{
-        position: absolute;
-        z-index: 0;
-        background-color: #572EE5;
-        width: 220px;
-        height: 200px;
-        &:hover{
-            display: block
-        }
-    }
-    .icons-actions-gif{
-        display: flex;
-        position: absolute;
-        right: 10px;
-        top: 10px;
-    }
-    .icons-actions-box{
-        width: 32px;
-        height: 32px;
-        background-color: #FFFFFF70;
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        border-radius: 6px;
-        border: none;
-        &:hover{
-            background-color:#FFFFFF
-        }
-    }
-    .favorite{
-        cursor: pointer;
-    }
-    .download{
-        margin-left: 10px;
-        cursor: pointer;
-    }
-    .max{
-        margin-left: 10px;
-        cursor: pointer;
-    }
-    .text-description-gif-results{
-        position: absolute;
-        bottom: 30px;
-        left: 18px;
-    }
     
-    .user-gif-results{
-        font-family: 'Roboto', sans-serif;
-        font-weight: 300;
-        text-align: left;
-        color: #FFFFFF;
-        font-size: 15px;
-        line-height: 18px;
-        padding: 0;
-        margin-bottom: 6px;
-    }
-    
-    .title-gif-results{
-        font-family: 'Roboto', sans-serif;
-        text-align: left;
-        color: #FFFFFF;
-        font-size: 16px;
-        line-height: 19px;
-        font-weight: 500;
-        padding: 0;
-        margin: 0;
-    }
-    .btn-mas{
-        border: 1px solid #572EE5;
-        &:hover{
-            background-color: #572EE5;
-            color: #FFFFFF;
-        }
-    }
 }// @media DESKTOP END
 
 

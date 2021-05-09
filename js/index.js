@@ -129,7 +129,7 @@ function SearchGifos() {
             if (content.data === 0) {
                 searchResultGIFOS.innerHTML = `
                     <div class="search-error-container">
-                    <img class="search-error-img" src="./assets/icon-busqueda-sin-resultado.svg" alt="Imagen ilustrativa sin resultado">
+                    <img class="search-error-img" src="./asset/icon-busqueda-sin-resultado.svg" alt="Imagen ilustrativa sin resultado">
                     <h3 class="search-error-text">Intenta con otra búsqueda</h3>
                     </div>
                     `;
@@ -148,19 +148,19 @@ function SearchGifos() {
 }
 
 
-function bringSearch(content) { /* Atencion "icons-actions-gif esta en desktop de _main */
+function bringSearch(content) { 
     searchResultGIFOS.innerHTML += `
                 <div class="results-gif-box" onclick="maxGifMobile('${content.images.downsized.url}', '${content.id}', '${content.slug}', '${content.username}', '${content.title}')">
                 <div class="gif-actions-results">
                     <div class="icons-actions-gif">
                         <button class="icons-actions-box favorite" onclick="agregarFavoritoBusqueda('${content.id}')">
-                            <img src="./assets/icon-fav-hover.svg" alt="Icono agregar a favorito" id="icon-fav-${content.id}">
+                            <img src="./asset/icon-fav-hover.svg" alt="Icono agregar a favorito" id="icon-fav-${content.id}">
                         </button>                        
                         <button class="icons-actions-box download" onclick="descargarGif('${content.images.downsized.url}', '${content.slug}')">
-                            <img src="./assets/icon-download.svg" alt="Icono descargar gif">
+                            <img src="./asset/icon-download-hover.svg" alt="Icono descargar gif">
                         </button>
                         <button class="icons-actions-box max" onclick="maxGifDesktop('${content.images.downsized.url}', '${content.id}', '${content.slug}', '${content.username}', '${content.title}')">
-                            <img src="./assets/icon-max.svg" alt="Icono maximizar gif">
+                            <img src="./asset/icon-max-hover.svg" alt="Icono maximizar gif">
                         </button>
                     </div>
                     <div class="text-description-gif-results">
@@ -171,8 +171,8 @@ function bringSearch(content) { /* Atencion "icons-actions-gif esta en desktop d
                 <img src="${content.images.downsized.url}" alt="${content.id}" class="results-gif" >
             </div>
                 `;
+                console.log( )
 }
-
 
 
 function closeBoxSearch() {
@@ -212,7 +212,7 @@ function searchGifosVerMas() {
             if (content.data == 0) {
                 searchResultGIFOS.innerHTML = `
                     <div class="search-error-container">
-                    <img src="./assets/icon-busqueda-sin-resultado.svg" alt="Busqueda sin resultado" class="search-error-img">
+                    <img src="./asset/icon-busqueda-sin-resultado.svg" alt="Busqueda sin resultado" class="search-error-img">
                     <h3 class="search-error-text">Intenta con otra búsqueda</h3>
                     </div>
                     `;
@@ -264,7 +264,7 @@ async function trendingTopics() {
 //FAVORITOS
 function agregarFavoritoBusqueda(gif){
     let iconFav = document.getElementById('icon-fav-' + gif);
-    iconFav.setAttribute("src", "./assets/icon-fav-active.svg");
+    iconFav.setAttribute("src", "./asset/icon-fav-active.svg");
 
     agregarFavorito(gif);
 }
@@ -299,20 +299,26 @@ function maxGifMobile(img, id, slug, user, title) {
     if (window.matchMedia("(max-width: 700px)").matches) {
         modalMobile.style.display = "block";
         modalMobile.innerHTML = `
-    <button class="modal-btn-close" onclick="cerrarModalMobile()"><img src="./assets/button-close.svg" alt=""></button>
-    <img src="${img}" alt="${id}" class="modal-gif">
+        <button class="modal-btn-close" onclick="cerrarModalMobile()">
+            <img src="./asset/close-modo-diu.svg" alt="Boton cerrar maximizar">
+        </button>
+        <img src="${img}" alt="${id}" class="modal-gif">
 
-    <div class="modal-bar">
-        <div class="modal-textos">
-            <p class="modal-user">${user}</p>
-            <p class="modal-titulo">${title}</p>
+        <div class="modal-bar">
+            <div class="modal-textos">
+                <p class="modal-user">${user}</p>
+                <p class="modal-titulo">${title}</p>
+            </div>
+            <div>
+                <button class="modal-btn" onclick="agregarFavoritoMaxMobile('${id}')">
+                    <img src="./asset/icon-fav-hover.svg" alt="Icono agregar a Favoritos" id="icon-fav-max-mob-${id}">
+                </button>
+                <button class="modal-btn" onclick="descargarGif('${img}', '${slug}')">
+                    <img src="./asset/icon-download-hover.svg" alt="Icono descargar gif">
+                </button>
+            </div>
         </div>
-        <div>
-            <button class="modal-btn" onclick="agregarFavoritoMaxMobile('${id}')"><img src="./assets/icon-fav-hover.svg" alt="fav-gif" id="icon-fav-max-mob-${id}"></button>
-            <button class="modal-btn" onclick="descargarGif('${img}', '${slug}')"><img src="./assets/icon-download.svg" alt="download-gif"></button>
-        </div>
-    </div>
-    `;
+        `;
         modalMobile.classList.add("modal-activado");
         document.body.appendChild(modalMobile);
     }
@@ -325,7 +331,7 @@ function cerrarModalMobile() {
 function agregarFavoritoMaxMobile(gif){
 
     let iconFavMaxMobile = document.getElementById('icon-fav-max-mob-' + gif);
-    iconFavMaxMobile.setAttribute("src", "./assets/icon-fav-active.svg");
+    iconFavMaxMobile.setAttribute("src", "./asset/icon-fav-active.svg");
 
     agregarFavorito(gif);
 }
@@ -336,7 +342,9 @@ function maxGifDesktop(img, id, slug, user, title){
     if (window.matchMedia("(min-width: 700px)").matches){
         modalDesktop.style.display = "block";
         modalDesktop.innerHTML = `
-    <button class="modal-btn-close" onclick="cerrarModalDesktop()"><img src="./assets/button-close.svg" alt=""></button>
+    <button class="modal-btn-close" onclick="cerrarModalDesktop()">
+        <img src="./asset/close-modo-diu.svg" alt="Botón cerrar maximizar">
+    </button>
     <img src="${img}" alt="${id}" class="modal-gif">
 
     <div class="modal-bar">
@@ -345,8 +353,12 @@ function maxGifDesktop(img, id, slug, user, title){
             <p class="modal-titulo">${title}</p>
         </div>
         <div>
-            <button class="modal-btn" onclick="agregarFavoritoMax('${id}')"><img src="./assets/icon-fav-hover.svg" alt="fav-gif" id="icon-fav-max-${id}"></button>
-            <button class="modal-btn" onclick="descargarGif('${img}', '${slug}')"><img src="./assets/icon-download.svg" alt="download-gif"></button>
+            <button class="modal-btn" onclick="agregarFavoritoMax('${id}')">
+                <img src="./asset/icon-fav-hover.svg" alt="Icono agregar a Favoritos" id="icon-fav-max-${id}">
+            </button>
+            <button class="modal-btn" onclick="descargarGif('${img}', '${slug}')">
+                <img src="./asset/icon-download-hover.svg" alt="Icono descargar gif">
+            </button>
         </div>
     </div>
     `;
@@ -362,7 +374,7 @@ function cerrarModalDesktop() {
 function agregarFavoritoMax(gif){
 
     let iconFavMax = document.getElementById('icon-fav-max-' + gif);
-    iconFavMax.setAttribute("src", "./assets/icon-fav-active.svg");
+    iconFavMax.setAttribute("src", "./asset/icon-fav-active.svg");
 
     agregarFavorito(gif);
 }
