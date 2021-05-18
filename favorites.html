@@ -35,31 +35,29 @@
         </nav>                           
     </header>
     <main>
-        <section class="favorite-title-icon">
+        <section class="header-favorites">
+            <img class="heart-icon" src="./asset/icon-favoritos.svg" alt="Icono forma de corazón">
+            <h1>Favoritos</h1>
+        </section>
+
+        <section id="favorites-empty">
+            <img src="./asset/icon-fav-sin-contenido.svg" alt="Imagen ilustrativa de un corazón">
+            <h3>¡Guardá tu primer GIFO en favoritos para que se muestre aquí!</h3>
+        </section>
+
+        <section id="gifos-favoritos">
+            <div class="resultados-favoritos" id="resultados-favoritos"></div> 
+        </section>
+
+        <!-- <section class="favorite-title-icon">
             <img class="heart-icon" src="./asset/icon-favoritos.svg" alt="Icono forma de corazón">
             <h2>Favoritos</h2>            
         </section>
         <section class="section-favorite-empty">
             <img src="./asset/icon-fav-sin-contenido.svg" alt="Imagen ilustrativa de un corazón">
             <h3>"¡Guardá tu primer GIFO en favoritos para que se muestre aquí!"</h3>
-        <!--<div class="grid-favorites">
-                <div class="gif-transition">
-                    <img class="gif" src="./images/pet_big(1).jpg" alt="Gif" >
-                    <div class="transition">
-                        <div class="icon-content">
-                            <img class="icon" src="./asset/icon-fav.svg" alt="Icono Favoritos">
-                            <img class="icon" src="./asset/icon-download.svg" alt="Icono Descargar">
-                            <img class="icon" src="./asset/icon-max-normal.svg" alt="Icono ampliar imagen">
-                        </div>                            
-                        <div class="text-content">
-                            <p class="user">User</p>
-                            <p class="titulo">Titulo GIFO</p>
-                        </div>                            
-                    </div>                            
-                </div>        
-            </div>
-            <a class="btn-mas" href="#">VER MAS</a> -->
-        </section>
+        
+        </section> -->
         <section class="section-carousel">
             <h2>Trending GIFOS</h2>
             <p>Mira los últimos GIFOS de nuestra comunidad.</p>
@@ -125,5 +123,6 @@
         <p>© GIFOS 2021 All Rights Reserved.</p>                
     </footer>
     <script src="./js/script.js"></script>
+    <script src="./js/favorites.js"></script>
 </body>
 </html>

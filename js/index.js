@@ -22,6 +22,28 @@ let modalDesktop = document.createElement("div");
 /*******************************************************/
 
 // BUSCADOR
+
+//Dark mode de las imagenes lupa y close dentro del imput **********************************
+darkMode.addEventListener("click", () => {
+    if (document.body.classList.contains("dark")) {
+        cambiarColorlupa.src ="./asset/icon-search-modo-noct.svg";
+        cambiarColorImgX.src ="./asset/close-modo-noct.svg";
+    }
+    else{
+        cambiarColorlupa.src ="./asset/icon-search.svg";
+        cambiarColorImgX.src ="./asset/close-modo-diu.svg";
+    }
+});
+
+if(localStorage.getItem("LocalStorageDark") === "true"){
+    cambiarColorlupa.src ="./asset/icon-search-modo-noct.svg";
+    cambiarColorImgX.src ="./asset/close-modo-noct.svg";
+}else{
+    cambiarColorlupa.src ="./asset/icon-search.svg";
+    cambiarColorImgX.src ="./asset/close-modo-diu.svg";
+}
+/******************************************************************************************/
+
 // Al abrir el div y se muestran sugerencias:
 inputSearch.addEventListener('keyup', searchActive);
 
@@ -48,9 +70,7 @@ function searchActive() {
         //funcion para cerrar el buscador cuando se borra todo
         closeBoxSearch();
     }
-}
-
-
+};
 
 function suggestionsData(data) {
     let suggestions = data.data;
@@ -76,7 +96,7 @@ function suggestionsData(data) {
         <p class="text-suggestions" >${suggestions[3].name}</p>
     </li>
     `;
-}
+};
 
 //funcion suggestions: cuando se clickea una, se hace la busqueda de ese termino
 listaSuggestions.addEventListener('click', function (li) {
@@ -197,7 +217,6 @@ function searchGifosVerMas() {
     let urlSearch = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&limit=12&offset=${offsetSearch}&q=`;
     let strSearch = inputSearch.value.trim();
     urlSearch = urlSearch.concat(strSearch);
-    console.log(urlSearch);
     fetch(urlSearch)
         .then(response => response.json())
         .then(content => {
