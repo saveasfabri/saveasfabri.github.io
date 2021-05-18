@@ -107,7 +107,7 @@ main{
     justify-content: center;
     align-items: center;
     margin-top: 5px;
-    .favorite-title-icon{
+    .header-favorites{
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -115,7 +115,7 @@ main{
         .heart-icon{
             width: 28px;
         }
-        h2{
+        h1{
             @include montserrat;
             font-size: 25px;
             font-weight: bold;
@@ -127,7 +127,53 @@ main{
             }
         }
     }
-    .section-favorite-empty{
+    #favorites-empty {
+        text-align: center;
+        margin-top: 40px;
+        display: none;
+    
+        img {
+            width: 120px;
+        }
+    
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            text-align: center;
+            color: #572EE5;
+            color: #50E3C2;
+            font-size: 18px;
+            line-height: 28px;
+            margin-top: 15px;
+            padding: 0 21px;
+        }
+    }
+    
+    #gifos-favoritos {
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+    .resultados-favoritos { //el contenedor con las 4 columnas
+        margin: 38px 10px 53px 10px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .resultados-gif-box-fav { //la caja con cada gif
+        width: 156px;
+        height: 120px; 
+        overflow: hidden;
+        margin: 0 10px 25px 10px;
+    }
+    
+    .gif-acciones-resultados-fav {
+        display: none;
+    }   
+    
+    /* .section-favorite-empty{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -181,7 +227,7 @@ main{
                 color: #FFFFFF;
             }
         }
-    }
+    } */
     .section-carousel{
         display: flex;
         flex-direction: column;
@@ -482,7 +528,121 @@ footer{
                 margin-top: 8px;
             }
         }
-        .section-favorite-empty{
+        .header-favoritos {
+        margin-top: 11px;
+            h1 {
+                font-size: 25px;
+                
+            }
+        }
+        
+        #favoritos-vacio {
+            margin-top: 110px;
+            margin-bottom: 136px;
+        
+            img {
+                width: 150px;
+            }
+        
+            h3 {
+                font-size: 22px;
+                line-height: 33px;
+                margin-top: 24px;
+                padding: 0 52px;
+            }
+        }
+    
+        .resultados-favoritos { //el contenedor con las 4 columnas
+            margin: 38px 10px 53px 10px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+        }
+    
+        .resultados-gif-box-fav { //la caja con cada gif
+            width: 220px;
+            height: 200px; 
+            margin: 0 10px 25px 10px;
+        }
+    
+        .gif-acciones-resultados-fav {
+            position: absolute;
+            z-index: 0;
+            background-color: #572ee599;
+            width: 220px;
+            height: 200px;
+        }
+    
+        .iconos-acciones-gif {
+            display: flex;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+    
+        .iconos-acciones-box {
+            width: 32px;
+            height: 32px;
+            background-color: #FFFFFFb3;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            border-radius: 6px;
+            border: none;
+        }
+    
+        .favorito-fav {
+            //background-color: #FFFFFF;
+            cursor: pointer;
+        }
+    
+        .download {
+            margin-left: 10px;
+            cursor: pointer;
+        }
+    
+        .max {
+            margin-left: 10px;
+            cursor: pointer;
+        }
+    
+        .iconos-acciones-box:hover {
+            background-color: #FFFFFF;
+        }
+    
+        .textos-descripcion-gif-favoritos {
+            position: absolute;
+            bottom: 30px;
+            left: 18px;
+        }
+    
+        .user-gif-favoritos {
+            font-family: 'Roboto', sans-serif;
+            text-align: left;
+            color: #FFFFFF;
+            font-weight: 300;
+            font-size: 15px;
+            line-height: 18px;
+            padding: 0;
+            margin-bottom: 6px;
+        }
+        
+        .titulo-gif-favoritos {
+            font-family: 'Roboto', sans-serif;
+            text-align: left;
+            color: #FFFFFF;
+            font-size: 16px;
+            line-height: 19px;
+            font-weight: 500;
+            padding: 0;
+            margin: 0;
+        }
+        
+            .resultados-gif-box-fav:hover .gif-acciones-resultados-fav {
+                display: block;
+            }
+        /* .section-favorite-empty{
             img{
                 width: 150px;
                 margin-top: 110px;
@@ -606,7 +766,7 @@ footer{
                     }
                 }
             }
-        } // section-favorite-empty DESKTOP END
+        } // section-favorite-empty DESKTOP END */
         .section-carousel{
             height: 640px;
             margin-top: 137px;

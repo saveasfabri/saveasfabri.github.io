@@ -1,7 +1,7 @@
 /* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0b1 | 201101 
-   NOTE: WORK IN PROGRESS
-   USE WITH CAUTION AND TEST WITH ABANDON */
+v2.0b1 | 201101 
+NOTE: WORK IN PROGRESS
+USE WITH CAUTION AND TEST WITH ABANDON */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
 html, body, div, span, applet, object, iframe,
@@ -54,9 +54,9 @@ q:before, q:after {
 }
 
 /* remember to define visible focus styles! 
-   :focus {
-       outline: ?????;
-   } */
+:focus {
+    outline: ?????;
+} */
 /* remember to highlight inserts somehow! */
 ins {
   text-decoration: none;

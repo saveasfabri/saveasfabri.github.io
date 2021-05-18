@@ -9,7 +9,7 @@ const cambiarColorlupa = document.querySelector(".btn-img-lupa");
 const cambiarColorImgX = document.querySelector(".btn-img-x");
 
 //Para cambiar el colores de fondo, fuentes etc
-darkMode.addEventListener("click", () => {
+ darkMode.addEventListener("click", () => {
     document.body.classList.toggle("dark");
     
     //Para cambiar texto del id="dark" ubicado dentro de .site-nav
@@ -23,16 +23,10 @@ darkMode.addEventListener("click", () => {
     if (document.body.classList.contains("dark")) {
         cambiarColorBurgerClose.src ="./asset/burger-modo-noct.svg";
         cambiarColorBurgerClose.src ="./asset/close-modo-noct.svg";
-
-        cambiarColorlupa.src ="./asset/icon-search-modo-noct.svg";
-        cambiarColorImgX.src ="./asset/close-modo-noct.svg";
         
     } else {
         cambiarColorBurgerClose.src ="./asset/burger-modo-diu.svg";
         cambiarColorBurgerClose.src ="./asset/close-modo-diu.svg";
-
-        cambiarColorlupa.src ="./asset/icon-search.svg";
-        cambiarColorImgX.src ="./asset/close-modo-diu.svg";
     }
 
     // Guardo en el localstorage.
@@ -47,22 +41,16 @@ if(localStorage.getItem("LocalStorageDark") === "true"){
     document.body.classList.add("dark");
     darkMode.innerHTML = "Modo Diurno";
 
-    cambiarColorBurgerClose.src ="./asset/burger-modo-noct.svg";
     cambiarColorBurgerClose.src ="./asset/close-modo-noct.svg";
-
-    cambiarColorlupa.src ="./asset/icon-search-modo-noct.svg";
-    cambiarColorImgX.src ="./asset/close-modo-noct.svg";
-}
-else{
+    cambiarColorBurgerClose.src ="./asset/burger-modo-noct.svg";
+}else{
     document.body.classList.remove("dark");
     darkMode.innerHTML = "Modo Nocturno";
 
-    cambiarColorBurgerClose.src ="./asset/burger-modo-diu.svg";
+    
     cambiarColorBurgerClose.src ="./asset/close-modo-diu.svg";
-
-    cambiarColorlupa.src ="./asset/icon-search.svg";
-    cambiarColorImgX.src ="./asset/close-modo-diu.svg";
-}
+    cambiarColorBurgerClose.src ="./asset/burger-modo-diu.svg";
+} 
 
 //********************* HEADER OFF ONSCROLL / header **************************/
 let time;
@@ -116,7 +104,7 @@ function menuBurger(){
     //desplegar menu en mobile        
     desplegarMenu.classList.toggle("site-nav-open");
 
-    //cambiar icono/burger/close y también noct/diurno
+    //cambiar icono/burger/close y también noct/diurno    
     if (cambiarBurgerClose.src.match ("close")) {
         if(document.body.classList.contains("dark")) {
             cambiarBurgerClose.src ="./asset/burger-modo-noct.svg";
@@ -134,9 +122,9 @@ function menuBurger(){
 
 //************** HOVER ICONS/ SOCIAL MEDIA / .footer *******************/
 
-let cambiarIconoHoverFace = document.getElementById("face-icon");
-let cambiarIconoHovertwit = document.getElementById("twit-icon");
-let cambiarIconoHoverInsta = document.getElementById("insta-icon");
+let cambiarIconoHoverFace = document.querySelector("#face-icon");
+let cambiarIconoHovertwit = document.querySelector("#twit-icon");
+let cambiarIconoHoverInsta = document.querySelector("#insta-icon");
 
 cambiarIconoHoverFace.addEventListener("mouseover",cambiarIconoFinalFace);
 cambiarIconoHoverFace.addEventListener("mouseout",cambiarIconoInicialFace);
@@ -144,6 +132,7 @@ cambiarIconoHovertwit.addEventListener("mouseover",cambiarIconoFinalTwit);
 cambiarIconoHovertwit.addEventListener("mouseout",cambiarIconoInicialTwit);
 cambiarIconoHoverInsta.addEventListener("mouseover",cambiarIconoFinalInsta);
 cambiarIconoHoverInsta.addEventListener("mouseout",cambiarIconoInicialInsta);
+
 /*Icono Facebook */
 function cambiarIconoFinalFace(){
     if (document.body.classList.contains("dark")) {
