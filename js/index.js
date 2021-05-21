@@ -24,6 +24,7 @@ let modalDesktop = document.createElement("div");
 // BUSCADOR
 
 //Dark mode de las imagenes lupa y close dentro del imput **********************************
+
 darkMode.addEventListener("click", () => {
     if (document.body.classList.contains("dark")) {
         cambiarColorlupa.src ="./asset/icon-search-modo-noct.svg";
@@ -137,7 +138,6 @@ function SearchGifos() {
         .then(response => response.json())
         .then(content => {
             searchResultGIFOS.innerHTML = "";
-            //console.log(content.data);
             //aparece el div con el titulo y resultados
             let containerResultsSearch = document.querySelector('.results-search-container');
             containerResultsSearch.style.display = "block";
@@ -281,15 +281,16 @@ async function trendingTopics() {
 //FUNCIONES ACCIONES GIF:
 
 //FAVORITOS
-function agregarFavoritoBusqueda(gif){
-    let iconFav = document.getElementById('icon-fav-' + gif);
+function agregarFavoritoBusqueda(gif){    
+    let iconFav = document.getElementById('icon-fav-' + gif);    
     iconFav.setAttribute("src", "./asset/icon-fav-active.svg");
-
+    
     agregarFavorito(gif);
 }
 
 function agregarFavorito(gif) {
 
+    let favoritosString = localStorage.getItem("gifosFavoritos");
     //si en el local storage no hay nada, el array queda vacio
     if (favoritosString == null) {
         favoritosArray = [];
@@ -308,7 +309,7 @@ function agregarFavorito(gif) {
 
 //DESCARGAR GIF
 async function descargarGif(gifImg, gifNombre) {
-    let blob = await fetch(gifImg).then(img => img.blob());;
+    let blob = await fetch(gifImg).then(img => img.blob());
     invokeSaveAsDialog(blob, gifNombre + ".gif");
 }
 

@@ -71,6 +71,11 @@ table {
   border-spacing: 0;
 }
 
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   background-color: #FFFFFF;
   -webkit-transition: .4s ease all;
