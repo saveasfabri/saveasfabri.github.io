@@ -1,6 +1,7 @@
 @import "reset";
-@import "trending";
 @import "modal";
+@import "trending";
+
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
@@ -106,6 +107,9 @@ header{
         height: 100vh;
     } 
 }// header MOBILE END
+
+/****************** COMIENZO BUSCADOR mobile **********************/
+
 main{
     display: flex;
     flex-direction: column;
@@ -265,6 +269,9 @@ main{
             }           
         }
     }// main-title-img-search MOBILE END
+
+    /****************** COMIENZO Trending mobile **********************/
+
     .section-trending{
         width: 100%;
         display: flex;
@@ -298,7 +305,9 @@ main{
         } 
     }
     
-    .section-carousel{
+    /****************** COMIENZO TRENDING-SLIDE mobile **********************/
+
+    /* .section-carousel{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -367,8 +376,9 @@ main{
                 display: none;
             }
         }// .carousel MOBILE END
-    }// trending-gif MOBILE END      
-}//main MOBILE END
+    }// trending-gif MOBILE END */    
+}//main MOBILE END 
+
 footer{
     width: 100%;
     height: 196px;
@@ -410,7 +420,8 @@ footer{
 .trending-topics-link{
     cursor: pointer;
 }
-//estilos de la seccion RESULTADOS BUSQUEDA agregada con js
+/******** Estilos de la seccion RESULTADOS BUSQUEDA agregada con js *******/
+
 .results-search-container{
     //la seccion entera con titulo
     display: none;
@@ -422,7 +433,7 @@ footer{
     content: "";
     position: absolute;
     z-index: 0;
-    top: 1;
+    top: 1px;
     left: calc(50% - 78.5px);
     width: 157px;
     border-bottom: 1px solid #9CAFC3;
@@ -506,7 +517,7 @@ footer{
     line-height: 28px;
 }
 
-/******************************* MEDIA QUERY 700px *********************************************/
+/***************************** MEDIA QUERY 700px *******************************************/
 
 @media screen and (min-width: 700px){
     header{
@@ -669,6 +680,9 @@ footer{
     .header-shadow-off{  //efecto on/off en scroll del header
         box-shadow: none;
     }
+
+    /****************** COMIENZO BUSCADOR Desktop **********************/
+
     main{
         margin-top: 76px;
         .main-title-img-search{
@@ -764,6 +778,8 @@ footer{
                 }           
             } // .div-main-search-active DESKTOP END
         }// .main-title-img-search DESKTOP END
+
+        /****************** COMIENZO TRENDING Desktop **********************/
 
         .section-trending{
             margin-top: 73px;
@@ -873,6 +889,9 @@ footer{
                 color: #FFFFFF;
             }
         }
+
+        /****************** COMIENZO TRENDING-SLIDE Desktop **********************/
+
         /* .section-carousel{
             height: 640px;
             margin-top: 137px;

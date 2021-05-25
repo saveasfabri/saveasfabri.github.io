@@ -35,6 +35,9 @@
         </nav>                           
     </header>
     <main>
+
+        <!-- ********************* SECCION BUSCADOR *********************** -->
+
         <section class="main-title-img-search">
             <h1 class="main-title">
                 Inspírate, busca, guarda, y crea los mejores <span>GIFOS</span>
@@ -70,7 +73,8 @@
             </div>      
         </section>
 
-        <!-- Sección trending texto -->
+        <!-- ********************* SECCION TRENDING *********************** -->
+
         <section class="section-trending">
             <h3>Trending:</h3>
             <p id="trending-topics" class="trending-topics"></p>
@@ -84,11 +88,38 @@
             <button id="btn-mas" class="btn-mas">VER MAS</button>
         </div>
 
-        <section class="section-carousel">
+        <!-- ********************* SECCION TRENDING-SLIDE *********************** -->
+
+        <section class="trending">
+
+            <h2>Trending GIFOS</h2>
+            <p class="trending-text">Mira los últimos GIFOS de nuestra comunidad.</p>
+
+            <div class="trending-slider-contenedor">
+
+                <div class="slider-prev" id="trending-btn-previous">
+                    <img src="./asset/button-slider-left.svg" alt="Botón para deslizar a la izquierda" class="prev-violeta">
+                    <img src="./asset/button-slider-left-md-noct.svg" alt="Botón para deslizar a la izquierda" class="prev-blanco">
+                </div>
+
+                <div class="trending-slider-box">
+                    <div class="trending-slider" id="trending-slider">
+                    </div>
+                </div>
+
+                <div class="slider-next" id="trending-btn-next">
+                    <img src="./asset/button-slider-right.svg" alt="Botón para deslizar a la derecha" class="next-violeta">
+                    <img src="./asset/button-slider-right-md-noct.svg" alt="Botón para deslizar a la derecha" class="next-blanco">
+                </div>
+
+            </div>
+
+        </section>
+        <!-- <section class="section-carousel">
             <h2>Trending GIFOS</h2>
             <p>Mira los últimos GIFOS de nuestra comunidad.</p>
             <div class="carousel">
-                <div class="left-arrow"></div> <!--imagen se asigna pos css-->
+                <div class="left-arrow"></div> //imagen se asigna pos css
                 <div class="grid">                    
                     <div class="gif-grid">
                         <img class="gif" src="./images/per_medium(1).jpg" alt="Imagen ejemplo mascota">
@@ -133,9 +164,9 @@
                         </div>                            
                     </div>                    
                 </div>
-                <div class="right-arrow"></div> <!--imagen se asigna por css-->
+                <div class="right-arrow"></div> //imagen se asigna por css
             </div>                           
-        </section>      
+        </section>  -->     
     </main>
     <footer>
         <div class="compartir-social">
@@ -151,5 +182,6 @@
     <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
     <script src="./js/script.js"></script>
     <script src="./js/index.js"></script>
+    <script src="./js/trending-slide.js"></script>
 </body>
 </html>

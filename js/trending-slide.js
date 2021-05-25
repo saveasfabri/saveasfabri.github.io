@@ -1,18 +1,18 @@
-/* ////// API KEY: 
-apiKey = "QEiNwRIV3GcWQ83yvX6IVcIAST0hxr1n";
+/////// API KEY: 
+apiKey = "yKyi5ldiEeXcyyhuq23sZ6o4ITW0AE95";
 
 // TRENDING GIFOS
 //1. Traigo el array con trending gifos
 //2. reemplazo los gifos mostrados con el contenido del array
 
-let sliderTrendingGifos = document.getElementById('trending-slider');
+let sliderTrendingGifos = document.querySelector('.trending-slider');
 trendingGifos();
 
 function trendingGifos() {
-    let url = `https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}&limit=8`;
+    let url = `https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}&limit=12`;
 
     fetch(url)
-        .then(resp => resp.json()) //me trae el json con los 4 trending gifos
+        .then(resp => resp.json()) //me trae el json con los 3 trending gifos
         .then(content => {
             //object with data, pagination, meta
             let trendingGifArray = content.data;
@@ -64,14 +64,8 @@ let trendingBtnNext = document.getElementById('trending-btn-next');
 
 trendingBtnNext.addEventListener('click', sliderNext);
 function sliderNext() {
-    if (window.matchMedia("(min-width: 1440px)").matches) {
-        if (imageIndex <= 5) {
-            imageIndex++;
-            translateX -= 387;
-            sliderTrendingGifos.style.transform = `translateX(${translateX}px)`;
-        }
-    } else if (window.matchMedia("(min-width: 1024px)").matches) {
-        if (imageIndex <= 5) {
+    if (window.matchMedia("(min-width: 700px)").matches) {
+        if (imageIndex <= 9) {
             imageIndex++;
             translateX -= 273;
             sliderTrendingGifos.style.transform = `translateX(${translateX}px)`;
@@ -81,13 +75,7 @@ function sliderNext() {
 
 trendingBtnPrev.addEventListener('click', sliderPrev);
 function sliderPrev() {
-    if (window.matchMedia("(min-width: 1440px)").matches) {
-        if (imageIndex !== 1) {
-            imageIndex--;
-            translateX += 387;
-            sliderTrendingGifos.style.transform = `translateX(${translateX}px)`;
-        }
-    } else if (window.matchMedia("(min-width: 1024px)").matches) {
+    if (window.matchMedia("(min-width: 700px)").matches) {
         if (imageIndex !== 1) {
             imageIndex--;
             translateX += 273;
@@ -103,7 +91,7 @@ modalMobile = document.createElement("div");
 modalDesktop = document.createElement("div");
 
 function maxGifMobileTrending(img, id, slug, user, title) {
-    if (window.matchMedia("(max-width: 1023px)").matches) {
+    if (window.matchMedia("(max-width: 699px)").matches) {
         modalMobile.style.display = "block";
         modalMobile.innerHTML = `
     <button class="modal-btn-close" onclick="cerrarModalMobile()"><img src="./asset/button-close.svg" alt=""></button>
@@ -138,7 +126,7 @@ function agregarFavoritoMaxMobileTrending(gif) {
 }
 
 function maxGifDesktopTrending(img, id, slug, user, title) {
-    if (window.matchMedia("(min-width: 1023px)").matches) {
+    if (window.matchMedia("(min-width: 699px)").matches) {
         modalDesktop.style.display = "block";
         modalDesktop.innerHTML = `
     <button class="modal-btn-close" onclick="cerrarModalDesktop()"><img src="./asset/button-close.svg" alt=""></button>
@@ -197,7 +185,6 @@ function agregarFavoritoTrendingGral(gif) {
     //vuelvo a pasar a texto el array para subirlo al localStorage
     favoritosString = JSON.stringify(favoritosArray);
     localStorage.setItem("gifosFavoritos", favoritosString);
-   
 }
 
 
@@ -207,4 +194,3 @@ async function descargarGifTrending(gifImg, gifNombre) {
     invokeSaveAsDialog(blob, gifNombre + ".gif");
 }
 
- */

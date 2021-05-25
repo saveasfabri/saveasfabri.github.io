@@ -1,4 +1,15 @@
-//modal maximizar gif
+@import "reset";
+@import "trending";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+@mixin montserrat{font-family: 'Montserrat', sans-serif};
+@mixin montserrat-dark{font-family: 'Montserrat', sans-serif; color: #ffffff};
+@mixin roboto {font-family: 'Roboto', sans-serif};
+@mixin roboto-dark {font-family: 'Roboto', sans-serif; color: #ffffff};
+
+/******************** Modal maximizar gif - Mobile ********************/
 .modal-activado {
     position: fixed;
     padding: 0 20px;
@@ -73,6 +84,8 @@
 }
 
 @media screen and (min-width:700px) {
+
+    /******************** Modal maximizar gif - Desktop ********************/
     .modal-activado {
         padding: unset;
         text-align: center;

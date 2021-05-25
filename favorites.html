@@ -35,6 +35,8 @@
         </nav>                           
     </header>
     <main>
+        <!-- ********************* SECCION FAVORITOS *********************** -->
+
         <section class="header-favorites">
             <img class="heart-icon" src="./asset/icon-favoritos.svg" alt="Icono forma de corazón">
             <h1>Favoritos</h1>
@@ -49,58 +51,33 @@
             <div class="resultados-favoritos" id="resultados-favoritos"></div> 
         </section>
         
-        <section class="section-carousel">
+        <!-- ********************* SECCION TRENDING-SLIDE *********************** -->
+
+        <section class="trending">
+
             <h2>Trending GIFOS</h2>
-            <p>Mira los últimos GIFOS de nuestra comunidad.</p>
-            <div class="carousel">
-                <div class="left-arrow"></div> <!--imagen se asigna pos css-->
-                <div class="grid">                    
-                    <div class="gif-grid">
-                        <img class="gif" src="./images/per_medium(1).jpg" alt="Imagen ejemplo mascota">
-                        <div class="transition">
-                            <div class="icon-content">
-                                <img class="icon" src="./asset/icon-fav.svg" alt="Icono Favoritos">
-                                <img class="icon" src="./asset/icon-download.svg" alt="Icono Descargar">
-                                <img class="icon" src="./asset/icon-max-normal.svg" alt="Icono ampliar imagen">
-                            </div>                            
-                            <div class="text-content">
-                                <p class="user">User</p>
-                                <p class="titulo">Titulo GIFO</p>
-                            </div>                            
-                        </div>                            
-                    </div>
-                    <div class="gif-grid">
-                        <img class="gif" src="./images/per_medium(2).jpg" alt="Imagen ejemplo mascota">
-                        <div class="transition">
-                            <div class="icon-content">
-                                <img class="icon" src="./asset/icon-fav.svg" alt="Icono Favoritos">
-                                <img class="icon" src="./asset/icon-download.svg" alt="Icono Descargar">
-                                <img class="icon" src="./asset/icon-max-normal.svg" alt="Icono ampliar imagen">
-                            </div>                            
-                            <div class="text-content">
-                                <p class="user">User</p>
-                                <p class="titulo">Titulo GIFO</p>
-                            </div>                            
-                        </div>                            
-                    </div>
-                    <div class="gif-grid">
-                        <img class="gif" src="./images/per_medium(3).jpg" alt="Imagen ejemplo mascota">
-                        <div class="transition">
-                            <div class="icon-content">
-                                <img class="icon" src="./asset/icon-fav.svg" alt="Icono Favoritos">
-                                <img class="icon" src="./asset/icon-download.svg" alt="Icono Descargar">
-                                <img class="icon" src="./asset/icon-max-normal.svg" alt="Icono ampliar imagen">
-                            </div>                            
-                            <div class="text-content">
-                                <p class="user">User</p>
-                                <p class="titulo">Titulo GIFO</p>
-                            </div>                           
-                        </div>                            
-                    </div>                    
+            <p class="trending-text">Mira los últimos GIFOS de nuestra comunidad.</p>
+
+            <div class="trending-slider-contenedor">
+
+                <div class="slider-prev" id="trending-btn-previous">
+                    <img src="./asset/button-slider-left.svg" alt="Botón para deslizar a la izquierda" class="prev-violeta">
+                    <img src="./asset/button-slider-left-md-noct.svg" alt="Botón para deslizar a la izquierda" class="prev-blanco">
                 </div>
-                <div class="right-arrow"></div> <!--imagen se asigna por css-->
-            </div>                           
-        </section>       
+
+                <div class="trending-slider-box">
+                    <div class="trending-slider" id="trending-slider">
+                    </div>
+                </div>
+
+                <div class="slider-next" id="trending-btn-next">
+                    <img src="./asset/button-slider-right.svg" alt="Botón para deslizar a la derecha" class="next-violeta">
+                    <img src="./asset/button-slider-right-md-noct.svg" alt="Botón para deslizar a la derecha" class="next-blanco">
+                </div>
+
+            </div>
+
+        </section>
     </main>
     <footer>
         <div class="compartir-social">
