@@ -1,26 +1,52 @@
-//estilos seccion fija de trendig gifos
+@import "reset";
+/* @import "modal"; */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+@mixin montserrat{font-family: 'Montserrat', sans-serif};
+@mixin montserrat-dark{font-family: 'Montserrat', sans-serif; color: #ffffff};
+@mixin roboto {font-family: 'Roboto', sans-serif};
+@mixin roboto-dark {font-family: 'Roboto', sans-serif; color: #ffffff};
+
+
+/********************** SECCION TRENDING-SLIDE Mobile ************************/
+//Estilos seccion fija de trendig gifs
+
 .trending {
+    width: 100vw;
     margin-top: 79px;
     background-color: #F3F5F8;
-    padding-bottom: 82px;
+    transition: .4s ease all; //Suaviza pase a Dark-mode
+        body.dark & {
+            background-color: #222326;
+        }
 
     h2 {
-        padding-top: 44px;
+        margin-top: 46px;
         font-family: 'Montserrat', sans-serif;
         font-weight: 500;
         text-align: center;
         color: #572EE5;
         font-size: 20px;
         line-height: 30px;
+        transition: .4s ease all; //Suaviza pase a Dark-mode
+        body.dark & {
+            @include montserrat-dark();
+        }
     }
 
     .trending-text {
+        width: 88.8vw;
         font-family: 'Roboto', sans-serif;
         font-weight: 300;
         font-size: 16px;
         line-height: 23px;
         text-align: center;
-        padding: 9px 100px;
+        transition: .4s ease all; //Suaviza pase a Dark-mode
+        body.dark & {
+            @include roboto-dark();
+        }
     }
 }
 
@@ -36,9 +62,8 @@
     //contenedor de los gif
     display: flex;
     margin: 23px auto 0 auto;
-
     max-width: 900px;
-    width: 100%;
+    width: 100vw;
     height: 187px;
     overflow-x: scroll;
     overflow-y: hidden;
@@ -57,18 +82,20 @@
     display: none;
 }
 
-.trending-gif {
-    //esta clase va separada para poder aplicarla a los gif que traiga desde la api
+//Esta clase va separada para poder aplicarla a los gif que traiga desde la api
+.trending-gif {  
     width: 243px;
     height: 100%;
     object-fit: cover;
 }
 
-@media screen and (min-width: 699px) {
+/********************** SECCION TRENDING-SLIDE Desktop ************************/
+
+@media screen and (min-width: 700px) {
     .trending-slider-contenedor {
-        margin: 53px 50px 0 50px;
+        margin: 53px 50px 182px 50px;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
     }
 
@@ -136,8 +163,8 @@
         transform: translateX(0);
         margin: 0;
         padding: 0;
-        width: 3080px;
-        max-width: 3080px;
+        width: 3276px;
+        max-width: 3276px;
         display: flex;
         justify-content: flex-start;
     }
@@ -228,54 +255,9 @@
     .gif-contenedor:hover .gif-acciones {
         display: block;
     }
-}
 
-@media screen and (min-width: 700px) {
-    //estilos seccion fija de trendig gifs
-    .trending {
-        padding: 0;
-
-        h2 {
-            padding-top: 78px;
-            font-size: 30px;
-        }
-
-        .trending-text {
-            font-size: 18px;
-            padding: 14px 0 0 0;
-        }
-    }
-
-    .trending-slider-contenedor {
-        margin: 53px 94px 0 94px;
-        padding-bottom: 182px;
-    }
-
-    .trending-slider-box {
-        width: 1133px;
-    }
-
-    .trending-slider {
-        height: 275px;
-    }
-
-    .gif-contenedor {
-        width: 357px;
-        height: 275px;
-    }
-
-    .gif-acciones {
-        width: 357px;
-        height: 275px;
-    }
-
-    .textos-descripcion-gif {
-        bottom: 51px;
-        left: 18.5px;
-    }
-
+    //Esta clase va separada para poder aplicarla a los gif que traiga desde la api
     .trending-gif {
-        //esta clase va separada para poder aplicarla a los gif que traiga desde la api
-        width: 357px;
+        width: 243px;
     }
 }
